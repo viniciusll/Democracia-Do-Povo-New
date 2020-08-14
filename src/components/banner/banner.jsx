@@ -9,7 +9,7 @@ const HeaderBanner = () => {
             <Container>
                 <Row className="justify-content-center">
                     <Col lg="8" md="6" className="align-self-center text-center">
-                        <h1 className="title"><img src={DemocraciaDoPovo} alt="democracia do povo"/></h1>
+                        <h1 className="title"><img className="img-responsive" src={DemocraciaDoPovo} alt="democracia do povo"/></h1>
                     </Col>
                 </Row>
             </Container>

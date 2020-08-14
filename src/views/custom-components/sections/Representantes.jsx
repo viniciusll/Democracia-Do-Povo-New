@@ -1,9 +1,12 @@
 /* eslint-disable */
 import React from 'react';
 import { Row, Col, Container } from 'reactstrap';
+import TableComissao from "./table.jsx";
+import TableComissaoCandidatos from './tableComissaoCandidatos';
+import TableComissaoCandidatos8 from './tableComissao8Candidatos';
 
-// import img1 from '../../../assets/images/features/feature48/app-store.png';
-// import img2 from '../../../assets/images/features/feature48/play-store.png';
+import Revista3 from '../../../assets/images/revista 3.png';
+import Revista4 from '../../../assets/images/revista 4.png';
 
 const Home = () => {
     return (
@@ -39,6 +42,44 @@ const Home = () => {
                 <p style={{ textAlign: 'center', color: '#000'}}>
                     com conteúdo único, por edição, obtendo, desta forma, a sua REVISTA PRÓPRIA.
                 </p>
+
+                <Container style={{  alignItems: 'center' }}>
+                        <Row>
+                            <Col lg="10" className="text-center m-b-30">
+                                <img src={Revista3} alt="img" className="img-responsive img-thumbnail" width='200' />
+                            </Col>
+                        </Row>
+                </Container>
+
+                <TableComissao />
+
+               <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                   A Revista PANFLETO EM REVISTA é uma publicação do O SÓCIO BR.
+               </p>
+               <p style={{ textAlign: 'center', color: '#000'}}>
+                   Um produto da LOJA VIRTUAL REAL.
+               </p>
+               <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '15px', padding: '15px', wordWrap: 'break-word' }}>
+                Os custos de publicação pelo SISTEMA COOPERADO DE PANFLETAGEM diminuem, consideravelmente, 
+                ao serem diluídos entre os participantes das edições desta revista.
+               </p>
+               <Container style={{  alignItems: 'center' }}>
+                        <Row>
+                            <Col lg="10" className="text-center m-b-30">
+                                <img src={Revista4} alt="img" className="img-responsive img-thumbnail" width='200' />
+                            </Col>
+                        </Row>
+                </Container>
+
+                <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000',fontFamily: 'Batang' }} >
+                    Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
+                </h3>
+
+                <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 4 (quatro) Candidatos</h4>
+                <TableComissaoCandidatos />
+                <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 8 (oito) Candidatos</h4>
+                <TableComissaoCandidatos8 />
+                <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 12 (doze) Candidatos</h4>
             </div>
         </div>
     );

@@ -7,22 +7,11 @@ import { Button } from 'reactstrap';
 import Header from "../../components/header/header.jsx";
 import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
+import Revista1 from '../../assets/images/revista 1.png'
+import Revista2 from '../../assets/images/revista 2.png'
+import { Container, Row, Col } from 'reactstrap';
 
 // sections for this page
-import Buttons from "./sections/buttons.jsx";
-import Labels from "./sections/labels.jsx";
-import PagePagination from "./sections/pagination.jsx";
-import Images from "./sections/images.jsx";
-import Breadcrumbs from "./sections/breadcrumbs.jsx";
-import Cards from "./sections/cards.jsx";
-import Dropdowns from "./sections/dropdowns.jsx";
-import PageForm from "./sections/form.jsx";
-import PageTable from "./sections/table.jsx";
-import Notification from "./sections/notification.jsx";
-import TooltipPopover from "./sections/tooltip-popover.jsx";
-import Typography from "./sections/typography.jsx";
-import JsComponents from "./sections/js-components.jsx";
-import CallToAction from "../../components/call-to-action/CallToAction"
 
 
 const Components = () => {
@@ -56,11 +45,22 @@ const Components = () => {
                         remuneração e com leis esdruxulas como a da Pequena Empresa, com seus altíssimos encargos tributários, fiscais e 
                         trabalhistas, que limitam a geração de milhões de empregos.
                     </p>
+                    <Container style={{  alignItems: 'center' }}>
+                        <Row>
+                            <Col lg="10" className="text-center m-b-30">
+                                <img src={Revista1} alt="img" className="img-responsive img-thumbnail" width='200' />
+                            </Col>
+                            <Col lg="10" lassName="text-center m-b-30">
+                                <img src={Revista2} alt="img" className="img-responsive img-thumbnail" width='200' />
+                            </Col>
+                        </Row>
+                    </Container>
+
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000',fontFamily: 'Batang' }} >
                         Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
                     </h3>
                     <div style={{ textAlign: 'center' }}>
-                    <Button color='primary' onClick={handleClick} >COMO FUNCIONA A DEMOCRACIA DO POVO?</Button>
+                    <Button outline color='primary' onClick={handleClick} >COMO FUNCIONA A DEMOCRACIA DO POVO?</Button>
                     </div>
 
                     {show == true ? 
