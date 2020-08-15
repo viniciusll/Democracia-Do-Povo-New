@@ -1,14 +1,28 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 import TableComissao from "./table.jsx";
 import TableComissaoCandidatos from './tableComissaoCandidatos';
 import TableComissaoCandidatos8 from './tableComissao8Candidatos';
+import TableComissaoCandidatos12 from './tableComissao12Candidatos';
+import { Button, Input, InputGroup } from 'reactstrap';
 
 import Revista3 from '../../../assets/images/revista 3.png';
 import Revista4 from '../../../assets/images/revista 4.png';
 
-const Home = () => {
+const Representantes = () => {
+
+    
+    const [show, setShow] = useState(false);
+
+    const handleClick = () => {
+        if(show == true) {
+            setShow(false);
+        } else {
+            setShow(true);
+        }
+    };
+
     return (
         <div>
             <div className="spacer bg-light">
@@ -80,9 +94,46 @@ const Home = () => {
                 <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 8 (oito) Candidatos</h4>
                 <TableComissaoCandidatos8 />
                 <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 12 (doze) Candidatos</h4>
+                <TableComissaoCandidatos12 />
+                <div style={{ textAlign: 'center' }}>
+                    <Button outline color="primary">CONTRATO DE REPRESENTAÇÃO Leia, preencha, reconheça firma e envie-o</Button>
+                </div>
+                <div style={{ textAlign: 'center', paddingTop: '5px' }}>
+                    <Button outline onClick={handleClick} color="primary">CADASTRE-SE</Button>
+                </div>
+                {
+                    show == true ?
+                        <div>
+                            <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                                <Input placeholder='Nome' />
+                            </InputGroup>
+                            <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                                <Input placeholder='Endereço' />
+                            </InputGroup>
+                            <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                                <Input placeholder='Cidade' />
+                            </InputGroup>
+                            <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                                <Input placeholder='Estado' />
+                            </InputGroup>
+                            <InputGroup size="lg" style={{ paddingTop: '10px' }} >
+                                <Input placeholder='Cep' />
+                            </InputGroup>
+                            <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                                <Input placeholder='Fone' />
+                            </InputGroup>
+                            <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                                <Input placeholder='Fone (2)' />
+                            </InputGroup>
+                            <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                                <Input placeholder='E-mail' />
+                            </InputGroup>
+                        </div> :
+                        undefined
+                }
             </div>
         </div>
     );
 }
 
-export default Home;
+export default Representantes;

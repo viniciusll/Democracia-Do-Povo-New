@@ -19,7 +19,6 @@ const Header = () => {
             <div className="header6">
                 <Container className="po-relative">
                     <Navbar fixed='top' className="navbar-expand-lg h6-nav-bar">
-                        <NavbarBrand href="/">reactstrap</NavbarBrand>
                         <NavbarToggler style={{ color: '#000' }} onClick={toggle}><span className="ti-menu"></span></NavbarToggler>
                         <Collapse isOpen={isOpen} navbar className="hover-dropdown font-14 ml-auto" id="h6-info">
                             <Nav style={{ backgroundColor: '#003d03' }} navbar className="ml-auto">
