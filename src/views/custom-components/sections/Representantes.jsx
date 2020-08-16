@@ -6,6 +6,7 @@ import TableComissaoCandidatos from './tableComissaoCandidatos';
 import TableComissaoCandidatos8 from './tableComissao8Candidatos';
 import TableComissaoCandidatos12 from './tableComissao12Candidatos';
 import { Button, Input, InputGroup } from 'reactstrap';
+import api from '../../../api/ConnectApi';
 
 import Revista3 from '../../../assets/images/revista 3.png';
 import Revista4 from '../../../assets/images/revista 4.png';
@@ -14,6 +15,14 @@ const Representantes = () => {
 
     
     const [show, setShow] = useState(false);
+    const [nome, setNome] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [cidade, setCidade] = useState('');
+    const [estado, setEstado] = useState('');
+    const [cep, setCep] = useState('');
+    const [fone, setFone] = useState('');
+    const [fone2, setFone2] = useState('');
+    const [email, setEmail] = useState('');
 
     const handleClick = () => {
         if(show == true) {
@@ -21,6 +30,24 @@ const Representantes = () => {
         } else {
             setShow(true);
         }
+    };
+
+    const enviarFicha = async() => {
+        if (nome == '' || endereco == '' || cidade == '' || estado == '' || cep == '' || fone == '' || email == '') {
+            return alert('Preencha todos os capos!');
+        }
+
+        const response = await api.post('/ficha/criandoFicha', {
+            nome: nome,
+            endereco: endereco,
+            cidade: cidade,
+            estado: estado,
+            cep: cep,
+            fone: fone,
+            fone2: fone2,
+            email: email
+        })
+        console.log(response);
     };
 
     return (
@@ -103,31 +130,33 @@ const Representantes = () => {
                 </div>
                 {
                     show == true ?
-                        <div>
+                        <div style={{ textAlign: 'center' }}>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                                <Input placeholder='Nome' />
+                                <Input placeholder='Nome' onChange={(e) => setNome(e.target.value)} />
                             </InputGroup>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                                <Input placeholder='Endereço' />
+                                <Input onChange={(e) => setEndereco(e.target.value)} placeholder='Endereço' />
                             </InputGroup>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                                <Input placeholder='Cidade' />
+                                <Input onChange={(e) => setCidade(e.target.value)} placeholder='Cidade' />
                             </InputGroup>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                                <Input placeholder='Estado' />
+                                <Input onChange={(e) => setEstado(e.target.value)} placeholder='Estado' />
                             </InputGroup>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }} >
-                                <Input placeholder='Cep' />
+                                <Input onChange={(e) => setCep(e.target.value)} placeholder='Cep' />
                             </InputGroup>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                                <Input placeholder='Fone' />
+                                <Input onChange={(e) => setFone(e.target.value)} placeholder='Fone' />
                             </InputGroup>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                                <Input placeholder='Fone (2)' />
+                                <Input onChange={(e) => setFone2(e.target.value)} placeholder='Fone (2)' />
                             </InputGroup>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                                <Input placeholder='E-mail' />
+                                <Input onChange={(e) => setEmail(e.target.value)} placeholder='E-mail' />
                             </InputGroup>
+                            <br/>
+                            <Button outline onClick={enviarFicha} color="primary">Enviar</Button>
                         </div> :
                         undefined
                 }
