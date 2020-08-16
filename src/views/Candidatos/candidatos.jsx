@@ -7,10 +7,14 @@ import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
 import { Container, Row, Col, Button } from 'reactstrap';
 import Revista1 from "../../assets/images/revista 1.png"
+import Revista4 from "../../assets/images/revista 4.png"
 
 // sections for this page
 import TabelaDePreco1 from './sections/tabelaDePreco1.jsx';
 import Formulario1 from './sections/formulario1';
+import TabelaDePreco2 from './sections/tabelaDePreco2.jsx';
+import TabelaDePreco3 from './sections/tabelaDepreco3.jsx';
+import TabelaDePreco4 from './sections/tabelaDePreco4.jsx';
 
 
 const CustomComponents = () => {
@@ -67,6 +71,43 @@ const CustomComponents = () => {
                         </Button>
                     </div>
                     {show == true ? <Formulario1 /> : undefined}
+                    <h1 style={{ textAlign: 'center', paddingTop: '10px', color: '#000bd4',fontFamily: 'cursive' }}>
+                        Candidato a vereador e a prefeito participe da edição desta revista
+                    </h1>
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
+                        PANFLETO EM REVISTA
+                    </h2>
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                        SISTEMA COOPERADO DE PANFLETAGEM
+                    </h2>
+                    <p style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
+                        A Revista <strong style={{ color: '#000bd4' }}>PANFLETO EM REVISTA</strong> é uma publicação do O SÓCIO BR. <br />
+                        Um produto da <strong style={{ color: '#0bacba' }}>LOJA VIRTUAL REAL</strong>.<br />
+                        Os custos de publicação pelo <strong style={{ color: '#ff0000' }}>SISTEMA COOPERADO DE PANFLETAGEM</strong> diminuem,<br />
+                        consideravelmente, ao serem diluídos entre os participantes das edições desta revista.
+                    </p>
+                    <Container style={{  alignItems: 'center' }}>
+                        <Row>
+                            <Col lg="10" className="text-center m-b-30">
+                                <img src={Revista4} alt="img" className="img-responsive img-thumbnail" width='200' />
+                            </Col>
+                        </Row>
+                    </Container>
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                        Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
+                    </h2>
+                    <h2 style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
+                        TABELA DE PREÇOS PARA EDIÇÃO COM 4 (quatro) Candidatos
+                    </h2>
+                    <TabelaDePreco2 />
+                    <h2 style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
+                        TABELA DE PREÇOS PARA EDIÇÃO COM 8 (oito) Candidatos
+                    </h2>
+                    <TabelaDePreco3 />
+                    <h2 style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
+                        TABELA DE PREÇOS PARA EDIÇÃO COM 12 (doze) Candidatos
+                    </h2>
+                    <TabelaDePreco4 />
                 </div>
             </div>
         </div>
