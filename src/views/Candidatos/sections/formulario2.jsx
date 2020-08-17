@@ -172,7 +172,7 @@ const Formulario2 = () => {
                             que entrarão na edição da Revista Panfleto em Revista.
                         </p>
                         <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                            <CustomInput type="file" id="exampleCustomFileBrowser" name="customFile" />
+                            <CustomInput type="file" multiple id="exampleCustomFileBrowser" name="customFile" />
                         </InputGroup>
                     </FormGroup>
                 </FormGroup>
