@@ -28,7 +28,6 @@ const CustomComponents = () => {
         }
     };
 
-
     return (
         <div id="main-wrapper">
             <Header />
