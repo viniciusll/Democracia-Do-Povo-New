@@ -15,16 +15,25 @@ import Formulario1 from './sections/formulario1';
 import TabelaDePreco2 from './sections/tabelaDePreco2.jsx';
 import TabelaDePreco3 from './sections/tabelaDepreco3.jsx';
 import TabelaDePreco4 from './sections/tabelaDePreco4.jsx';
+import Formulario2 from './sections/formulario2.jsx';
 
 
 const CustomComponents = () => {
     const [show, setShow] = useState(false);
+    const [show2, setShow2] = useState(false);
 
     const handleClick = () => {
         if(show == true) {
             setShow(false);
         } else {
             setShow(true);
+        }
+    };
+    const handleClick2 = () => {
+        if(show2 == true) {
+            setShow2(false);
+        } else {
+            setShow2(true);
         }
     };
 
@@ -107,6 +116,12 @@ const CustomComponents = () => {
                         TABELA DE PREÇOS PARA EDIÇÃO COM 12 (doze) Candidatos
                     </h2>
                     <TabelaDePreco4 />
+                    <div style={{ textAlign: 'center', paddingTop: '5px' }}>
+                        <Button onClick={handleClick2} style={{ color: 'yellow', backgroundColor: '#003d03' }}>
+                            Pedido para revista
+                        </Button>
+                        {show2 == true ? <Formulario2 /> : undefined}
+                    </div>
                 </div>
             </div>
         </div>
