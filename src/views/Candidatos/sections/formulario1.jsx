@@ -159,7 +159,7 @@ const Formulario1 = () => {
                         <Input placeholder="Cidade do Representante Comercial" />
                     </InputGroup>
                     <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <CustomInput type="file" id="exampleCustomFileBrowser" name="customFile" />
+                        <CustomInput multiple type="file" id="exampleCustomFileBrowser" name="customFile" />
                     </InputGroup>
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista para <br />
