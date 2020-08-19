@@ -47,7 +47,7 @@ const Formulario2 = () => {
 
     const enviarFormulario = async() => {
         const data = new FormData();
-        data.append('file', image)
+        data.append('file', image);
         data.append('primeiraCapa', primeiraCapa);
         data.append('segundaCapa', segundaCapa);
         data.append('terceiraCapa', terceiraCapa);
