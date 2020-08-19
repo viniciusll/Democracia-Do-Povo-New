@@ -21,22 +21,16 @@ const Formulario1 = () => {
     const [exemplar, setExemplar] = useState('');
     const [nomeDoRepresentanteComercial, setNomeDoRepresentanteComercial] = useState('');
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
-    const [image, setFiles] = useState([]);
+    const [image, setFiles] = useState(null);
 
-    const handleUpload = async files => {
-        console.log(files);
-
-        const imagesFiles = Array.from(files);
-        if (!imagesFiles.length) return;
-        console.log('imagesFiles: ', imagesFiles);
-
-        setFiles(imagesFiles);
+    const handleUpload = async file => {
+        setFiles(file)
     };
 
     const enviarFormulario = async () => {
         console.log('files: ', image);
         const data = new FormData();
-        data.append('image', image);
+        data.append('file', image)
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
         data.append('nomeComoCandidato', nomeComoCandidato);
         data.append('candidatoA', candidatoA);
@@ -231,7 +225,7 @@ const Formulario1 = () => {
                         <Input onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} placeholder="Cidade do Representante Comercial" />
                     </InputGroup>
                     <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => handleUpload(e.target.files)} multiple type="file" id="exampleCustomFileBrowser" name="file" />
+                        <CustomInput onChange={e => handleUpload(e.target.files[0])} type="file" id="exampleCustomFileBrowser" name="file" />
                     </InputGroup>
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista para <br />
