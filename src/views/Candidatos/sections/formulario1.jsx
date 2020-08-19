@@ -21,16 +21,22 @@ const Formulario1 = () => {
     const [exemplar, setExemplar] = useState('');
     const [nomeDoRepresentanteComercial, setNomeDoRepresentanteComercial] = useState('');
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
-    const [files, setFiles] = useState([]);
+    const [image, setFiles] = useState([]);
 
-    const handleUpload = files => {
+    const handleUpload = async files => {
         console.log(files);
-        setFiles(files);
+
+        const imagesFiles = Array.from(files);
+        if (!imagesFiles.length) return;
+        console.log('imagesFiles: ', imagesFiles);
+
+        setFiles(imagesFiles);
     };
 
     const enviarFormulario = async () => {
+        console.log('files: ', image);
         const data = new FormData();
-        data.append('files', files);
+        data.append('image', image);
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
         data.append('nomeComoCandidato', nomeComoCandidato);
         data.append('candidatoA', candidatoA);
