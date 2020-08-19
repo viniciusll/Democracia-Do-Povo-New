@@ -101,8 +101,8 @@ const Representantes = () => {
                    Um produto da LOJA VIRTUAL REAL.
                </p>
                <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '15px', padding: '15px', wordWrap: 'break-word' }}>
-                Os custos de publicação pelo SISTEMA COOPERADO DE PANFLETAGEM diminuem, consideravelmente, 
-                ao serem diluídos entre os participantes das edições desta revista.
+                    Os custos de publicação pelo SISTEMA COOPERADO DE PANFLETAGEM diminuem, consideravelmente, 
+                    ao serem diluídos entre os participantes das edições desta revista.
                </p>
                <Container style={{  alignItems: 'center' }}>
                         <Row>

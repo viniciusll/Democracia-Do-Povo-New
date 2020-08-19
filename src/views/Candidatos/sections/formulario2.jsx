@@ -28,8 +28,6 @@ const Formulario2 = () => {
     const [terceiraCapa3, setTerceiraCapa3] = useState('');
     const [quartaCapa3, setQuartaCapa3] = useState('');
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
-    const [nomeComoCandidato, setNomeComoCandidato] = useState('');
-    const [candidatoA, setCandidatoA] = useState('');
     const [cidadeEntrega, setCidadeEntrega] = useState('');
     const [enderecoEntrega, setEnderecoEntrega] = useState('');
     const [estadoEntrega, setEstadoEntrega] = useState('');
@@ -75,8 +73,6 @@ const Formulario2 = () => {
         data.append('terceiraCapa3', terceiraCapa3);
         data.append('quartaCapa3', quartaCapa3);
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
-        data.append('nomeComoCandidato', nomeComoCandidato);
-        data.append('candidatoA', candidatoA);
         data.append('cidadeEntrega', cidadeEntrega);
         data.append('enderecoEntrega', enderecoEntrega);
         data.append('estadoEntrega', estadoEntrega);
