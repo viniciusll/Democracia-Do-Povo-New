@@ -124,6 +124,7 @@ const CustomComponents = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
