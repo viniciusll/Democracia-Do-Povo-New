@@ -123,7 +123,7 @@ const Representantes = () => {
                 <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 12 (doze) Candidatos</h4>
                 <TableComissaoCandidatos12 />
                 <div style={{ textAlign: 'center' }}>
-                    <Button outline color="primary">CONTRATO DE REPRESENTAÇÃO Leia, preencha, reconheça firma e envie-o</Button>
+                    <Button outline color="primary">CONTRATO DE REPRESENTAÇÃO Leia, <br /> preencha, reconheça firma e envie-o</Button>
                 </div>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <Button outline onClick={handleClick} color="primary">CADASTRE-SE</Button>
