@@ -5,10 +5,19 @@ import PropTypes from "prop-types";
 import Header from "../../components/header/header.jsx";
 import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
+import { Button } from 'reactstrap';
 
 // sections for this page
 
 const Contratos = () => {
+    const printDiv = () => {
+        var divToPrint = document.getElementById('areaToPrint');
+        let newWin = window.open("");
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.print();
+        newWin.close();
+    };
+
     return (
         <div id="main-wrapper">
             <Header />
@@ -18,6 +27,11 @@ const Contratos = () => {
                     <h1 style={{ textAlign: 'center', color: '#000', padding: '10px'}}>
                         Contrato Representante Comercial Autônomo e Pessoa Jurídica
                     </h1>
+                    <div style={{ textAlign: 'center' }}>
+                        <Button onClick={() => printDiv()} color="primary">
+                            Imprimir Contrato
+                        </Button>
+                    </div>
                     <div 
                         style={{ 
                             width: '100%', 
@@ -26,7 +40,8 @@ const Contratos = () => {
                             marginBlockEnd: '1em', 
                             marginInlineStart: '0', 
                             marginInlineEnd: '0' 
-                    }}
+                        }}
+                        id='areaToPrint'
                     >
                         <p style={{ padding: '15px', textAlign: 'justify', color: '#000', fontSize: '20px'}}>
                             Pelo presente instrumento particular de Contrato de Representação Comercial que entre si fazem, de um lado ...................................................................................................................... representante comercial, brasileiro, casado/solteiro,
