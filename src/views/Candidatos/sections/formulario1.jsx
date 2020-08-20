@@ -50,9 +50,31 @@ const Formulario1 = () => {
         data.append('nomeDoRepresentanteComercial', nomeDoRepresentanteComercial);
         data.append('cidadeDoRepresentanteComercial', cidadeDoRepresentanteComercial);
 
-        const request = await api.post('/ficha/criarFormulario1', data);
-        console.log(request);
-    }
+        if (
+            image == null ||
+            nomeCompletoCandidato == '' || 
+            nomeComoCandidato == '' || 
+            candidatoA == '' || 
+            cidadeEntrega == '' || 
+            enderecoEntrega == '' || 
+            estadoEntrega == ''||
+            cepEntrega == ''||
+            enderecoNotaFiscal == ''||
+            cidadeNotaFiscal == ''||
+            cepNotaFiscal == ''||
+            inscRg == ''||
+            cnpjOuCpf == ''||
+            email == ''||
+            exemplar == ''||
+            nomeDoRepresentanteComercial == ''||
+            cidadeDoRepresentanteComercial == ''
+            ) {
+            return alert('Preencha todos os capos!');
+        } else {
+            const request = await api.post('/ficha/criarFormulario1', data);
+            console.log(request);
+        };
+    };
 
     return (
         <div>

@@ -39,13 +39,13 @@ const Revistas = () => {
                             <Col lg="10" className="text-center m-b-30">
                                 <iframe 
                                     src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=7c8459przp&t=1597160351"
-                                    frameborder="0" 
+                                    frameBorder="0" 
                                     style={{ height: '500px', width: '100%' }}
                                     scrolling="no"
                                     title='Revista Panfleto em Revista'
                                     seamless='seamless'
-                                    allowfullscreen='true'
-                                    allowtransparency="true"
+                                    allowFullScreen={true}
+                                    allowTransparency={true}
                                 />
                             </Col>
                         </Row>
