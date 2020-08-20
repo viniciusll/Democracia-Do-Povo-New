@@ -72,7 +72,7 @@ const Contratos = () => {
                         <p style={{ padding: '15px', textAlign: 'justify', color: '#000', fontSize: '20px'}}>
                             Local e data: __/__/____
                         </p>
-                        <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'row'}}>
+                        <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
                             <p style={{ color: '#000' }}>
                                 REPRESENTADA___________________________
                             </p>
@@ -80,7 +80,7 @@ const Contratos = () => {
                                 TESTEMUNHAS___________________________
                             </p>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'row' }}>
+                        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
                             <p style={{ color: '#000' }}>
                                 REPRESENTADA___________________________
                             </p>
