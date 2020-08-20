@@ -35,13 +35,13 @@ const Revistas = () => {
                     </p>
                     <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                         <iframe 
-                        src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=7c8459przp&t=1597160351"
-                        frameborder="0" 
-                        style={{ width: '100vh', minheight: '300px', height: '500px', maxHeight: '600px'}}
-                        title='Revista Panfleto em Revista'
-                        seamless='seamless'
-                        allowfullscreen='true'
-                        allowtransparency="true"
+                            src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=7c8459przp&t=1597160351"
+                            frameborder="0" 
+                            style={{ minWidth: '300px', width: '100vh', maxWidth: '100vh', minheight: '300px', height: '500px', maxHeight: '600px'}}
+                            title='Revista Panfleto em Revista'
+                            seamless='seamless'
+                            allowfullscreen='true'
+                            allowtransparency="true"
                         />
                     </div>
                 </div>
