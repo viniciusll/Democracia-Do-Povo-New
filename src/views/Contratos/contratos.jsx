@@ -43,7 +43,7 @@ const Contratos = () => {
                         }}
                         id='areaToPrint'
                     >
-                        <p style={{ padding: '15px', textAlign: 'justify', color: '#000', fontSize: '20px'}}>
+                        <p style={{ padding: '15px', paddingLeft: '50px', paddingRight: '50px', textAlign: 'justify', color: '#000', fontSize: '20px'}}>
                             Pelo presente instrumento particular de Contrato de Representação Comercial que entre si fazem, de um lado ...................................................................................................................... representante comercial, brasileiro, casado/solteiro,
                             CNPJ nº........................................................, portador da cédula de identidade RG nº ............................................................................
                             CPF nº..............................................................................com domicilio em........................................................................................,.......
