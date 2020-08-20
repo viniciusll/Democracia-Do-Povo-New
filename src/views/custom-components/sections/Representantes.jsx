@@ -7,6 +7,7 @@ import TableComissaoCandidatos8 from './tableComissao8Candidatos';
 import TableComissaoCandidatos12 from './tableComissao12Candidatos';
 import { Button, Input, InputGroup } from 'reactstrap';
 import api from '../../../api/ConnectApi';
+import { Link } from 'react-router-dom';
 
 import Revista3 from '../../../assets/images/revista 3.png';
 import Revista4 from '../../../assets/images/revista 4.png';
@@ -123,7 +124,11 @@ const Representantes = () => {
                 <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 12 (doze) Candidatos</h4>
                 <TableComissaoCandidatos12 />
                 <div style={{ textAlign: 'center' }}>
-                    <Button outline color="primary">CONTRATO DE REPRESENTAÇÃO Leia, <br /> preencha, reconheça firma e envie-o</Button>
+                    <Button color="primary">
+                         <Link to='/contratos' style={{ textDecoration: 'none', color: '#fff' }}>
+                            CONTRATO DE REPRESENTAÇÃO Leia, <br /> preencha, reconheça firma e envie-o
+                        </Link>
+                    </Button>
                 </div>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <Button outline onClick={handleClick} color="primary">CADASTRE-SE</Button>

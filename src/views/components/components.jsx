@@ -60,7 +60,9 @@ const Components = () => {
                         Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
                     </h3>
                     <div style={{ textAlign: 'center' }}>
-                    <Button outline color='primary' onClick={handleClick} >COMO FUNCIONA A DEMOCRACIA DO POVO?</Button>
+                    <Button outline color='primary' onClick={handleClick} >
+                            COMO FUNCIONA A DEMOCRACIA DO POVO?
+                    </Button>
                     </div>
 
                     {show == true ? 
