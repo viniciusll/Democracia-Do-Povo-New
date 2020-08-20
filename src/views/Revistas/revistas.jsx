@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import Header from "../../components/header/header.jsx";
 import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
+import { Container, Row, Col } from 'reactstrap';
 
 // sections for this page
 
@@ -33,17 +34,22 @@ const Revistas = () => {
                     <p style={{ textAlign: 'center', color: '#000', paddingTop: '10px'}}>
                         Revista Democracia do Povo (36 páginas + 4 Capas)
                     </p>
-                    <div style={{ textAlign: 'center', paddingTop: '5px' }}>
-                        <iframe 
-                            src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=7c8459przp&t=1597160351"
-                            frameborder="0" 
-                            style={{ minWidth: '300px', width: '100vh', maxWidth: '100vh', minheight: '300px', height: '500px', maxHeight: '600px'}}
-                            title='Revista Panfleto em Revista'
-                            seamless='seamless'
-                            allowfullscreen='true'
-                            allowtransparency="true"
-                        />
-                    </div>
+                    <Container style={{ textAlign: 'center', paddingTop: '5px' }}>
+                        <Row>
+                            <Col lg="10" className="text-center m-b-30">
+                                <iframe 
+                                    src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=7c8459przp&t=1597160351"
+                                    frameborder="0" 
+                                    style={{ height: '500px', width: '100%' }}
+                                    scrolling="no"
+                                    title='Revista Panfleto em Revista'
+                                    seamless='seamless'
+                                    allowfullscreen='true'
+                                    allowtransparency="true"
+                                />
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
             </div>
             <Footer />
