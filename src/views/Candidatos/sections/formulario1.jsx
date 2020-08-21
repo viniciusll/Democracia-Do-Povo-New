@@ -7,7 +7,10 @@ const Formulario1 = () => {
     const [nomeComoCandidato, setNomeComoCandidato] = useState('');
     const [candidatoA, setCandidatoA] = useState('');
     const [cidadeEntrega, setCidadeEntrega] = useState('');
-    const [enderecoEntrega, setEnderecoEntrega] = useState('');
+    const [rua, setRua] = useState('');
+    const [bairro, setBairro] = useState('');
+    const [numero, setNumero] = useState('');
+    const [complemento, setComplemento] = useState('');
     const [estadoEntrega, setEstadoEntrega] = useState('');
     const [cepEntrega, setCepEntrega] = useState('');
     const [enderecoNotaFiscal, setEnderecoNotaFiscal] = useState('');
@@ -35,7 +38,9 @@ const Formulario1 = () => {
         data.append('nomeComoCandidato', nomeComoCandidato);
         data.append('candidatoA', candidatoA);
         data.append('cidadeEntrega', cidadeEntrega);
-        data.append('enderecoEntrega', enderecoEntrega);
+        data.append('enderecoEntrega', rua);
+        data.append('enderecoEntrega', numero);
+        data.append('enderecoEntrega', bairro);
         data.append('estadoEntrega', estadoEntrega);
         data.append('cepEntrega', cepEntrega);
         data.append('enderecoNotaFiscal', enderecoNotaFiscal);
@@ -56,7 +61,9 @@ const Formulario1 = () => {
             nomeComoCandidato == '' || 
             candidatoA == '' || 
             cidadeEntrega == '' || 
-            enderecoEntrega == '' || 
+            rua == '' || 
+            numero == '' || 
+            bairro == '' || 
             estadoEntrega == ''||
             cepEntrega == ''||
             enderecoNotaFiscal == ''||
@@ -102,7 +109,16 @@ const Formulario1 = () => {
                 </div>
                 <FormGroup>
                     <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEnderecoEntrega(e.target.value)} placeholder="Endereço para entrega:" />
+                        <Input onChange={e => setRua(e.target.value)} placeholder="Rua para entrega:" name='street' />
+                    </InputGroup>
+                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                        <Input onChange={e => setNumero(e.target.value)} placeholder="Número para entrega:" name='number' type='number' />
+                    </InputGroup>
+                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                        <Input onChange={e => setBairro(e.target.value)} placeholder="Bairro para entrega:" name='bairro' />
+                    </InputGroup>
+                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                        <Input onChange={e => setComplemento(e.target.value)} placeholder="Complemento para entrega:" />
                     </InputGroup>
                     <InputGroup size="lg" style={{ paddingTop: '10px' }}>
                         <Input onChange={e => setCidadeEntrega(e.target.value)} placeholder="Cidade para entrega:" />
@@ -144,7 +160,7 @@ const Formulario1 = () => {
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='Edição com 8 páginas + 4 capas - Quantidade: 250 Exemplares - Valor: R$877,50'
                                 type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
-                            Edição com 8 páginas + 4 capas – Quantidade: 250 Exemplares - Valor: R$877,50
+                                Edição com 8 páginas + 4 capas – Quantidade: 250 Exemplares - Valor: R$877,50
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
