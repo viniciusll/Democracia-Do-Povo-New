@@ -29,8 +29,11 @@ const Formulario2 = () => {
     const [quartaCapa3, setQuartaCapa3] = useState('');
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
     const [cidadeEntrega, setCidadeEntrega] = useState('');
-    const [enderecoEntrega, setEnderecoEntrega] = useState('');
+    const [ruaEntrega, setRuaEntrega] = useState('');
+    const [bairroEntrega, setBairroEntrega] = useState('');
+    const [numeroEntrega, setNumeroEntrega] = useState('');
     const [estadoEntrega, setEstadoEntrega] = useState('');
+    const [complemento, setComplementoEntrega] = useState('');
     const [cepEntrega, setCepEntrega] = useState('');
     const [enderecoNotaFiscal, setEnderecoNotaFiscal] = useState('');
     const [cidadeNotaFiscal, setCidadeNotaFiscal] = useState('');
@@ -74,7 +77,10 @@ const Formulario2 = () => {
         data.append('quartaCapa3', quartaCapa3);
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
         data.append('cidadeEntrega', cidadeEntrega);
-        data.append('enderecoEntrega', enderecoEntrega);
+        data.append('ruaEntrega', ruaEntrega);
+        data.append('bairroEntrega', bairroEntrega);
+        data.append('numeroEntrega', numeroEntrega);
+        data.append('complemento', complemento);
         data.append('estadoEntrega', estadoEntrega);
         data.append('cepEntrega', cepEntrega);
         data.append('enderecoNotaFiscal', enderecoNotaFiscal);
@@ -183,7 +189,16 @@ const Formulario2 = () => {
                         <Input onChange={e => setQuartaCapa3(e.target.value)} placeholder="Quarta capa:" />
                     </InputGroup>
                     <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEnderecoEntrega(e.target.value)} placeholder="Endereço para entrega" />
+                        <Input onChange={e => setRuaEntrega(e.target.value)} placeholder="Rua para entrega" />
+                    </InputGroup>
+                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                        <Input onChange={e => setBairroEntrega(e.target.value)} placeholder="Bairro para entrega" />
+                    </InputGroup>
+                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                        <Input onChange={e => setNumeroEntrega(e.target.value)} type='number' placeholder="Número para entrega" />
+                    </InputGroup>
+                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                        <Input onChange={e => setComplementoEntrega(e.target.value)} placeholder="Complemento" />
                     </InputGroup>
                     <InputGroup size="lg" style={{ paddingTop: '10px' }}>
                         <Input onChange={e => setCidadeEntrega(e.target.value)} placeholder="Cidade para entrega:" />
@@ -220,42 +235,42 @@ const Formulario2 = () => {
                     </InputGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='Edição com 8 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$3.600,00' 
+                            <Input value='1' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 8 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$3.600,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='Edição com 8 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$5.600,00' 
+                            <Input value='2' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 8 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$5.600,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='Edição com 8 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$10.400,00' 
+                            <Input value='3' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 8 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$10.400,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$4.800,00' 
+                            <Input value='4' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$4.800,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='Edição com 12 Candidatos – Quantidade: 4.000 Exemplares - Valor: R$7.800,00' 
+                            <Input value='5' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 12 Candidatos – Quantidade: 4.000 Exemplares - Valor: R$7.800,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='Edição com 12 Candidatos – Quantidade: 8.000 Exemplares - Valor: R$14.400,00'
+                            <Input value='6'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 12 Candidatos – Quantidade: 8.000 Exemplares - Valor: R$14.400,00
                         </Label>

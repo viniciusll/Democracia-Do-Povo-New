@@ -38,9 +38,10 @@ const Formulario1 = () => {
         data.append('nomeComoCandidato', nomeComoCandidato);
         data.append('candidatoA', candidatoA);
         data.append('cidadeEntrega', cidadeEntrega);
-        data.append('enderecoEntrega', rua);
-        data.append('enderecoEntrega', numero);
-        data.append('enderecoEntrega', bairro);
+        data.append('rua', rua);
+        data.append('numero', numero);
+        data.append('complemento', complemento);
+        data.append('bairro', bairro);
         data.append('estadoEntrega', estadoEntrega);
         data.append('cepEntrega', cepEntrega);
         data.append('enderecoNotaFiscal', enderecoNotaFiscal);
@@ -159,98 +160,98 @@ const Formulario1 = () => {
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='1'
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                                 Edição com 8 páginas + 4 capas – Quantidade: 250 Exemplares - Valor: R$877,50
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='2' 
-                                onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
+                                onChange={e => setExemplar(e.target.value)} type="radio" name='radio2' />{' '}
                             Edição com 8 páginas + 4 capas – Quantidade: 500 Exemplares - Valor: R$1.485,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='3' 
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 8 páginas + 4 capas – Quantidade: 1.000 Exemplares - Valor: R$2.350,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='4' 
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 8 páginas + 4 capas – Quantidade: 2.000 Exemplares - Valor: R$3.560,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='5' 
-                                type="radio" onChange={e => setExemplar(e.target.value)}name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)}name='radio2' />{' '}
                             Edição com 8 páginas + 4 capas – Quantidade: 4.000 Exemplares - Valor: R$7.120,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='6' 
-                                type="radio" onChange={e => setExemplar(e.target.value)}name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)}name='radio2' />{' '}
                             Edição com 8 páginas + 4 capas – Quantidade: 5.000 Exemplares - Valor: R$8.900,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='7' 
-                                type="radio" onChange={e => setExemplar(e.target.value)}name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)}name='radio2' />{' '}
                             Edição com 8 páginas + 4 capas – Quantidade: 8.000 Exemplares - Valor: R$17.400,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='8' 
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 12 páginas + 4 capas – Quantidade: 250 Exemplares - Valor: R$1.087,50
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='9' 
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 12 páginas + 4 capas – Quantidade: 500 Exemplares - Valor: R$1.905,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='10' 
-                                type="radio" onChange={e => setExemplar(e.target.value)}name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)}name='radio2' />{' '}
                             Edição com 12 páginas + 4 capas – Quantidade: 1.000 Exemplares - Valor: R$3.050,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='11' 
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 12 páginas + 4 capas – Quantidade: 2.000 Exemplares - Valor: R$4.680,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='12' 
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 12 páginas + 4 capas – Quantidade: 4.000 Exemplares - Valor: R$9.360,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='13' 
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 12 páginas + 4 capas – Quantidade: 5.000 Exemplares - Valor: R$11.700,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='14' 
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio1' />{' '}
+                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 12 páginas + 4 capas – Quantidade: 8.000 Exemplares - Valor: R$23.000,00
                         </Label>
                     </FormGroup>
