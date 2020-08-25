@@ -90,6 +90,101 @@ const Formulario1 = () => {
         };
     };
 
+    const verificationCpf = (cpf) => {
+        cpf = cpf.replace(/[^\d]+/g, '');
+        let sum, leftover;
+        sum = 0;
+        if (cpf == "00000000000") return false;
+    
+        for (let i = 1; i <= 9; i++) sum = sum + parseInt(cpf.substring(i - 1, i)) * (11 - i);
+        leftover = (sum * 10) % 11;
+    
+        if ((leftover == 10) || (leftover == 11)) leftover = 0;
+        if (leftover != parseInt(cpf.substring(9, 10))) return false;
+    
+        sum = 0;
+        for (let i = 1; i <= 10; i++) sum = sum + parseInt(cpf.substring(i - 1, i)) * (12 - i);
+        leftover = (sum * 10) % 11;
+    
+        if ((leftover == 10) || (leftover == 11)) leftover = 0;
+        if (leftover != parseInt(cpf.substring(10, 11))) return false;
+    
+        return true;
+    };
+
+    const verificationCnpj = (cnpj) => {
+        cnpj = cnpj.replace(/[^\d]+/g, '');
+        console.log(cnpj);
+        if (cnpj == '') return false;
+
+        if (cnpj.length != 14)
+            return false;
+    
+        if (cnpj == "00000000000000" ||
+            cnpj == "11111111111111" ||
+            cnpj == "22222222222222" ||
+            cnpj == "33333333333333" ||
+            cnpj == "44444444444444" ||
+            cnpj == "55555555555555" ||
+            cnpj == "66666666666666" ||
+            cnpj == "77777777777777" ||
+            cnpj == "88888888888888" ||
+            cnpj == "99999999999999")
+    
+            return false;
+    
+        // Valida DVs
+        let size = cnpj.length - 2
+        let numbers = cnpj.substring(0, size);
+        let digits = cnpj.substring(size);
+    
+        let sum = 0;
+        let pos = size - 7;
+        for (let i = size; i >= 1; i--) {
+            sum += numbers.charAt(size - i) * pos--;
+            if (pos < 2)
+                pos = 9;
+        }
+        let result;
+        
+        result = sum % 11 < 2 ? 0 : 11 - sum % 11;
+        if (result != digits.charAt(0))
+            return false;
+    
+        size = size + 1;
+        numbers = cnpj.substring(0, size);
+        sum = 0;
+        pos = size - 7;
+    
+        for (let i = size; i >= 1; i--) {
+            sum += numbers.charAt(size - i) * pos--;
+            if (pos < 2)
+                pos = 9;
+        }
+    
+        result = sum % 11 < 2 ? 0 : 11 - sum % 11;
+    
+        if (result != digits.charAt(1))
+            return false;
+    
+        return true;
+    };
+
+    const delayedQueryCpfCnpj = useRef(
+        debounce(e => {
+            setCnpjOuCpf(e);
+            if (e.replace(/\D/g, "").length == 11) {
+                if(verificationCpf(e) == false)  setVisible(true);
+            } else if (e.replace(/\D/g, "").length == 14) {
+                if(verificationCnpj(e) == false) setVisible(true);
+            } else if (e.replace(/\D/g, "").length < 11) {
+                setVisible(true);
+            } else if (e.replace(/\D/g, "").length > 14) {
+                setVisible(true);
+            };
+        }, 500)
+    ).current;
+
     const delayedQuery = useRef(
         debounce(e => {
             setCepEntrega(e);
@@ -112,12 +207,16 @@ const Formulario1 = () => {
     const handleChange = (e) => {
         delayedQuery(e.target.value);
     };
+    
+    const handleChangeCpfCnpj = (e) => {
+        delayedQueryCpfCnpj(e.target.value);
+    };
 
     return (
         <div>
             <AvForm className="uploader" encType="multipart/form-data" style={{ padding: '10px', alignItems: 'center'}}>
                 <UncontrolledAlert fade={false} isOpen={visible} toggle={onDismiss} color='danger'>
-                    Preencha todos Campos
+                    CPF ou CNPJ invalido
                 </UncontrolledAlert>
                 <FormGroup>
                     <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
@@ -153,7 +252,7 @@ const Formulario1 = () => {
                         <AvField onChange={e => setEstadoNotaFiscal(e.target.value)} placeholder="Estado para nota fiscal:" name='stateNotafiscal' required/>
                         <AvField onChange={e => setCepNotaFiscal(e.target.value)} placeholder="CEP para nota fiscal:" name='cepNotofiscal' required />
                         <AvField onChange={e => setInscRg(e.target.value)} placeholder="Insc. Est./RG:" name='rg' required />
-                        <AvField onChange={e => setCnpjOuCpf(e.target.value)} placeholder="CNPJ/CPF:" name='cpf' required/>
+                        <AvField onChange={handleChangeCpfCnpj} placeholder="CNPJ/CPF:" name='cpf' required/>
                         <AvField onChange={e => setTelefone(e.target.value)} placeholder="Telefone:" name='telefone' required/>
                         <AvField onChange={e => setEmail(e.target.value)} placeholder="E-mail:" name='email' required/>
                 </FormGroup>
