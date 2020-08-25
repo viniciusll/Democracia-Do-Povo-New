@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput } from 'reactstrap';
+import React, { useState, useEffect, useRef } from 'react';
+import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput, UncontrolledAlert } from 'reactstrap';
+import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
+import axios from 'axios';
+import { debounce } from 'lodash';
 
 const Formulario1 = () => {
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
@@ -25,6 +28,9 @@ const Formulario1 = () => {
     const [nomeDoRepresentanteComercial, setNomeDoRepresentanteComercial] = useState('');
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
     const [image, setFiles] = useState(null);
+    const [visible, setVisible] = useState(false);
+
+    const onDismiss = () => setVisible(false);
 
     const handleUpload = async file => {
         setFiles(file)
@@ -77,23 +83,49 @@ const Formulario1 = () => {
             nomeDoRepresentanteComercial == ''||
             cidadeDoRepresentanteComercial == ''
             ) {
-            return alert('Preencha todos os capos!');
+            return setVisible(true);
         } else {
             const request = await api.post('/ficha/criarFormulario1', data);
             console.log(request);
         };
     };
 
+    const delayedQuery = useRef(
+        debounce(e => {
+            setCepEntrega(e);
+            axios.get(`http://viacep.com.br/ws/${e}/json/`)
+                .then((response) => {
+                    console.log(response.data);
+                    setCidadeEntrega(response.data.localidade);
+                    setEstadoEntrega(response.data.uf);
+                    setBairro(response.data.bairro);
+                    setRua(response.data.logradouro);
+                }).catch(() => {
+                    setCidadeEntrega('');
+                    setEstadoEntrega('');
+                    setBairro('');
+                    setRua('');
+                });
+        }, 500)
+    ).current;
+
+    const handleChange = (e) => {
+        delayedQuery(e.target.value);
+    };
+
     return (
         <div>
-            <Form className="uploader" encType="multipart/form-data" style={{ padding: '10px', alignItems: 'center'}}>
+            <AvForm className="uploader" encType="multipart/form-data" style={{ padding: '10px', alignItems: 'center'}}>
+                <UncontrolledAlert fade={false} isOpen={visible} toggle={onDismiss} color='danger'>
+                    Preencha todos Campos
+                </UncontrolledAlert>
                 <FormGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setNomeCompletoCandidato(e.target.value)} placeholder="Nome completo do Candidato:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
+                    <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                        name='nome' 
+                        required 
+                        placeholder="Nome completo do Candidato:"
+                    />
                         <Input onChange={e => setNomeComoCandidato(e.target.value)} placeholder="Nome como candidato:" />
-                    </InputGroup>
                 </FormGroup>
                 <div style={{ textAlign: 'center'}}>
                 <p>Candidato a: </p>
@@ -109,51 +141,21 @@ const Formulario1 = () => {
                     </FormGroup>
                 </div>
                 <FormGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setRua(e.target.value)} placeholder="Rua para entrega:" name='street' />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setNumero(e.target.value)} placeholder="Número para entrega:" name='number' type='number' />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setBairro(e.target.value)} placeholder="Bairro para entrega:" name='bairro' />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setComplemento(e.target.value)} placeholder="Complemento para entrega:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCidadeEntrega(e.target.value)} placeholder="Cidade para entrega:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEstadoEntrega(e.target.value)} placeholder="Estado para entrega:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCepEntrega(e.target.value)} placeholder="CEP para entrega:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEnderecoNotaFiscal(e.target.value)} placeholder="Endereço para nota fiscal:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCidadeNotaFiscal(e.target.value)} placeholder="Cidade para nota fiscal:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEstadoNotaFiscal(e.target.value)} placeholder="Estado para nota fiscal:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCepNotaFiscal(e.target.value)} placeholder="CEP para nota fiscal:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setInscRg(e.target.value)} placeholder="Insc. Est./RG:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCnpjOuCpf(e.target.value)} placeholder="CNPJ/CPF:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setTelefone(e.target.value)} placeholder="Telefone:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEmail(e.target.value)} placeholder="E-mail:" />
-                    </InputGroup>
+                        <AvField onChange={handleChange} placeholder="CEP para entrega:" name='cep' required/>
+                        <AvField value={cidadeEntrega} onChange={e => setCidadeEntrega(e.target.value)} placeholder="Cidade para entrega:" name='city' disabled />
+                        <AvField value={estadoEntrega} onChange={e => setEstadoEntrega(e.target.value)} placeholder="Estado para entrega:" name='estado' disabled />
+                        <AvField value={rua} onChange={e => setRua(e.target.value)} placeholder="Rua para entrega:" name='street' disabled />
+                        <AvField value={bairro} onChange={e => setBairro(e.target.value)} placeholder="Bairro para entrega:" name='bairro' disabled />
+                        <AvField value={numero} onChange={e => setNumero(e.target.value)} placeholder="Número para entrega:" name='number' required type='number' required />
+                        <AvField onChange={e => setComplemento(e.target.value)} placeholder="Complemento para entrega:"  name='complemento' />
+                        <AvField onChange={e => setEnderecoNotaFiscal(e.target.value)} placeholder="Endereço para nota fiscal:" name='endereço' required/>
+                        <AvField onChange={e => setCidadeNotaFiscal(e.target.value)} placeholder="Cidade para nota fiscal:" name='cidadeNotafiscal' required/>
+                        <AvField onChange={e => setEstadoNotaFiscal(e.target.value)} placeholder="Estado para nota fiscal:" name='stateNotafiscal' required/>
+                        <AvField onChange={e => setCepNotaFiscal(e.target.value)} placeholder="CEP para nota fiscal:" name='cepNotofiscal' required />
+                        <AvField onChange={e => setInscRg(e.target.value)} placeholder="Insc. Est./RG:" name='rg' required />
+                        <AvField onChange={e => setCnpjOuCpf(e.target.value)} placeholder="CNPJ/CPF:" name='cpf' required/>
+                        <AvField onChange={e => setTelefone(e.target.value)} placeholder="Telefone:" name='telefone' required/>
+                        <AvField onChange={e => setEmail(e.target.value)} placeholder="E-mail:" name='email' required/>
                 </FormGroup>
                 <div style={{ textAlign: 'center'}}>
                 <p>Quantidade de Exemplares: </p>
@@ -257,15 +259,10 @@ const Formulario1 = () => {
                     </FormGroup>
                 </div>
                 <FormGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setNomeDoRepresentanteComercial(e.target.value)} placeholder="Nome do Representante Comercial:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} placeholder="Cidade do Representante Comercial" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <CustomInput onChange={e => handleUpload(e.target.files[0])} type="file" id="exampleCustomFileBrowser" name="file" />
-                    </InputGroup>
+                        <AvField name='representante' required onChange={e => setNomeDoRepresentanteComercial(e.target.value)} placeholder="Nome do Representante Comercial:" />
+                        <br/>
+                        <AvField name='cidade representante' required onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} placeholder="Cidade do Representante Comercial" />
+                        <CustomInput name='file' required onChange={e => handleUpload(e.target.files[0])} type="file" id="exampleCustomFileBrowser" name="file" />
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista para <br />
                         a divulgação de sua candidatura, com exclusividade, nas 4 capas da Revista <br />
@@ -277,7 +274,7 @@ const Formulario1 = () => {
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <Button onClick={() => enviarFormulario()} outline color="primary">Enviar</Button>
                 </div>
-            </Form>
+            </AvForm>
         </div>
     );
 };
