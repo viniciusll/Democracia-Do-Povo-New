@@ -6,6 +6,7 @@ import TableComissaoCandidatos from './tableComissaoCandidatos';
 import TableComissaoCandidatos8 from './tableComissao8Candidatos';
 import TableComissaoCandidatos12 from './tableComissao12Candidatos';
 import { Button, Input, InputGroup } from 'reactstrap';
+import { UncontrolledAlert  } from 'reactstrap';
 import api from '../../../api/ConnectApi';
 import { Link } from 'react-router-dom';
 
@@ -24,6 +25,11 @@ const Representantes = () => {
     const [fone, setFone] = useState('');
     const [fone2, setFone2] = useState('');
     const [email, setEmail] = useState('');
+    const [visible, setVisible] = useState(false);
+    const [visible2, setVisible2] = useState(false);
+
+    const onDismiss = () => setVisible(false);
+    const onDismiss2 = () => setVisible(false);
 
     const handleClick = () => {
         if(show == true) {
@@ -35,8 +41,8 @@ const Representantes = () => {
 
     const enviarFicha = async() => {
         if (nome == '' || endereco == '' || cidade == '' || estado == '' || cep == '' || fone == '' || email == '') {
-            return alert('Preencha todos os capos!');
-        }
+            return setVisible(true);
+        };
 
         const response = await api.post('/ficha/criandoFicha', {
             nome: nome,
@@ -48,7 +54,17 @@ const Representantes = () => {
             fone2: fone2,
             email: email
         })
+        setVisible2(true);
         console.log(response);
+        setShow(false);
+        setNome('');
+        setEndereco('');
+        setEstado('');
+        setCidade('');
+        setCep('');
+        setFone('');
+        setFone2('');
+        setEmail('');
     };
 
     return (
@@ -133,9 +149,17 @@ const Representantes = () => {
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <Button outline onClick={handleClick} color="primary">CADASTRE-SE</Button>
                 </div>
+                <br/>
+                <UncontrolledAlert fade={false} isOpen={visible2} toggle={onDismiss2} color='success'>
+                    Cadastro feito com sucesso.
+                </UncontrolledAlert>
                 {
                     show == true ?
                         <div style={{ textAlign: 'center' }}>
+                            <br/>
+                            <UncontrolledAlert fade={false} isOpen={visible} toggle={onDismiss} color='danger'>
+                                Preencha todos Campos 
+                            </UncontrolledAlert>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
                                 <Input placeholder='Nome' onChange={(e) => setNome(e.target.value)} />
                             </InputGroup>
