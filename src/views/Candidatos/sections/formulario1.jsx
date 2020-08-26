@@ -31,6 +31,9 @@ const Formulario1 = () => {
     const [image, setFiles] = useState(null);
     const [nomeNotaFiscal, setNomeNotaFiscal] = useState('');
     const [visible, setVisible] = useState(false);
+    const [visible2, setVisible2] = useState(false);
+
+  const onDismiss = () => setVisible2(false);
 
     const handleUpload = async file => {
         setFiles(file);
@@ -89,6 +92,7 @@ const Formulario1 = () => {
         } else {
             const request = await api.post('/ficha/criarFormulario1', data);
             console.log(request);
+            setVisible2(true)
         };
     };
 
@@ -225,6 +229,9 @@ const Formulario1 = () => {
     return (
         <div>
             <AvForm className="uploader" encType="multipart/form-data" style={{ padding: '10px', alignItems: 'center'}}>
+                <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
+                    Pedido Emitido com sucesso
+                </UncontrolledAlert>
                 <FormGroup>
                     <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
                         name='nome' 
