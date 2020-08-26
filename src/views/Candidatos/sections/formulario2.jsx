@@ -4,6 +4,7 @@ import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
 import { debounce } from 'lodash';
 import axios from 'axios';
+import { mask, unMask } from 'remask';
 
 const Formulario2 = () => {
     const [primeiraCapa, setPrimeiraCapa] = useState('');
@@ -227,6 +228,11 @@ const Formulario2 = () => {
         } else {
             return 'CPF ou CNPJ inválido';
         };
+    };
+
+    const handleChangeCpfCnpj = (e) => {
+        const value = e.target.value;
+        setCnpjOuCpf(mask(unMask(value), ['999.999.999-99', '99.999.999/9999-99']));
     };
 
     return (
@@ -548,9 +554,10 @@ const Formulario2 = () => {
                             }}
                         />
                         <AvField 
-                            onChange={e => setCnpjOuCpf(e.target.value)} 
+                            onChange={handleChangeCpfCnpj} 
                             placeholder="CNPJ/CPF:" 
-                            name='cpf'    
+                            name='cpf'
+                            value={cnpjOuCpf}
                             validate={{
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'},
                                 verificationCpfCnpj
