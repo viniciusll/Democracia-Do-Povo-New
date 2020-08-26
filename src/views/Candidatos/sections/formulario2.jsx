@@ -129,6 +129,106 @@ const Formulario2 = () => {
         delayedQuery(e.target.value);
     };
 
+    
+    const verificationCpf = (cpf) => {
+        cpf = cpf.replace(/[^\d]+/g, '');
+        let sum, leftover;
+        sum = 0;
+        if (cpf == "00000000000") return false;
+    
+        for (let i = 1; i <= 9; i++) sum = sum + parseInt(cpf.substring(i - 1, i)) * (11 - i);
+        leftover = (sum * 10) % 11;
+    
+        if ((leftover == 10) || (leftover == 11)) leftover = 0;
+        if (leftover != parseInt(cpf.substring(9, 10))) return false;
+    
+        sum = 0;
+        for (let i = 1; i <= 10; i++) sum = sum + parseInt(cpf.substring(i - 1, i)) * (12 - i);
+        leftover = (sum * 10) % 11;
+    
+        if ((leftover == 10) || (leftover == 11)) leftover = 0;
+        if (leftover != parseInt(cpf.substring(10, 11))) return false;
+    
+        return true;
+    };
+
+    const verificationCnpj = (cnpj) => {
+        cnpj = cnpj.replace(/[^\d]+/g, '');
+        if (cnpj == '') return false;
+
+        if (cnpj.length != 14)
+            return false;
+    
+        if (cnpj == "00000000000000" ||
+            cnpj == "11111111111111" ||
+            cnpj == "22222222222222" ||
+            cnpj == "33333333333333" ||
+            cnpj == "44444444444444" ||
+            cnpj == "55555555555555" ||
+            cnpj == "66666666666666" ||
+            cnpj == "77777777777777" ||
+            cnpj == "88888888888888" ||
+            cnpj == "99999999999999")
+    
+            return false;
+    
+        // Valida DVs
+        let size = cnpj.length - 2
+        let numbers = cnpj.substring(0, size);
+        let digits = cnpj.substring(size);
+    
+        let sum = 0;
+        let pos = size - 7;
+        for (let i = size; i >= 1; i--) {
+            sum += numbers.charAt(size - i) * pos--;
+            if (pos < 2)
+                pos = 9;
+        }
+        let result;
+        
+        result = sum % 11 < 2 ? 0 : 11 - sum % 11;
+        if (result != digits.charAt(0))
+            return false;
+    
+        size = size + 1;
+        numbers = cnpj.substring(0, size);
+        sum = 0;
+        pos = size - 7;
+    
+        for (let i = size; i >= 1; i--) {
+            sum += numbers.charAt(size - i) * pos--;
+            if (pos < 2)
+                pos = 9;
+        }
+    
+        result = sum % 11 < 2 ? 0 : 11 - sum % 11;
+    
+        if (result != digits.charAt(1))
+            return false;
+    
+        return true;
+    };
+
+    const verificationCpfCnpj = (value) => {
+        if(value.replace(/\D/g, "").length == 11) {
+            if(!verificationCpf(value)) {
+               return 'CPF inválido';
+            } else {
+                setCnpjOuCpf(value);
+                return true 
+            };
+        } else if(value.replace(/\D/g, "").length == 14) {
+            if (!verificationCnpj(value)) {
+                return 'CNPJ inválido';
+            } else {
+                setCnpjOuCpf(value);
+                return true
+            }
+        } else {
+            return 'CPF ou CNPJ inválido';
+        };
+    };
+
     return (
         <div>
             <AvForm style={{ padding: '10px', alignItems: 'center'}}>
@@ -144,26 +244,41 @@ const Formulario2 = () => {
                             onChange={e => setnomeComprador(e.target.value)} 
                             placeholder="Nome Comprador:"
                             name='nomeComprador'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setPrimeiraCapa(e.target.value)} 
                             placeholder="Primeira capa:"
                             name='primeiraCapa'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setSegundaCapa(e.target.value)} 
                             placeholder="Segunda capa:" 
                             name='segundaCapa'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setTerceiraCapa(e.target.value)} 
                             placeholder="Terceira capa:"
                             name='terceiraCapa'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setQuartaCapa(e.target.value)} 
                             placeholder="Quarta capa:"
                             name='quartaCapa'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                         Nomes completos dos 8 (oito) Candidatos e nomes como candidatos:
@@ -172,41 +287,65 @@ const Formulario2 = () => {
                             onChange={e => setPrimeiraCapa2(e.target.value)} 
                             placeholder="Primeira capa:"
                             name='primeiraCapa2'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setSegundaCapa2(e.target.value)} 
                             placeholder="Segunda capa:" 
                             name='segundaCapa2'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setPagina3(e.target.value)} 
                             placeholder="Página 3:" 
                             name='pagina3'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setPagina4(e.target.value)} 
                             placeholder="Página 4:"
-                            name='pagina4' 
+                            name='pagina4'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setPagina5(e.target.value)} 
                             placeholder="Página 5:" 
                             name='pagina5'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setPagina6(e.target.value)} 
                             placeholder="Página 6:"
                             name='pagina6'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setTerceiraCapa2(e.target.value)}
                             placeholder="Terceira capa:" 
                             name='terceiraCapa2'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setQuartaCapa2(e.target.value)} 
                             placeholder="Quarta capa:" 
                             name='quartaCapa2'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                         Nomes completos dos 12 (doze) Candidatos e nomes como candidatos:
@@ -215,71 +354,113 @@ const Formulario2 = () => {
                             onChange={e => setPrimeiraCapa3(e.target.value)} 
                             placeholder="Primeira capa:" 
                             name='primeiraCapa3'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setSegundaCapa3(e.target.value)} 
                             placeholder="Segunda capa:" 
                             name='segundaCapa2'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => set_Pagina3(e.target.value)} 
                             placeholder="Página 3:" 
                             name='set_pagina3'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => set_Pagina4(e.target.value)} 
                             placeholder="Página 4:" 
                             name='set_pagina4'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => set_Pagina5(e.target.value)} 
                             placeholder="Página 5:"
                             name='set_pagina5'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => set_Pagina6(e.target.value)} 
                             placeholder="Página 6:" 
                             name='set_pagina6'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => set_Pagina7(e.target.value)} 
                             placeholder="Página 7:" 
                             name='set_pagina7'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => set_Pagina8(e.target.value)} 
                             placeholder="Página 8:" 
                             name='set_pagina8'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => set_Pagina9(e.target.value)} 
                             placeholder="Página 9:" 
                             name='pagina9'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => set_Pagina10(e.target.value)} 
                             placeholder="Página 10:" 
                             name='pagina10'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setTerceiraCapa3(e.target.value)} 
                             placeholder="Terceira capa:" 
                             name='terceiraCapa3'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setQuartaCapa3(e.target.value)} 
                             placeholder="Quarta capa:" 
                             name='quartaCapa3'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setNomeNotaFiscal(e.target.value)} 
                             placeholder="Nome Nota fiscal:"
                             name='nomeNotaFiscal'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={handleChange} 
                             placeholder="CEP para entrega:" 
                             name='cep'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             value={estadoEntrega}
@@ -314,104 +495,162 @@ const Formulario2 = () => {
                             type='number'  
                             placeholder="Número para entrega" 
                             name='numero' 
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setComplementoEntrega(e.target.value)} 
                             placeholder="Complemento" 
                             name='complemento'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setEnderecoNotaFiscal(e.target.value)} 
                             placeholder="Endereço para nota fiscal:" 
                             name='enderecoNotaFiscal'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setCidadeNotaFiscal(e.target.value)} 
                             placeholder="Cidade para nota fiscal:" 
                             name='cidadeNotaFiscal'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setEstadoNotaFiscal(e.target.value)} 
                             placeholder="Estado para nota fiscal:" 
                             name='estadoNotaFiscal'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setCepNotaFiscal(e.target.value)} 
                             placeholder="CEP para nota fiscal:" 
                             name='cepNotaFiscal'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setInscRg(e.target.value)} 
                             placeholder="Insc. Est./RG:" 
                             name='inscRg'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setCnpjOuCpf(e.target.value)} 
                             placeholder="CNPJ/CPF:" 
                             name='cnpjOuCpf'    
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'},
+                                verificationCpfCnpj
+                            }}
                         />
                         <AvField 
                             onChange={e => setTelefone(e.target.value)} 
                             placeholder="Telefone:" 
                             name='telefone'    
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setEmail(e.target.value)} 
                             placeholder="E-mail:" 
-                            name='email'    
+                            name='email'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
+                        <FormGroup style={{ paddingTop: '10px' }} check row>
+                            <Label style={{ paddingRight: '10px' }}check>
+                                <Input value='1' 
+                                    onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
+                              Edição com 4 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$2.000,00
+                            </Label>
+                    </FormGroup>
+                    <FormGroup style={{ paddingTop: '10px' }} check row>
+                            <Label style={{ paddingRight: '10px' }}check>
+                                <Input value='2' 
+                                    onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
+                              Edição com 4 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$3.000,00
+                            </Label>
+                    </FormGroup>
+                    <FormGroup style={{ paddingTop: '10px' }} check row>
+                            <Label style={{ paddingRight: '10px' }}check>
+                                <Input value='3' 
+                                    onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
+                             Edição com 4 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$5.400,00
+                            </Label>
+                    </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='1' 
+                            <Input value='4' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 8 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$3.600,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='2' 
+                            <Input value='5' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 8 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$5.600,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='3' 
+                            <Input value='6' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 8 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$10.400,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='4' 
+                            <Input value='7' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$4.800,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='5' 
+                            <Input value='8' 
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 12 Candidatos – Quantidade: 4.000 Exemplares - Valor: R$7.800,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
-                            <Input value='6'
+                            <Input value='9'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 12 Candidatos – Quantidade: 8.000 Exemplares - Valor: R$14.400,00
                         </Label>
                     </FormGroup>
                     <FormGroup>
-                            <Input 
+                            <AvField 
                                 onChange={e => setNomeDoRepresentanteComercial(e.target.value)} 
                                 placeholder="Nome do Representante Comercial:" 
-                                name='nomeDoRepresentanteComercial'    
+                                name='nomeDoRepresentanteComercial'
+                                validate={{
+                                    required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                                }}
                             />
-                            <Input 
+                            <AvField 
                                 onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} 
                                 placeholder="Cidade do Representante Comercial" 
-                                name='cidadeDoRepresentanteComercial'    
+                                name='cidadeDoRepresentanteComercial'
+                                validate={{
+                                    required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                                }} 
                             />
                         <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                             Envie as fotos dos candidatos e textos das matérias
@@ -421,6 +660,9 @@ const Formulario2 = () => {
                                 onChange={e => setFiles(e.target.files[0])} 
                                 type="file" 
                                 id="exampleCustomFileBrowser" 
+                                validate={{
+                                    required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                                }}
                                 name="customFile" />
                     </FormGroup>
                 </FormGroup>
