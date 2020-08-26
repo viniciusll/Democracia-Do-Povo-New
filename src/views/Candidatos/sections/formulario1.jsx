@@ -3,7 +3,7 @@ import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput, Uncontr
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
 import axios from 'axios';
-import { debounce, set } from 'lodash';
+import { debounce } from 'lodash';
 
 const Formulario1 = () => {
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
@@ -29,7 +29,6 @@ const Formulario1 = () => {
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
     const [image, setFiles] = useState(null);
     const [visible, setVisible] = useState(false);
-    const [error, setError] = useState(false);
 
     const onDismiss = () => setVisible(false);
 
@@ -216,13 +215,12 @@ const Formulario1 = () => {
     return (
         <div>
             <AvForm className="uploader" encType="multipart/form-data" style={{ padding: '10px', alignItems: 'center'}}>
-                <UncontrolledAlert fade={false} isOpen={visible} toggle={onDismiss} color='danger'>
-                    CPF ou CNPJ invalido
-                </UncontrolledAlert>
                 <FormGroup>
                     <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
                         name='nome' 
-                        required 
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                        }}
                         placeholder="Nome completo do Candidato:"
                     />
                         <Input onChange={e => setNomeComoCandidato(e.target.value)} placeholder="Nome como candidato:" />
@@ -245,7 +243,9 @@ const Formulario1 = () => {
                             onChange={handleChange} 
                             placeholder="CEP para entrega:" 
                             name='cep' 
-                            required
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             value={cidadeEntrega} 
@@ -280,9 +280,7 @@ const Formulario1 = () => {
                             onChange={e => setNumero(e.target.value)} 
                             placeholder="Número para entrega:" 
                             name='number' 
-                            required 
                             type='number' 
-                            required 
                         />
                         <AvField 
                             onChange={e => setComplemento(e.target.value)} 
@@ -293,31 +291,41 @@ const Formulario1 = () => {
                             onChange={e => setEnderecoNotaFiscal(e.target.value)} 
                             placeholder="Endereço para nota fiscal:" 
                             name='endereço' 
-                            required
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setCidadeNotaFiscal(e.target.value)} 
                             placeholder="Cidade para nota fiscal:" 
                             name='cidadeNotafiscal' 
-                            required
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setEstadoNotaFiscal(e.target.value)} 
                             placeholder="Estado para nota fiscal:" 
                             name='stateNotafiscal' 
-                            required
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setCepNotaFiscal(e.target.value)} 
                             placeholder="CEP para nota fiscal:" 
                             name='cepNotofiscal' 
-                            required 
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setInscRg(e.target.value)} 
                             placeholder="Insc. Est./RG:" 
                             name='rg' 
-                            required 
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             // onChange={handleChangeCpfCnpj} 
@@ -332,13 +340,17 @@ const Formulario1 = () => {
                             onChange={e => setTelefone(e.target.value)} 
                             placeholder="Telefone:" 
                             name='telefone' 
-                            required
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                         <AvField 
                             onChange={e => setEmail(e.target.value)} 
                             placeholder="E-mail:" 
                             name='email' 
-                            required
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
                         />
                 </FormGroup>
                 <div style={{ textAlign: 'center'}}>
@@ -443,9 +455,23 @@ const Formulario1 = () => {
                     </FormGroup>
                 </div>
                 <FormGroup>
-                        <AvField name='representante' required onChange={e => setNomeDoRepresentanteComercial(e.target.value)} placeholder="Nome do Representante Comercial:" />
+                        <AvField 
+                            name='representante' 
+                            onChange={e => setNomeDoRepresentanteComercial(e.target.value)} 
+                            placeholder="Nome do Representante Comercial:" 
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
+                        />
                         <br/>
-                        <AvField name='cidade representante' required onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} placeholder="Cidade do Representante Comercial" />
+                        <AvField 
+                            name='cidade representante' 
+                            onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} 
+                            placeholder="Cidade do Representante Comercial" 
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
+                        />
                         <CustomInput name='file' required onChange={e => handleUpload(e.target.files[0])} type="file" id="exampleCustomFileBrowser" name="file" />
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista para <br />

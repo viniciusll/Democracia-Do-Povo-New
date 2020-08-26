@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput } from 'reactstrap';
+import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
 
 const Formulario2 = () => {
@@ -101,7 +102,7 @@ const Formulario2 = () => {
 
     return (
         <div>
-            <Form style={{ padding: '10px', alignItems: 'center'}}>
+            <AvForm style={{ padding: '10px', alignItems: 'center'}}>
                 <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                     FORMULÁRIO PARA PEDIDOS <br />
                     Revista Panfleto em Revista
@@ -110,129 +111,208 @@ const Formulario2 = () => {
                     Nomes completos dos 4 (quatro) Candidatos e nomes como candidatos
                 </h3>
                 <FormGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setPrimeiraCapa(e.target.value)} placeholder="Primeira capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setSegundaCapa(e.target.value)} placeholder="Segunda capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setTerceiraCapa(e.target.value)} placeholder="Terceira capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setQuartaCapa(e.target.value)} placeholder="Quarta capa:" />
-                    </InputGroup>
+                        <AvField 
+                            onChange={e => setPrimeiraCapa(e.target.value)} 
+                            placeholder="Primeira capa:"
+                            name='primeiraCapa'
+                        />
+                        <AvField 
+                            onChange={e => setSegundaCapa(e.target.value)} 
+                            placeholder="Segunda capa:" 
+                            name='segundaCapa'
+                        />
+                        <AvField 
+                            onChange={e => setTerceiraCapa(e.target.value)} 
+                            placeholder="Terceira capa:"
+                            name='terceiraCapa'
+                        />
+                        <AvField 
+                            onChange={e => setQuartaCapa(e.target.value)} 
+                            placeholder="Quarta capa:"
+                            name='quartaCapa'
+                        />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                         Nomes completos dos 8 (oito) Candidatos e nomes como candidatos:
                     </h3>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setPrimeiraCapa2(e.target.value)} placeholder="Primeira capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setSegundaCapa2(e.target.value)} placeholder="Segunda capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setPagina3(e.target.value)} placeholder="Página 3:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setPagina4(e.target.value)} placeholder="Página 4:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setPagina5(e.target.value)} placeholder="Página 5:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setPagina6(e.target.value)} placeholder="Página 6:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setTerceiraCapa2(e.target.value)} placeholder="Terceira capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setQuartaCapa2(e.target.value)} placeholder="Quarta capa:" />
-                    </InputGroup>
+                        <AvField 
+                            onChange={e => setPrimeiraCapa2(e.target.value)} 
+                            placeholder="Primeira capa:"
+                            name='primeiraCapa2'
+                        />
+                        <AvField 
+                            onChange={e => setSegundaCapa2(e.target.value)} 
+                            placeholder="Segunda capa:" 
+                            name='segundaCapa2'
+                        />
+                        <AvField 
+                            onChange={e => setPagina3(e.target.value)} 
+                            placeholder="Página 3:" 
+                            name='pagina3'
+                        />
+                        <AvField 
+                            onChange={e => setPagina4(e.target.value)} 
+                            placeholder="Página 4:"
+                            name='pagina4' 
+                        />
+                        <AvField 
+                            onChange={e => setPagina5(e.target.value)} 
+                            placeholder="Página 5:" 
+                            name='pagina5'
+                        />
+                        <AvField 
+                            onChange={e => setPagina6(e.target.value)} 
+                            placeholder="Página 6:"
+                            name='pagina6'
+                        />
+                        <AvField 
+                            onChange={e => setTerceiraCapa2(e.target.value)}
+                            placeholder="Terceira capa:" 
+                            name='terceiraCapa2'
+                        />
+                        <AvField 
+                            onChange={e => setQuartaCapa2(e.target.value)} 
+                            placeholder="Quarta capa:" 
+                            name='quartaCapa2'
+                        />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                         Nomes completos dos 12 (doze) Candidatos e nomes como candidatos:
                     </h3>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setPrimeiraCapa3(e.target.value)} placeholder="Primeira capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setSegundaCapa3(e.target.value)} placeholder="Segunda capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => set_Pagina3(e.target.value)} placeholder="Página 3:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => set_Pagina4(e.target.value)} placeholder="Página 4:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => set_Pagina5(e.target.value)} placeholder="Página 5:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => set_Pagina6(e.target.value)} placeholder="Página 6:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => set_Pagina7(e.target.value)} placeholder="Página 7:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => set_Pagina8(e.target.value)} placeholder="Página 8:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => set_Pagina9(e.target.value)} placeholder="Página 9:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => set_Pagina10(e.target.value)} placeholder="Página 10:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setTerceiraCapa3(e.target.value)} placeholder="Terceira capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setQuartaCapa3(e.target.value)} placeholder="Quarta capa:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setRuaEntrega(e.target.value)} placeholder="Rua para entrega" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setBairroEntrega(e.target.value)} placeholder="Bairro para entrega" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setNumeroEntrega(e.target.value)} type='number' placeholder="Número para entrega" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setComplementoEntrega(e.target.value)} placeholder="Complemento" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCidadeEntrega(e.target.value)} placeholder="Cidade para entrega:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEstadoEntrega(e.target.value)} placeholder="Estado para entrega:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCepEntrega(e.target.value)} placeholder="CEP para entrega:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEnderecoNotaFiscal(e.target.value)} placeholder="Endereço para nota fiscal:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCidadeNotaFiscal(e.target.value)} placeholder="Cidade para nota fiscal:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEstadoNotaFiscal(e.target.value)} placeholder="Estado para nota fiscal:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCepNotaFiscal(e.target.value)} placeholder="CEP para nota fiscal:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setInscRg(e.target.value)} placeholder="Insc. Est./RG:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setCnpjOuCpf(e.target.value)} placeholder="CNPJ/CPF:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setTelefone(e.target.value)} placeholder="Telefone:" />
-                    </InputGroup>
-                    <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                        <Input onChange={e => setEmail(e.target.value)} placeholder="E-mail:" />
-                    </InputGroup>
+                        <AvField 
+                            onChange={e => setPrimeiraCapa3(e.target.value)} 
+                            placeholder="Primeira capa:" 
+                            name='primeiraCapa3'
+                        />
+                        <AvField 
+                            onChange={e => setSegundaCapa3(e.target.value)} 
+                            placeholder="Segunda capa:" 
+                            name='segundaCapa2'
+                        />
+                        <AvField 
+                            onChange={e => set_Pagina3(e.target.value)} 
+                            placeholder="Página 3:" 
+                            name='set_pagina3'
+                        />
+                        <AvField 
+                            onChange={e => set_Pagina4(e.target.value)} 
+                            placeholder="Página 4:" 
+                            name='set_pagina4'
+                        />
+                        <AvField 
+                            onChange={e => set_Pagina5(e.target.value)} 
+                            placeholder="Página 5:"
+                            name='set_pagina5'
+                        />
+                        <AvField 
+                            onChange={e => set_Pagina6(e.target.value)} 
+                            placeholder="Página 6:" 
+                            name='set_pagina6'
+                        />
+                        <AvField 
+                            onChange={e => set_Pagina7(e.target.value)} 
+                            placeholder="Página 7:" 
+                            name='set_pagina7'
+                        />
+                        <AvField 
+                            onChange={e => set_Pagina8(e.target.value)} 
+                            placeholder="Página 8:" 
+                            name='set_pagina8'
+                        />
+                        <AvField 
+                            onChange={e => set_Pagina9(e.target.value)} 
+                            placeholder="Página 9:" 
+                            name='pagina9'
+                        />
+                        <AvField 
+                            onChange={e => set_Pagina10(e.target.value)} 
+                            placeholder="Página 10:" 
+                            name='pagina10'
+                        />
+                        <AvField 
+                            onChange={e => setTerceiraCapa3(e.target.value)} 
+                            placeholder="Terceira capa:" 
+                            name='terceiraCapa3'
+                        />
+                        <AvField 
+                            onChange={e => setQuartaCapa3(e.target.value)} 
+                            placeholder="Quarta capa:" 
+                            name='quartaCapa3'
+                        />
+                        <AvField 
+                            onChange={e => setRuaEntrega(e.target.value)} 
+                            placeholder="Rua para entrega" 
+                            name='rua'
+                        />
+                        <AvField 
+                            onChange={e => setBairroEntrega(e.target.value)} 
+                            placeholder="Bairro para entrega" 
+                            name='bairro'
+                        />
+                        <AvField 
+                            onChange={e => setNumeroEntrega(e.target.value)} 
+                            type='number'  
+                            placeholder="Número para entrega" 
+                            name='numero'
+                        />
+                        <AvField 
+                            onChange={e => setComplementoEntrega(e.target.value)} 
+                            placeholder="Complemento" 
+                            name='complemento'
+                        />
+                        <AvField 
+                            onChange={e => setCidadeEntrega(e.target.value)} 
+                            placeholder="Cidade para entrega:" 
+                            name='cidade'
+                            />
+                        <AvField 
+                            onChange={e => setEstadoEntrega(e.target.value)} 
+                            placeholder="Estado para entrega:" 
+                            name='estado'
+                        />
+                        <AvField 
+                            onChange={e => setCepEntrega(e.target.value)} 
+                            placeholder="CEP para entrega:" 
+                            name='cep'
+                        />
+                        <AvField 
+                            onChange={e => setEnderecoNotaFiscal(e.target.value)} 
+                            placeholder="Endereço para nota fiscal:" 
+                            name='enderecoNotaFiscal'
+                        />
+                        <AvField 
+                            onChange={e => setCidadeNotaFiscal(e.target.value)} 
+                            placeholder="Cidade para nota fiscal:" 
+                            name='cidadeNotaFiscal'
+                        />
+                        <AvField 
+                            onChange={e => setEstadoNotaFiscal(e.target.value)} 
+                            placeholder="Estado para nota fiscal:" 
+                            name='estadoNotaFiscal'
+                        />
+                        <AvField 
+                            onChange={e => setCepNotaFiscal(e.target.value)} 
+                            placeholder="CEP para nota fiscal:" 
+                            name='cepNotaFiscal'
+                        />
+                        <AvField 
+                            onChange={e => setInscRg(e.target.value)} 
+                            placeholder="Insc. Est./RG:" 
+                            name='inscRg'
+                        />
+                        <AvField 
+                            onChange={e => setCnpjOuCpf(e.target.value)} 
+                            placeholder="CNPJ/CPF:" 
+                            name='cnpjOuCpf'    
+                        />
+                        <AvField 
+                            onChange={e => setTelefone(e.target.value)} 
+                            placeholder="Telefone:" 
+                            name='telefone'    
+                        />
+                        <AvField 
+                            onChange={e => setEmail(e.target.value)} 
+                            placeholder="E-mail:" 
+                            name='email'    
+                        />
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }}check>
                             <Input value='1' 
@@ -276,19 +356,25 @@ const Formulario2 = () => {
                         </Label>
                     </FormGroup>
                     <FormGroup>
-                        <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                            <Input onChange={e => setNomeDoRepresentanteComercial(e.target.value)} placeholder="Nome do Representante Comercial:" />
-                        </InputGroup>
-                        <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                            <Input onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} placeholder="Cidade do Representante Comercial" />
-                        </InputGroup>
+                            <Input 
+                                onChange={e => setNomeDoRepresentanteComercial(e.target.value)} 
+                                placeholder="Nome do Representante Comercial:" 
+                                name='nomeDoRepresentanteComercial'    
+                            />
+                            <Input 
+                                onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} 
+                                placeholder="Cidade do Representante Comercial" 
+                                name='cidadeDoRepresentanteComercial'    
+                            />
                         <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                             Envie as fotos dos candidatos e textos das matérias
                             que entrarão na edição da Revista Panfleto em Revista.
                         </p>
-                        <InputGroup size="lg" style={{ paddingTop: '10px' }}>
-                            <CustomInput onChange={e => setFiles(e.target.files[0])} type="file" id="exampleCustomFileBrowser" name="customFile" />
-                        </InputGroup>
+                            <CustomInput 
+                                onChange={e => setFiles(e.target.files[0])} 
+                                type="file" 
+                                id="exampleCustomFileBrowser" 
+                                name="customFile" />
                     </FormGroup>
                 </FormGroup>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
@@ -296,7 +382,7 @@ const Formulario2 = () => {
                         Enviar
                     </Button>
                 </div>
-            </Form>
+            </AvForm>
         </div>
     )
 }
