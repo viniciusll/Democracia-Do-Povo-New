@@ -252,7 +252,7 @@ const Formulario1 = () => {
                             value={cidadeEntrega} 
                             onChange={e => setCidadeEntrega(e.target.value)} 
                             placeholder="Cidade para entrega:" 
-                            name='city' 
+                            name='city'
                             disabled 
                         />
                         <AvField 

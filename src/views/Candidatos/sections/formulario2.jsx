@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput } from 'reactstrap';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
+import { debounce } from 'lodash';
+import axios from 'axios';
 
 const Formulario2 = () => {
     const [primeiraCapa, setPrimeiraCapa] = useState('');
@@ -102,6 +104,29 @@ const Formulario2 = () => {
 
         const request = await api.post('/ficha/criarFormulario2', data);
         console.log(request);
+    };
+
+    const delayedQuery = useRef(
+        debounce(e => {
+            setCepEntrega(e);
+            axios.get(`http://viacep.com.br/ws/${e}/json/`)
+                .then((response) => {
+                    console.log(response.data);
+                    setCidadeEntrega(response.data.localidade);
+                    setEstadoEntrega(response.data.uf);
+                    setBairroEntrega(response.data.bairro);
+                    setRuaEntrega(response.data.logradouro);
+                }).catch(() => {
+                    setCidadeEntrega('');
+                    setEstadoEntrega('');
+                    setBairroEntrega('');
+                    setRuaEntrega('');
+                });
+        }, 500)
+    ).current;
+
+    const handleChange = (e) => {
+        delayedQuery(e.target.value);
     };
 
     return (
@@ -252,40 +277,48 @@ const Formulario2 = () => {
                             name='nomeNotaFiscal'
                         />
                         <AvField 
-                            onChange={e => setRuaEntrega(e.target.value)} 
-                            placeholder="Rua para entrega" 
-                            name='rua'
+                            onChange={handleChange} 
+                            placeholder="CEP para entrega:" 
+                            name='cep'
                         />
                         <AvField 
+                            value={estadoEntrega}
+                            onChange={e => setEstadoEntrega(e.target.value)} 
+                            placeholder="Estado para entrega:" 
+                            name='estado'
+                            disabled 
+                        />
+                         <AvField 
+                            value={cidadeEntrega}
+                            onChange={e => setCidadeEntrega(e.target.value)} 
+                            placeholder="Cidade para entrega:" 
+                            name='cidade'
+                            disabled 
+                            />
+                        <AvField 
+                            value={bairroEntrega}
                             onChange={e => setBairroEntrega(e.target.value)} 
                             placeholder="Bairro para entrega" 
                             name='bairro'
+                            disabled 
+                        />
+                        <AvField 
+                            value={ruaEntrega}
+                            onChange={e => setRuaEntrega(e.target.value)} 
+                            placeholder="Rua para entrega" 
+                            name='rua'
+                            disabled 
                         />
                         <AvField 
                             onChange={e => setNumeroEntrega(e.target.value)} 
                             type='number'  
                             placeholder="Número para entrega" 
-                            name='numero'
+                            name='numero' 
                         />
                         <AvField 
                             onChange={e => setComplementoEntrega(e.target.value)} 
                             placeholder="Complemento" 
                             name='complemento'
-                        />
-                        <AvField 
-                            onChange={e => setCidadeEntrega(e.target.value)} 
-                            placeholder="Cidade para entrega:" 
-                            name='cidade'
-                            />
-                        <AvField 
-                            onChange={e => setEstadoEntrega(e.target.value)} 
-                            placeholder="Estado para entrega:" 
-                            name='estado'
-                        />
-                        <AvField 
-                            onChange={e => setCepEntrega(e.target.value)} 
-                            placeholder="CEP para entrega:" 
-                            name='cep'
                         />
                         <AvField 
                             onChange={e => setEnderecoNotaFiscal(e.target.value)} 
