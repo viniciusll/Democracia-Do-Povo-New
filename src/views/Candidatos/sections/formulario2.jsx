@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput } from 'reactstrap';
+import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput, UncontrolledAlert } from 'reactstrap';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
 import { debounce } from 'lodash';
@@ -53,6 +53,13 @@ const Formulario2 = () => {
     const [image, setFiles] = useState(null);
     const [nomeComprador, setnomeComprador] = useState('');
     const [nomeNotaFiscal, setNomeNotaFiscal] = useState('');
+    const [visible2, setVisible2] = useState(false);
+
+    const onDismiss = () => setVisible2(false);
+  
+      const handleUpload = async file => {
+          setFiles(file);
+      };
 
     const enviarFormulario = async() => {
         const data = new FormData();
@@ -243,6 +250,9 @@ const Formulario2 = () => {
     return (
         <div>
             <AvForm style={{ padding: '10px', alignItems: 'center'}}>
+                <UncontrolledAlert   UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
+                    Pedido Emitido com sucesso
+                </UncontrolledAlert>
                 <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                     FORMULÁRIO PARA PEDIDOS <br />
                     Revista Panfleto em Revista
@@ -457,6 +467,7 @@ const Formulario2 = () => {
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'}
                             }}
                         />
+                        <br/>
                         <AvField 
                             onChange={e => setNomeNotaFiscal(e.target.value)} 
                             placeholder="Nome Nota fiscal:"
@@ -658,19 +669,19 @@ const Formulario2 = () => {
                                 }}
                             />
                             <AvField 
-                                onChange={e => setCidadeDoRepresentanteComercial(e.target.value)} 
-                                placeholder="Cidade do Representante Comercial" 
+                                onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
+                                placeholder="Cidade do Representante Comercial"
                                 name='cidadeDoRepresentanteComercial'
                                 validate={{
                                     required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                                }} 
+                                }}
                             />
                         <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                             Envie as fotos dos candidatos e textos das matérias
                             que entrarão na edição da Revista Panfleto em Revista.
                         </p>
-                            <CustomInput 
-                                onChange={e => setFiles(e.target.files[0])} 
+                            <CustomInput
+                                onChange={e => handleUpload(e.target.files[0])} 
                                 type="file" 
                                 id="exampleCustomFileBrowser" 
                                 validate={{
