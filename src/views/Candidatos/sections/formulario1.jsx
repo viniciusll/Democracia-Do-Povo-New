@@ -3,7 +3,7 @@ import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput, Uncontr
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
 import axios from 'axios';
-import { debounce } from 'lodash';
+import { debounce, set } from 'lodash';
 
 const Formulario1 = () => {
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
@@ -29,6 +29,7 @@ const Formulario1 = () => {
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
     const [image, setFiles] = useState(null);
     const [visible, setVisible] = useState(false);
+    const [error, setError] = useState(false);
 
     const onDismiss = () => setVisible(false);
 
@@ -114,7 +115,6 @@ const Formulario1 = () => {
 
     const verificationCnpj = (cnpj) => {
         cnpj = cnpj.replace(/[^\d]+/g, '');
-        console.log(cnpj);
         if (cnpj == '') return false;
 
         if (cnpj.length != 14)
@@ -170,20 +170,25 @@ const Formulario1 = () => {
         return true;
     };
 
-    const delayedQueryCpfCnpj = useRef(
-        debounce(e => {
-            setCnpjOuCpf(e);
-            if (e.replace(/\D/g, "").length == 11) {
-                if(verificationCpf(e) == false)  setVisible(true);
-            } else if (e.replace(/\D/g, "").length == 14) {
-                if(verificationCnpj(e) == false) setVisible(true);
-            } else if (e.replace(/\D/g, "").length < 11) {
-                setVisible(true);
-            } else if (e.replace(/\D/g, "").length > 14) {
-                setVisible(true);
+    const verificationCpfCnpj = (value) => {
+        if(value.replace(/\D/g, "").length == 11){
+            if(!verificationCpf(value)) {
+               return 'CPF inválido';
+            } else {
+                setCnpjOuCpf(value);
+                return true 
             };
-        }, 500)
-    ).current;
+        } else if(value.replace(/\D/g, "").length == 14) {
+            if (!verificationCnpj(value)) {
+                return 'CNPJ inválido';
+            } else {
+                setCnpjOuCpf(value);
+                return true
+            }
+        } else {
+            return 'CPF ou CNPJ inválido';
+        };
+    };
 
     const delayedQuery = useRef(
         debounce(e => {
@@ -206,10 +211,6 @@ const Formulario1 = () => {
 
     const handleChange = (e) => {
         delayedQuery(e.target.value);
-    };
-    
-    const handleChangeCpfCnpj = (e) => {
-        delayedQueryCpfCnpj(e.target.value);
     };
 
     return (
@@ -240,21 +241,105 @@ const Formulario1 = () => {
                     </FormGroup>
                 </div>
                 <FormGroup>
-                        <AvField onChange={handleChange} placeholder="CEP para entrega:" name='cep' required/>
-                        <AvField value={cidadeEntrega} onChange={e => setCidadeEntrega(e.target.value)} placeholder="Cidade para entrega:" name='city' disabled />
-                        <AvField value={estadoEntrega} onChange={e => setEstadoEntrega(e.target.value)} placeholder="Estado para entrega:" name='estado' disabled />
-                        <AvField value={rua} onChange={e => setRua(e.target.value)} placeholder="Rua para entrega:" name='street' disabled />
-                        <AvField value={bairro} onChange={e => setBairro(e.target.value)} placeholder="Bairro para entrega:" name='bairro' disabled />
-                        <AvField value={numero} onChange={e => setNumero(e.target.value)} placeholder="Número para entrega:" name='number' required type='number' required />
-                        <AvField onChange={e => setComplemento(e.target.value)} placeholder="Complemento para entrega:"  name='complemento' />
-                        <AvField onChange={e => setEnderecoNotaFiscal(e.target.value)} placeholder="Endereço para nota fiscal:" name='endereço' required/>
-                        <AvField onChange={e => setCidadeNotaFiscal(e.target.value)} placeholder="Cidade para nota fiscal:" name='cidadeNotafiscal' required/>
-                        <AvField onChange={e => setEstadoNotaFiscal(e.target.value)} placeholder="Estado para nota fiscal:" name='stateNotafiscal' required/>
-                        <AvField onChange={e => setCepNotaFiscal(e.target.value)} placeholder="CEP para nota fiscal:" name='cepNotofiscal' required />
-                        <AvField onChange={e => setInscRg(e.target.value)} placeholder="Insc. Est./RG:" name='rg' required />
-                        <AvField onChange={handleChangeCpfCnpj} placeholder="CNPJ/CPF:" name='cpf' required/>
-                        <AvField onChange={e => setTelefone(e.target.value)} placeholder="Telefone:" name='telefone' required/>
-                        <AvField onChange={e => setEmail(e.target.value)} placeholder="E-mail:" name='email' required/>
+                        <AvField 
+                            onChange={handleChange} 
+                            placeholder="CEP para entrega:" 
+                            name='cep' 
+                            required
+                        />
+                        <AvField 
+                            value={cidadeEntrega} 
+                            onChange={e => setCidadeEntrega(e.target.value)} 
+                            placeholder="Cidade para entrega:" 
+                            name='city' 
+                            disabled 
+                        />
+                        <AvField 
+                            value={estadoEntrega} 
+                            onChange={e => setEstadoEntrega(e.target.value)} 
+                            placeholder="Estado para entrega:" 
+                            name='estado' 
+                            disabled 
+                        />
+                        <AvField 
+                            value={rua} 
+                            onChange={e => setRua(e.target.value)} 
+                            placeholder="Rua para entrega:" 
+                            name='street' 
+                            disabled 
+                        />
+                        <AvField 
+                            value={bairro} 
+                            onChange={e => setBairro(e.target.value)} 
+                            placeholder="Bairro para entrega:" 
+                            name='bairro' 
+                            disabled 
+                        />
+                        <AvField 
+                            value={numero} 
+                            onChange={e => setNumero(e.target.value)} 
+                            placeholder="Número para entrega:" 
+                            name='number' 
+                            required 
+                            type='number' 
+                            required 
+                        />
+                        <AvField 
+                            onChange={e => setComplemento(e.target.value)} 
+                            placeholder="Complemento para entrega:"  
+                            name='complemento' 
+                        />
+                        <AvField 
+                            onChange={e => setEnderecoNotaFiscal(e.target.value)} 
+                            placeholder="Endereço para nota fiscal:" 
+                            name='endereço' 
+                            required
+                        />
+                        <AvField 
+                            onChange={e => setCidadeNotaFiscal(e.target.value)} 
+                            placeholder="Cidade para nota fiscal:" 
+                            name='cidadeNotafiscal' 
+                            required
+                        />
+                        <AvField 
+                            onChange={e => setEstadoNotaFiscal(e.target.value)} 
+                            placeholder="Estado para nota fiscal:" 
+                            name='stateNotafiscal' 
+                            required
+                        />
+                        <AvField 
+                            onChange={e => setCepNotaFiscal(e.target.value)} 
+                            placeholder="CEP para nota fiscal:" 
+                            name='cepNotofiscal' 
+                            required 
+                        />
+                        <AvField 
+                            onChange={e => setInscRg(e.target.value)} 
+                            placeholder="Insc. Est./RG:" 
+                            name='rg' 
+                            required 
+                        />
+                        <AvField 
+                            // onChange={handleChangeCpfCnpj} 
+                            placeholder="CNPJ/CPF:" 
+                            name='cpf' 
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'},
+                                verificationCpfCnpj
+                            }}
+                        />
+                        <AvField 
+                            onChange={e => setTelefone(e.target.value)} 
+                            placeholder="Telefone:" 
+                            name='telefone' 
+                            required
+                        />
+                        <AvField 
+                            onChange={e => setEmail(e.target.value)} 
+                            placeholder="E-mail:" 
+                            name='email' 
+                            required
+                        />
                 </FormGroup>
                 <div style={{ textAlign: 'center'}}>
                 <p>Quantidade de Exemplares: </p>
