@@ -48,10 +48,14 @@ const Formulario2 = () => {
     const [nomeDoRepresentanteComercial, setNomeDoRepresentanteComercial] = useState('');
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
     const [image, setFiles] = useState(null);
+    const [nomeComprador, setnomeComprador] = useState('');
+    const [nomeNotaFiscal, setNomeNotaFiscal] = useState('');
 
     const enviarFormulario = async() => {
         const data = new FormData();
         data.append('file', image);
+        data.append('nomeComprador', nomeComprador);
+        data.append('nomeNotaFiscal', nomeNotaFiscal);
         data.append('primeiraCapa', primeiraCapa);
         data.append('segundaCapa', segundaCapa);
         data.append('terceiraCapa', terceiraCapa);
@@ -111,6 +115,11 @@ const Formulario2 = () => {
                     Nomes completos dos 4 (quatro) Candidatos e nomes como candidatos
                 </h3>
                 <FormGroup>
+                        <AvField 
+                            onChange={e => setnomeComprador(e.target.value)} 
+                            placeholder="Nome Comprador:"
+                            name='nomeComprador'
+                        />
                         <AvField 
                             onChange={e => setPrimeiraCapa(e.target.value)} 
                             placeholder="Primeira capa:"
@@ -236,6 +245,11 @@ const Formulario2 = () => {
                             onChange={e => setQuartaCapa3(e.target.value)} 
                             placeholder="Quarta capa:" 
                             name='quartaCapa3'
+                        />
+                        <AvField 
+                            onChange={e => setNomeNotaFiscal(e.target.value)} 
+                            placeholder="Nome Nota fiscal:"
+                            name='nomeNotaFiscal'
                         />
                         <AvField 
                             onChange={e => setRuaEntrega(e.target.value)} 
@@ -384,7 +398,7 @@ const Formulario2 = () => {
                 </div>
             </AvForm>
         </div>
-    )
-}
+    );
+};
 
 export default Formulario2;

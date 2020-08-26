@@ -28,21 +28,21 @@ const Formulario1 = () => {
     const [nomeDoRepresentanteComercial, setNomeDoRepresentanteComercial] = useState('');
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
     const [image, setFiles] = useState(null);
+    const [nomeNotaFiscal, setNomeNotaFiscal] = useState('');
     const [visible, setVisible] = useState(false);
 
-    const onDismiss = () => setVisible(false);
-
     const handleUpload = async file => {
-        setFiles(file)
+        setFiles(file);
     };
 
     const enviarFormulario = async () => {
         console.log('files: ', image);
         const data = new FormData();
-        data.append('file', image)
+        data.append('file', image);
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
         data.append('nomeComoCandidato', nomeComoCandidato);
         data.append('candidatoA', candidatoA);
+        data.append('nomeNotaFiscal', nomeNotaFiscal);
         data.append('cidadeEntrega', cidadeEntrega);
         data.append('rua', rua);
         data.append('numero', numero);
@@ -65,6 +65,7 @@ const Formulario1 = () => {
         if (
             image == null ||
             nomeCompletoCandidato == '' || 
+            nomeNotaFiscal == '' || 
             nomeComoCandidato == '' || 
             candidatoA == '' || 
             cidadeEntrega == '' || 
@@ -286,6 +287,14 @@ const Formulario1 = () => {
                             onChange={e => setComplemento(e.target.value)} 
                             placeholder="Complemento para entrega:"  
                             name='complemento' 
+                        />
+                        <AvField
+                            onChange={e => setNomeNotaFiscal(e.target.value)}
+                            name='nomeNotaFiscal' 
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
+                            placeholder="Nome completo do Candidato:"
                         />
                         <AvField 
                             onChange={e => setEnderecoNotaFiscal(e.target.value)} 
