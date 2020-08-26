@@ -171,7 +171,7 @@ const Formulario1 = () => {
     };
 
     const verificationCpfCnpj = (value) => {
-        if(value.replace(/\D/g, "").length == 11){
+        if(value.replace(/\D/g, "").length == 11) {
             if(!verificationCpf(value)) {
                return 'CPF inválido';
             } else {
