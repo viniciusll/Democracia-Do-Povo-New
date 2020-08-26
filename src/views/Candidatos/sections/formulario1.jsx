@@ -4,6 +4,7 @@ import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
 import axios from 'axios';
 import { debounce } from 'lodash';
+import { mask, unMask } from 'remask';
 
 const Formulario1 = () => {
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
@@ -175,14 +176,12 @@ const Formulario1 = () => {
             if(!verificationCpf(value)) {
                return 'CPF inválido';
             } else {
-                setCnpjOuCpf(value);
                 return true 
             };
         } else if(value.replace(/\D/g, "").length == 14) {
             if (!verificationCnpj(value)) {
                 return 'CNPJ inválido';
             } else {
-                setCnpjOuCpf(value);
                 return true
             }
         } else {
@@ -211,6 +210,11 @@ const Formulario1 = () => {
 
     const handleChange = (e) => {
         delayedQuery(e.target.value);
+    };
+
+    const handleChangeCpfCnpj = (e) => {
+        const value = e.target.value;
+        setCnpjOuCpf(mask(unMask(value), ['999.999.999-99', '99.999.999/9999-99']));
     };
 
     return (
@@ -337,9 +341,11 @@ const Formulario1 = () => {
                             }}
                         />
                         <AvField 
-                            // onChange={handleChangeCpfCnpj} 
+                            onChange={handleChangeCpfCnpj} 
                             placeholder="CNPJ/CPF:" 
-                            name='cpf' 
+                            name='cpf'
+                            value={cnpjOuCpf}
+                            id="cpfcnpj"
                             validate={{
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'},
                                 verificationCpfCnpj

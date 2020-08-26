@@ -17,11 +17,14 @@
         "prop-types": "15.7.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
+        "react-input-mask": "^2.0.4",
         "react-router-dom": "5.0.1",
         "react-router-hash-link": "^1.2.2",
         "react-scripts": "^3.4.1",
         "react-scroll-to-component": "^1.0.2",
-        "reactstrap": "^8.0.1"
+        "reactstrap": "^8.0.1",
+        "remask": "0.1.0-alpha.5",
+        "vanilla-masker": "^1.2.0"
     },
     "scripts": {
         "start": "react-scripts start",
