@@ -550,7 +550,7 @@ const Formulario2 = () => {
                         <AvField 
                             onChange={e => setCnpjOuCpf(e.target.value)} 
                             placeholder="CNPJ/CPF:" 
-                            name='cnpjOuCpf'    
+                            name='cpf'    
                             validate={{
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'},
                                 verificationCpfCnpj
