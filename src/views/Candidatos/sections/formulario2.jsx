@@ -235,6 +235,11 @@ const Formulario2 = () => {
         setCnpjOuCpf(mask(unMask(value), ['999.999.999-99', '99.999.999/9999-99']));
     };
 
+    const handleChangeTelefone = (e) => {
+        const value = e.target.value;
+        setTelefone(mask(unMask(value), ['99 99999-9999', '99 9999-9999']))
+    };
+
     return (
         <div>
             <AvForm style={{ padding: '10px', alignItems: 'center'}}>
@@ -564,9 +569,10 @@ const Formulario2 = () => {
                             }}
                         />
                         <AvField 
-                            onChange={e => setTelefone(e.target.value)} 
+                            onChange={handleChangeTelefone} 
                             placeholder="Telefone:" 
-                            name='telefone'    
+                            name='telefone' 
+                            value={telefone}   
                             validate={{
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'}
                             }}
