@@ -294,7 +294,7 @@ const Formulario1 = () => {
                             validate={{
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'}
                             }}
-                            placeholder="Nome completo do Candidato:"
+                            placeholder="Nome nota fiscal:"
                         />
                         <AvField 
                             onChange={e => setEnderecoNotaFiscal(e.target.value)} 
