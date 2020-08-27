@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
+import { AvField } from 'availity-reactstrap-validation';
 
 class Autocomplete extends Component {
   static propTypes = {
@@ -106,7 +107,7 @@ class Autocomplete extends Component {
     if (showSuggestions && userInput) {
       if (filteredSuggestions.length) {
         suggestionsListComponent = (
-          <ul class="suggestions">
+          <ul className="suggestions">
             {filteredSuggestions.map((suggestion, index) => {
               let className;
 
@@ -138,8 +139,12 @@ class Autocomplete extends Component {
 
     return (
       <Fragment>
-        <input
+        <AvField
           type="text"
+          name='representantes'
+          validate={{
+            required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+          }}
           onChange={onChange}
           onKeyDown={onKeyDown}
           value={userInput}

@@ -38,10 +38,10 @@ const Formulario1 = () => {
   const onDismiss = () => setVisible2(false);
 
   const getRepresentantes = async () => {
-      api.get('/ficha/representantes')
+      await api.get('/ficha/representantes')
         .then((response) => {
-            console.log(response.data);
-            setRepresentantes(response.data);
+            console.log(response.data.nomesRepresentantes);
+            setRepresentantes(response.data.nomesRepresentantes);
         });
   };
 
@@ -498,12 +498,7 @@ const Formulario1 = () => {
                 </div>
                 <FormGroup>
                         <Autocomplete 
-                            // name='representante' 
-                            // onChange={e => setNomeDoRepresentanteComercial(e.target.value)} 
-                            // placeholder="Nome do Representante Comercial:" 
-                            // // validate={{
-                            // //     required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            // // }}
+                            onChange={e => setNomeDoRepresentanteComercial(e.target.value)} 
                             suggestions={[...representantes]}
                         />
                         <br/>
