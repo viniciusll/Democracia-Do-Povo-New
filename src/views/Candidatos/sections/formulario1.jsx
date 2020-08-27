@@ -5,6 +5,7 @@ import api from '../../../api/ConnectApi';
 import axios from 'axios';
 import { debounce } from 'lodash';
 import { mask, unMask } from 'remask';
+import Autocomplete from './Autocomplete';
 
 const Formulario1 = () => {
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
@@ -32,8 +33,21 @@ const Formulario1 = () => {
     const [nomeNotaFiscal, setNomeNotaFiscal] = useState('');
     const [visible, setVisible] = useState(false);
     const [visible2, setVisible2] = useState(false);
+    const [representantes, setRepresentantes] = useState([]);
 
   const onDismiss = () => setVisible2(false);
+
+  const getRepresentantes = async () => {
+      api.get('/ficha/representantes')
+        .then((response) => {
+            console.log(response.data);
+            setRepresentantes(response.data);
+        });
+  };
+
+  useEffect(() => {
+        getRepresentantes();
+  }, [])
 
     const handleUpload = async file => {
         setFiles(file);
@@ -483,13 +497,14 @@ const Formulario1 = () => {
                     </FormGroup>
                 </div>
                 <FormGroup>
-                        <AvField 
-                            name='representante' 
-                            onChange={e => setNomeDoRepresentanteComercial(e.target.value)} 
-                            placeholder="Nome do Representante Comercial:" 
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        <Autocomplete 
+                            // name='representante' 
+                            // onChange={e => setNomeDoRepresentanteComercial(e.target.value)} 
+                            // placeholder="Nome do Representante Comercial:" 
+                            // // validate={{
+                            // //     required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            // // }}
+                            suggestions={[...representantes]}
                         />
                         <br/>
                         <AvField 
@@ -517,4 +532,6 @@ const Formulario1 = () => {
     );
 };
 
+const container = document.createElement("div");
+document.body.appendChild(container);
 export default Formulario1;

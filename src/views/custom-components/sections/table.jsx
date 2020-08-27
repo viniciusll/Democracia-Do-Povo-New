@@ -23,52 +23,45 @@ const TableComissao = (props) => {
           </tr>
           <tr>
             <th style={{ color: '#000' }} scope="row">250</th>
-            <td style={{ color: 'blue' }}>877,50</td>
-            <td style={{ color: 'blue' }}>43,38</td>
-            <td style={{ color: 'red' }}>1.087,50</td>
-            <td style={{ color: 'red' }}>54,37</td>
+            <td style={{ color: 'blue' }}>1.110,00</td>
+            <td style={{ color: 'blue' }}>66,60</td>
+            <td style={{ color: 'red' }}>1.300,00</td>
+            <td style={{ color: 'red' }}>78,00</td>
           </tr>
           <tr>
             <th style={{ color: '#000' }} scope="row">500</th>
-            <td style={{ color: 'blue' }}>1.485,00</td>
-            <td style={{ color: 'blue' }}>74,25</td>
-            <td style={{ color: 'red' }}>1.905,00</td>
-            <td style={{ color: 'red' }}>95,25</td>
+            <td style={{ color: 'blue' }}>1.560,00</td>
+            <td style={{ color: 'blue' }}>96,60</td>
+            <td style={{ color: 'red' }}>1.975,00</td>
+            <td style={{ color: 'red' }}>118,50</td>
           </tr>
           <tr>
             <th style={{ color: '#000' }} scope="row">1.000</th>
-            <td style={{ color: 'blue' }}>2.350,00</td>
-            <td style={{ color: 'blue' }}>117,50</td>
-            <td style={{ color: 'red' }}>3.050,00</td>
-            <td style={{ color: 'red' }}>152,50</td>
+            <td style={{ color: 'blue' }}>2.460,00</td>
+            <td style={{ color: 'blue' }}>147,50</td>
+            <td style={{ color: 'red' }}>3.350,00</td>
+            <td style={{ color: 'red' }}>201,00</td>
           </tr>
           <tr>
             <th style={{ color: '#000' }} scope="row">2.000</th>
-            <td style={{ color: 'blue' }}>3.560,00</td>
-            <td style={{ color: 'blue' }}>178,00</td>
-            <td style={{ color: 'red' }}>4.680,00</td>
-            <td style={{ color: 'red' }}>234,00</td>
+            <td style={{ color: 'blue' }}>4.020,00</td>
+            <td style={{ color: 'blue' }}>241,20</td>
+            <td style={{ color: 'red' }}>5.900,00</td>
+            <td style={{ color: 'red' }}>354,00</td>
           </tr>
           <tr>
             <th style={{ color: '#000' }} scope="row">4.000</th>
-            <td style={{ color: 'blue' }}>7.120,00</td>
-            <td style={{ color: 'blue' }}>356,00</td>
-            <td style={{ color: 'red' }}>9.360,00</td>
-            <td style={{ color: 'red' }}>468,00</td>
+            <td style={{ color: 'blue' }}>5.480,00</td>
+            <td style={{ color: 'blue' }}>328,80</td>
+            <td style={{ color: 'red' }}>6.840,00</td>
+            <td style={{ color: 'red' }}>410,40</td>
           </tr>
           <tr>
-            <th style={{ color: '#000' }} scope="row">5.000</th>
-            <td style={{ color: 'blue' }}>8.900,00</td>
-            <td style={{ color: 'blue' }}>445,00</td>
-            <td style={{ color: 'red' }}>11.700,00</td>
-            <td style={{ color: 'red' }}>585,00</td>
-          </tr>
-          <tr>
-            <th style={{ color: '#000' }} scope="row">10.000</th>
-            <td style={{ color: 'blue' }}>17.400,00</td>
-            <td style={{ color: 'blue' }}>870,00</td>
-            <td style={{ color: 'red' }}>23.000,00</td>
-            <td style={{ color: 'red' }}>1.150,00</td>
+            <th style={{ color: '#000' }} scope="row">8.000</th>
+            <td style={{ color: 'blue' }}>9.200,00</td>
+            <td style={{ color: 'blue' }}>552,00</td>
+            <td style={{ color: 'red' }}>11.360,00</td>
+            <td style={{ color: 'red' }}>681,60</td>
           </tr>
         </tbody>
       </Table>

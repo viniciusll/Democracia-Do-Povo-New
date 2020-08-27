@@ -42,11 +42,6 @@ const Header = () => {
                                         Revistas
                                     </Link>
                                 </NavItem>
-                                <NavItem>
-                                    <Link className="nav-link" to={"/contratos"}>
-                                        Contratos
-                                    </Link>
-                                </NavItem>
                             </Nav>
                         </Collapse>
                     </Navbar>

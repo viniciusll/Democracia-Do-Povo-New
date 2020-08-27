@@ -139,19 +139,12 @@ const Representantes = () => {
                 <TableComissaoCandidatos8 />
                 <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 12 (doze) Candidatos</h4>
                 <TableComissaoCandidatos12 />
-                <div style={{ textAlign: 'center' }}>
-                    <Button color="primary">
-                         <Link to='/contratos' style={{ textDecoration: 'none', color: '#fff' }}>
-                            CONTRATO DE REPRESENTAÇÃO Leia, <br /> preencha, reconheça firma e envie-o
-                        </Link>
-                    </Button>
-                </div>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
-                    <Button outline onClick={handleClick} color="primary">CADASTRE-SE</Button>
+                    <Button outline onClick={handleClick} color="primary">PRÉ-CADASTRO</Button>
                 </div>
                 <br/>
                 <UncontrolledAlert fade={false} isOpen={visible2} toggle={onDismiss2} color='success'>
-                    Cadastro feito com sucesso.
+                    Cadastro enviado com sucesso.
                 </UncontrolledAlert>
                 {
                     show == true ?
@@ -192,6 +185,6 @@ const Representantes = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Representantes;
