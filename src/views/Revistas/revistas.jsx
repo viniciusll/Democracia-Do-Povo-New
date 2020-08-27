@@ -45,7 +45,6 @@ const Revistas = () => {
                                     title='Revista Panfleto em Revista'
                                     seamless='seamless'
                                     allowFullScreen={true}
-                                    allowTransparency={true}
                                 />
                             </Col>
                         </Row>
