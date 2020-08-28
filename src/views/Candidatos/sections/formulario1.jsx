@@ -53,6 +53,7 @@ const Formulario1 = () => {
     };
 
     const enviarFormulario = async () => {
+        console.log('representante comercial: ', nomeDoRepresentanteComercial);
         console.log('files: ', image);
         const data = new FormData();
         data.append('file', image);
@@ -496,8 +497,7 @@ const Formulario1 = () => {
                     </FormGroup>
                 </div>
                 <FormGroup>
-                        <Autocomplete 
-                            onChange={e => setNomeDoRepresentanteComercial(e.target.value)} 
+                        <Autocomplete
                             suggestions={[...representantes]}
                         />
                         <br/>
