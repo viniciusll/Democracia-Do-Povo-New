@@ -139,7 +139,7 @@ const CustomComponents = () => {
             <Footer />
         </div>
     );
-}
+};
 
 CustomComponents.propTypes = {
     classes: PropTypes.object
