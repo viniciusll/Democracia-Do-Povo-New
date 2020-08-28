@@ -140,18 +140,7 @@ class Autocomplete extends Component {
 
     return (
       <Fragment>
-        <AvField
-          type="text"
-          name='representantes'
-          autoComplete="off"
-          label='Nome do Representante'
-          validate={{
-            required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-          }}
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          value={userInput}
-        />
+     
         {suggestionsListComponent}
       </Fragment>
     );

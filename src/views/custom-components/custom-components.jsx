@@ -7,18 +7,7 @@ import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
 
 // sections for this page
-import HeaderComponent from "./sections/headercomponent.jsx";
-import BannerComponent from "./sections/bannercomponent.jsx";
-import FormBannerComponent from "./sections/formbannercomponent.jsx";
-import FeatureComponent from "./sections/featurecomponent.jsx";
-import PortfolioComponent from "./sections/portfoliocomponent.jsx";
-import PricingComponent from "./sections/pricingcomponent.jsx";
-import TeamComponent from "./sections/teamcomponent.jsx";
-import TestimonialComponent from "./sections/testimonialcomponent.jsx";
-import BlogComponent from "./sections/blogcomponent.jsx";
 import Representantes from "./sections/Representantes.jsx";
-import ContactComponent from "./sections/contactcomponent.jsx";
-import CallToAction from "../../components/call-to-action/CallToAction"
 
 const CustomComponents = () => {
     return (
