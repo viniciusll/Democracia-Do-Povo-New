@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import { AvField } from 'availity-reactstrap-validation';
+import './Autocomplete.css';
 
 class Autocomplete extends Component {
   static propTypes = {
@@ -130,7 +131,7 @@ class Autocomplete extends Component {
         );
       } else {
         suggestionsListComponent = (
-          <div class="no-suggestions">
+          <div className="no-suggestions">
             <em>No suggestions, you're on your own!</em>
           </div>
         );
@@ -142,6 +143,8 @@ class Autocomplete extends Component {
         <AvField
           type="text"
           name='representantes'
+          autoComplete="off"
+          label='Nome do Representante'
           validate={{
             required: { value: true, errorMessage: 'Esse campo é obrigatório'}
           }}

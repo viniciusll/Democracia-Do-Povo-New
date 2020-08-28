@@ -40,7 +40,6 @@ const Formulario1 = () => {
   const getRepresentantes = async () => {
       await api.get('/ficha/representantes')
         .then((response) => {
-            console.log(response.data.nomesRepresentantes);
             setRepresentantes(response.data.nomesRepresentantes);
         });
   };
