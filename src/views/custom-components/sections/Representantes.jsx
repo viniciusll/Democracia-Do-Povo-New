@@ -69,8 +69,8 @@ const Representantes = () => {
 
     return (
         <div>
-            <div className="spacer bg-light">
-                <h2 style={{ textAlign: 'center', paddingTop: '5px', color: '#000bd4',fontFamily: 'cursive' }}>
+            <div className="bg-light">
+                <h2 style={{ textAlign: 'center', color: '#000bd4',fontFamily: 'cursive' }}>
                     Seja o Representante de seu município.
                 </h2>
                 <h1 style={{ textAlign: 'center', paddingTop: '5px', color: '#000bd4',fontFamily: 'cursive' }}>
@@ -107,8 +107,14 @@ const Representantes = () => {
                                 <img src={Revista3} alt="img" className="img-responsive img-thumbnail" width='200' />
                             </Col>
                         </Row>
+                        <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000',fontFamily: 'Batang' }} >
+                            Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
+                        </h3>
                 </Container>
-
+                <br/><br/>
+                <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000',fontFamily: 'Batang' }} >
+                    TABELA DE PREÇOS E COMISSÕES.
+                </h3>
                 <TableComissao />
 
                <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
@@ -127,11 +133,12 @@ const Representantes = () => {
                                 <img src={Revista4} alt="img" className="img-responsive img-thumbnail" width='200' />
                             </Col>
                         </Row>
+                    <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000',fontFamily: 'Batang' }} >
+                        Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
+                    </h3>
                 </Container>
-
-                <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000',fontFamily: 'Batang' }} >
-                    Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
-                </h3>
+                <br/>
+                <br/>
 
                 <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 4 (quatro) Candidatos</h4>
                 <TableComissaoCandidatos />
@@ -139,7 +146,8 @@ const Representantes = () => {
                 <TableComissaoCandidatos8 />
                 <h4 style={{ textAlign: 'center', color: '#000'}}>TABELA DE PREÇOS E COMISSÕES PARA 12 (doze) Candidatos</h4>
                 <TableComissaoCandidatos12 />
-                <div style={{ textAlign: 'center', paddingTop: '5px' }}>
+                <br/>
+                <div style={{ textAlign: 'center', paddingTop: '10px' }}>
                     <Button outline onClick={handleClick} color="primary">PRÉ-CADASTRO</Button>
                 </div>
                 <br/>
@@ -149,7 +157,6 @@ const Representantes = () => {
                 {
                     show == true ?
                         <div style={{ textAlign: 'center' }}>
-                            <br/>
                             <UncontrolledAlert fade={false} isOpen={visible} toggle={onDismiss} color='danger'>
                                 Preencha todos Campos 
                             </UncontrolledAlert>
@@ -179,9 +186,11 @@ const Representantes = () => {
                             </InputGroup>
                             <br/>
                             <Button outline onClick={enviarFicha} color="primary">Enviar</Button>
+                            <br/>
                         </div> :
                         undefined
                 }
+                <br/>
             </div>
         </div>
     );

@@ -309,7 +309,7 @@ const Formulario1 = () => {
                         <AvField 
                             value={numero} 
                             onChange={e => setNumero(e.target.value)} 
-                            placeholder="Número para entrega:" 
+                            placeholder="Número" 
                             name='number' 
                             type='number' 
                         />
@@ -509,7 +509,7 @@ const Formulario1 = () => {
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'}
                             }}
                         />
-                        <CustomInput name='file' required onChange={e => handleUpload(e.target.files[0])} type="file" id="exampleCustomFileBrowser" name="file" />
+                        <CustomInput name='file' placeholder='escolha seu arquivo' required onChange={e => handleUpload(e.target.files[0])} type="file" id="exampleCustomFileBrowser" name="file" />
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista para <br />
                         a divulgação de sua candidatura, com exclusividade, nas 4 capas da Revista <br />

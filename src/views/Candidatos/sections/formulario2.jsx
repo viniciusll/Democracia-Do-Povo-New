@@ -515,7 +515,7 @@ const Formulario2 = () => {
                         <AvField 
                             onChange={e => setNumeroEntrega(e.target.value)} 
                             type='number'  
-                            placeholder="Número para entrega" 
+                            placeholder="Número" 
                             name='numero' 
                             validate={{
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'}

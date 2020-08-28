@@ -42,6 +42,21 @@ const Header = () => {
                                         Revistas
                                     </Link>
                                 </NavItem>
+                                <NavItem>
+                                    <Link className="nav-link" to={"/revistas-propria"}>
+                                        Revista Própria
+                                    </Link>
+                                </NavItem>
+                                <NavItem>
+                                    <Link className="nav-link" to={"/candidatos-inscritos"}>
+                                        Candidatos inscritos
+                                    </Link>
+                                </NavItem>
+                                <NavItem>
+                                    <Link className="nav-link" to={"/representantes-cadastrados"}>
+                                       Representantes cadastrados
+                                    </Link>
+                                </NavItem>
                             </Nav>
                         </Collapse>
                     </Navbar>

@@ -54,15 +54,16 @@ const Components = () => {
                                 <img src={Revista2} alt="img" className="img-responsive img-thumbnail" width='200' />
                             </Col>
                         </Row>
-                    </Container>
-
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000',fontFamily: 'Batang' }} >
                         Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
                     </h3>
+                    </Container>
+                    <br/>
+                    <br/>
                     <div style={{ textAlign: 'center' }}>
-                    <Button outline color='primary' onClick={handleClick} >
-                            COMO FUNCIONA A DEMOCRACIA DO POVO?
-                    </Button>
+                        <Button outline color='primary' onClick={handleClick} >
+                                COMO FUNCIONA A DEMOCRACIA DO POVO?
+                        </Button>
                     </div>
 
                     {show == true ? 
@@ -161,6 +162,7 @@ const Components = () => {
                     }
                 </div>
             </div>
+            <br/>
             <Footer />
         </div>
     );

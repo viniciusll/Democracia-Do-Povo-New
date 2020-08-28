@@ -50,7 +50,7 @@ const CustomComponents = () => {
                         A Revista <strong style={{ color: 'green', fontSize: '25px' }}>Democracia Do Povo</strong> é uma publicação do O SÓCIO BR.<br />
                         Um produto da LOJA VIRTUAL REAL desenvolvido para campanhas publicitárias eleitorais.<br />
                         O candidato e candidata às eleições municipais, estaduais e federais poderão anunciar nas quatro capas da revista,
-                        com conteúdo único, por edição, obtendo, desta forma, a sua <strong style={{ color: 'red' }}>REVISTA PRÓPRIA</strong>.
+                        <br/>com conteúdo único, por edição, obtendo, desta forma, a sua <strong style={{ color: 'red' }}>REVISTA PRÓPRIA</strong>.
                     </p>
 
                     <Container style={{  alignItems: 'center' }}>
@@ -59,25 +59,32 @@ const CustomComponents = () => {
                                 <img src={Revista1} alt="img" className="img-responsive img-thumbnail" width='200' />
                             </Col>
                         </Row>
+                        <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                            Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
+                         </h2>
                     </Container>
-                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
-                        Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
-                    </h2>
+                   <br/><br/>
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                        <strong style={{ color: '#ff0000' }}>Arte final das quatros capas: Formato Fechado 20cm x 28cm. Formato Aberto 40cm x 28cm </strong><br/>
                         Faça o seu pedido com um dos Representantes da Democracia do Povo.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a 
                         possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas Democracia do Povo e 
-                        Panfleto em Revista aos candidatos a prefeito e a vereador.
+                        Panfleto <br/> em Revista aos candidatos a prefeito e a vereador. <br/>
+                        <strong style={{ color: '#ff0000' }}> Salve a arte final das quatro capas em PDF </strong>
                     </p>
                     <h2 style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
                         TABELA DE PREÇOS
                     </h2>
                     <TabelaDePreco1 />
+                    <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                        Os pedidos serão efetivados somente por um dos Representantes cadastrados neste site.
+                    </p>
                     <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                         <Button onClick={handleClick} style={{ color: 'yellow', backgroundColor: '#003d03' }}>
-                            Pedido para a revista
+                            Pedido para a revista Democracia do Povo
                         </Button>
                     </div>
+                    <br/>
                     {show == true ? <Formulario1 /> : undefined}
                     <h1 style={{ textAlign: 'center', paddingTop: '10px', color: '#000bd4',fontFamily: 'cursive' }}>
                         Candidato a vereador e a prefeito participe da edição desta revista
@@ -100,10 +107,11 @@ const CustomComponents = () => {
                                 <img src={Revista4} alt="img" className="img-responsive img-thumbnail" width='200' />
                             </Col>
                         </Row>
+                        <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                            Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
+                        </h2>
                     </Container>
-                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
-                        Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
-                    </h2>
+                    <br/><br/>
                     <h2 style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
                         TABELA DE PREÇOS PARA EDIÇÃO COM 4 (quatro) Candidatos
                     </h2>
@@ -116,12 +124,16 @@ const CustomComponents = () => {
                         TABELA DE PREÇOS PARA EDIÇÃO COM 12 (doze) Candidatos
                     </h2>
                     <TabelaDePreco4 />
+                    <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                        Os pedidos serão efetivados somente por um dos Representantes cadastrados neste site.
+                    </p>
                     <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                         <Button onClick={handleClick2} style={{ color: 'yellow', backgroundColor: '#003d03' }}>
-                            Pedido para revista
+                            Pedido para Panfleto em Revista 
                         </Button>
                         {show2 == true ? <Formulario2 /> : undefined}
                     </div>
+                    <br/>
                 </div>
             </div>
             <Footer />
