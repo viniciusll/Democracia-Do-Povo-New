@@ -41,7 +41,12 @@ const RepresentantesCadastrados = () => {
                         Esse projeto poderá ser colocado em prática, votado pelo Congresso Nacional, até mesmo, antes de a Democracia do Povo ser implantada, porém é bem provável que os congressistas dirão: isso não é possível. Esse projeto é inconstitucional. São muitos os motivos que o tornam inviável. A elevação do salário mínimo causa inflação e desabastecimento etc, etc, etc.
                         A Democracia do Povo respeita as pessoas e políticos que votariam na alternativa “V” e que dizem ou somente pensam: “O brasileiro não sabe nem o que é projeto, quanto mais votar em um programa de governo”. “O brasileiro não se interessa por política”. “O povo brasileiro não está preparado para isso, é imaturo, ele não sabe fazer as escolhas corretamente, por isso, precisa ser representado e governado por políticos”. “O eleitor brasileiro ainda não sabe votar, por isso o voto deverá ser obrigatório até que a ‘nossa’ democracia se consolide, que aprenda a exercer a sua cidadania e a cumprir os seus deveres cívicos”.
                         A Democracia do Povo divulgou em sua revista, projetos na área da saúde, segurança pública, mobilidade urbana, educação e muitos outros, que farão com que o Brasil seja uma potência e um país de melhor qualidade de vida no mundo. 
-                        Depois de examiná-los e você considerar que essa possibilidade é alcançável poderá encaminhar esta mensagem ao maior número de eleitores possível para que todos escolham a alternativa “III”, projeto c, ao votarem para prefeito e vereador.
+                        Depois de examiná-los e você considerar que essa possibilidade é alcançável poderá encaminhar esta mensagem ao maior número de eleitores possível para que todos escolham a alternativa “III”, projeto c, ao votarem para prefeito e vereador. <br />
+                        <br/>
+                    </p>
+                    <p style={{ color: 'red', textAlign: 'center' }}>Divulgue o site da Democracia do Povo.</p>
+                    <p style={{ fontSize: '28px', textAlign: 'center', color: '#000'}}>
+                        www.democraciadopovo.com.br
                     </p>
                 </div>
             </div>
