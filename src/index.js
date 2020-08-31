@@ -15,6 +15,7 @@ import CustomComponents from "./views/custom-components/custom-components.jsx";
 import Candidatos from './views/Candidatos/candidatos';
 import Revistas from './views/Revistas/revistas.jsx';
 import CandidatosInscritos from './views/CandidatosInscritos/CandidatosInscritos';
+import RepresentantesCadastrados from './views/RepresentantesCadastrados/RepresentantesCadastrados'
 
 var hist = createBrowserHistory();
 
@@ -25,6 +26,7 @@ ReactDOM.render(
             <Route path="/candidatos" component={Candidatos} />
             <Route path="/revistas" component={Revistas} />
             <Route path="/candidatos-inscritos" component={CandidatosInscritos} />
+            <Route path="/representantes-cadastrados" component={RepresentantesCadastrados} />
             <Route path="/" component={Components} />
         </Switch>
     </HashRouter>,
