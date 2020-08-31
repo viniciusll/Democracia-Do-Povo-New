@@ -451,14 +451,6 @@ const Formulario2 = () => {
                         />
                         <br/>
                         <AvField 
-                            onChange={e => setNomeNotaFiscal(e.target.value)} 
-                            placeholder="Nome Nota fiscal:"
-                            name='nomeNotaFiscal'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
-                        />
-                        <AvField 
                             onChange={handleChange} 
                             placeholder="CEP para entrega:" 
                             name='cep'
@@ -507,6 +499,14 @@ const Formulario2 = () => {
                             onChange={e => setComplementoEntrega(e.target.value)} 
                             placeholder="Complemento" 
                             name='complemento'
+                            validate={{
+                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                            }}
+                        />
+                        <AvField 
+                            onChange={e => setNomeNotaFiscal(e.target.value)} 
+                            placeholder="Nome Nota fiscal:"
+                            name='nomeNotaFiscal'
                             validate={{
                                 required: { value: true, errorMessage: 'Esse campo é obrigatório'}
                             }}
