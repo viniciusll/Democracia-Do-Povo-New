@@ -247,6 +247,10 @@ const Formulario1 = () => {
                 <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
                     Pedido Emitido com sucesso
                 </UncontrolledAlert>
+                <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
+                    FORMULÁRIO PARA PEDIDOS <br />
+                    Revista Democracia do Povo
+                </h2>
                 <FormGroup>
                 <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
                                 name='nome'
