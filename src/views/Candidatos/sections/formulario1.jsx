@@ -435,13 +435,6 @@ const Formulario1 = () => {
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
-                            <Input value='6'
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
-                            Edição com 8 páginas + 4 capas – Quantidade: 5.000 Exemplares - Valor: R$10
-                        </Label>
-                    </FormGroup>
-                    <FormGroup style={{ paddingTop: '10px' }} check row>
-                        <Label style={{ paddingRight: '10px' }} check>
                             <Input value='7'
                                 type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 8 páginas + 4 capas – Quantidade: 8.000 Exemplares - Valor: R$10
@@ -480,13 +473,6 @@ const Formulario1 = () => {
                             <Input value='12'
                                 type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
                             Edição com 12 páginas + 4 capas – Quantidade: 4.000 Exemplares - Valor: R$10
-                        </Label>
-                    </FormGroup>
-                    <FormGroup style={{ paddingTop: '10px' }} check row>
-                        <Label style={{ paddingRight: '10px' }} check>
-                            <Input value='13'
-                                type="radio" onChange={e => setExemplar(e.target.value)} name='radio2' />{' '}
-                            Edição com 12 páginas + 4 capas – Quantidade: 5.000 Exemplares - Valor: R$10
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
