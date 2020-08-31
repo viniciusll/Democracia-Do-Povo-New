@@ -261,6 +261,36 @@ const Formulario2 = () => {
                     Nomes completos dos 4 (quatro) Candidatos e nomes como candidatos
                 </h3>
                 <FormGroup>
+                    <FormGroup>
+                    <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                                    name='nome'
+                                    validate={{
+                                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                                    }}
+                                    placeholder="NOME DA TRANSPORTADORA ESCOLHIDA:"
+                                />
+                                <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                                    name='nome'
+                                    validate={{
+                                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                                    }}
+                                    placeholder="Endereço em São Paulo:"
+                                />
+                                <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                                    name='nome'
+                                    validate={{
+                                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                                    }}
+                                    placeholder="Fone:"
+                                />
+                                <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                                    name='nome'
+                                    validate={{
+                                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                                    }}
+                                    placeholder="E-mail:"
+                                />
+                    </FormGroup>
                         <AvField 
                             onChange={e => setnomeComprador(e.target.value)} 
                             placeholder="Nome Comprador:"
