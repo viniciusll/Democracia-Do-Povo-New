@@ -521,13 +521,6 @@ const Formulario1 = () => {
                     </Label>
                     <Input type="file" name="file" style={{ display: "none" }} id="exampleFile" />
                     </FormGroup>
-                    <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
-                        Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista para <br />
-                            a divulgação de sua candidatura, com exclusividade, nas 4 capas da Revista <br />
-                            Democracia do Povo, a qual será fixada no conteúdo desta. <br />
-                            Se desejar, inclua na arte final de suas capas, cupons semelhantes aos <br />
-                            que foram inseridos nas terceira e quarta capas desta revista.<br />
-                    </p>
                 </FormGroup>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <Button onClick={() => enviarFormulario()} outline color="primary">Enviar</Button>
