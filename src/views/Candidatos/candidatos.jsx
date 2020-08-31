@@ -8,6 +8,8 @@ import Footer from "../../components/footer/footer.jsx";
 import { Container, Row, Col, Button } from 'reactstrap';
 import Revista1 from "../../assets/images/revista 1.png"
 import Revista4 from "../../assets/images/revista 4.png"
+import Imagem1 from "../../assets/images/imagem 1.png";
+import Imagem2 from "../../assets/images/imagem 2.png";
 
 // sections for this page
 import TabelaDePreco1 from './sections/tabelaDePreco1.jsx';
@@ -82,6 +84,22 @@ const CustomComponents = () => {
                         TABELA DE PREÇOS
                     </h2>
                     <TabelaDePreco1 />
+                    <Container style={{  alignItems: 'center', textAlign: 'center'}}>
+                        <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                            GANHE ESSA LINDA PLACA DE RECONHECIMENTO À SUA CANDIDATURA NA COMPRA DE QUALQUER QUANTIDADE DE EXEMPLARES ACIMA.
+                         </h2>
+                        <Row>
+                            <Col lg="7" className="text-center m-b-30">
+                                <img src={Imagem1} alt="img" className="img-responsive img-thumbnail" width='100' />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col lg="7" className="text-center m-b-30">
+                                <img src={Imagem2} alt="img" className="img-responsive img-thumbnail" width="100" />
+                            </Col>
+                        </Row>
+                    </Container>
+
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Os pedidos serão efetivados somente por um dos Representantes cadastrados neste site.
                     </p>
