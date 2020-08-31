@@ -662,14 +662,23 @@ const Formulario2 = () => {
                             Envie as fotos dos candidatos e textos das matérias
                             que entrarão na edição da Revista Panfleto em Revista.
                         </p>
-                            <CustomInput
-                                onChange={e => handleUpload(e.target.files[0])} 
-                                type="file" 
-                                id="exampleCustomFileBrowser" 
-                                validate={{
-                                    required: { value: true, errorMessage: 'Esse campo é obrigatório'}
+                        <FormGroup>
+                            <Label 
+                                for="exampleFile" 
+                                style={{ 
+                                    backgroundColor: '#3639ff', 
+                                    borderRadius: '3px',
+                                    color: "#fff", 
+                                    cursor: 'pointer', 
+                                    margin: '10px', 
+                                    padding: '6px 20px',
+                                    width: '100%'
                                 }}
-                                name="customFile" />
+                            >
+                                    Escolha seu arquivo
+                            </Label>
+                            <Input type="file" name="file" style={{ display: "none" }} id="exampleFile" />
+                    </FormGroup>
                     </FormGroup>
                 </FormGroup>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
