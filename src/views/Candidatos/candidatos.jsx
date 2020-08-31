@@ -102,7 +102,7 @@ const CustomComponents = () => {
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                         Dados para contratação da transportadora de sua preferência
                     </h2>
-
+                    <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000', fontFamily: 'Batang' }}>Faça a simulação neste site: <a href="https://cargobr.com/">cargobr.com</a></p>
                     <TabelaDePreco5 />
 
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
