@@ -8,7 +8,7 @@ const TableComissaoCandidatos12 = (props) => {
           <tr>
             <th style={{ color: '#000' }}>Quantidade de Exemplares</th>
             <th style={{ color: 'blue' }}>Total a Pagar R$ Por Candidato</th>
-            <th style={{ color: 'blue' }}>Valor do Pedido R$ 4 (quatro) Candidatos</th>
+            <th style={{ color: 'blue' }}>Valor do Pedido R$ 12 (doze) Candidatos</th>
             <th style={{ color: 'red' }}>Comissão do Representante R$</th>
           </tr>
         </thead>

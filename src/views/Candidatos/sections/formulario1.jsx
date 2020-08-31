@@ -5,7 +5,6 @@ import api from '../../../api/ConnectApi';
 import axios from 'axios';
 import { debounce } from 'lodash';
 import { mask, unMask } from 'remask';
-import FilterResults from 'react-filter-search';
 
 const Formulario1 = () => {
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
@@ -519,17 +518,23 @@ const Formulario1 = () => {
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
                     />
-                    <CustomInput
-                        name='file'
-                        placeholder='escolha seu arquivo'
-                        required
-                        style={{ display: 'none' }}
-                        placeholder="Arquivo"
-                        onChange={e => handleUpload(e.target.files[0])}
-                        type="file"
-                        id="exampleCustomFileBrowser"
-                        name="file"
-                    />
+                    <FormGroup>
+                    <Label 
+                        for="exampleFile" 
+                        style={{ 
+                            backgroundColor: '#3639ff', 
+                            borderRadius: '3px',
+                            color: "#fff", 
+                            cursor: 'pointer', 
+                            margin: '10px', 
+                            padding: '6px 20px',
+                            width: '100%'
+                        }}
+                    >
+                            Escolha seu arquivo
+                    </Label>
+                    <Input type="file" name="file" style={{ display: "none" }} id="exampleFile" />
+                    </FormGroup>
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista para <br />
                             a divulgação de sua candidatura, com exclusividade, nas 4 capas da Revista <br />
