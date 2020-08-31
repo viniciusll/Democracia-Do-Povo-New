@@ -115,6 +115,7 @@ const CustomComponents = () => {
                     </div>
                     <br/>
                     {show == true ? <Formulario1 /> : undefined}
+                    <br/><br/>
                     <h1 style={{ textAlign: 'center', paddingTop: '10px', color: '#000bd4',fontFamily: 'cursive' }}>
                         Candidato a vereador e a prefeito participe da edição desta revista
                     </h1>
