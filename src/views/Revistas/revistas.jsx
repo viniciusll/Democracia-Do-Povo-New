@@ -108,7 +108,7 @@ const Revistas = () => {
                             file={RevistaDemocraciaDoPovo1}
                             onLoadSuccess={onDocumentLoadSuccess1}
                         >
-                            <Page width='600' pageNumber={pageNumber1} />
+                            <Page style={{ width: '100%' }} pageNumber={pageNumber1} />
                         </Document>
                         <button style={{
                             backgroundColor: '#171616',
@@ -148,7 +148,7 @@ const Revistas = () => {
                             file={RevistaDemocraciaDoPovo2}
                             onLoadSuccess={onDocumentLoadSuccess2}
                         >
-                            <Page width='600' pageNumber={pageNumber2} />
+                            <Page style={{ width: '100%' }} pageNumber={pageNumber2} />
                         </Document>
                         <button style={{
                             backgroundColor: '#171616',
