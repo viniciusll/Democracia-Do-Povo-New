@@ -12,6 +12,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import RevistaDemocraciaDoPovo1 from './1002 Revista Democracia do Povo 8 p. site.pdf';
 import RevistaDemocraciaDoPovo2 from './1011 Revist Panfleto Revista 12 Cand. site.pdf';
 import { Container, Row, Col } from 'reactstrap';
+// import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
