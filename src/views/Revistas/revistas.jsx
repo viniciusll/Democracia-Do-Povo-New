@@ -9,7 +9,8 @@ import Footer from "../../components/footer/footer.jsx";
 import { Progress } from 'reactstrap';
 import Dedepe from '../../assets/images/Dedepê.png';
 import { Document, Page, pdfjs } from 'react-pdf';
-import CleanCode from './cleanCode.pdf';
+import RevistaDemocraciaDoPovo1 from './1002 Revista Democracia do Povo 8 p. site.pdf';
+import RevistaDemocraciaDoPovo2 from './1011 Revist Panfleto Revista 12 Cand. site.pdf';
 import { Container, Row, Col } from 'reactstrap';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -18,27 +19,50 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const Revistas = () => {
 
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
+    const [numPages1, setNumPages1] = useState(null);
+    const [pageNumber1, setPageNumber1] = useState(1);
+    const [numPages2, setNumPages2] = useState(null);
+    const [pageNumber2, setPageNumber2] = useState(1);
 
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
+    function onDocumentLoadSuccess1({ numPages }) {
+        setNumPages1(numPages);
     };
 
     const nextPage = (pageNumber) => {
-        if (pageNumber + 1 > numPages) {
-            setPageNumber(1);
+        if (pageNumber + 1 > numPages1) {
+            setPageNumber1(1);
         } else {
-            setPageNumber(pageNumber + 1);
+            setPageNumber1(pageNumber + 1);
         }
     };
 
     const previousPage = (pageNumber) => {
         console.log(pageNumber - 1);
         if (pageNumber === 1) {
-            setPageNumber(numPages);
+            setPageNumber1(numPages1);
         } else {
-            setPageNumber(pageNumber - 1);
+            setPageNumber1(pageNumber - 1);
+        };
+    };
+
+    function onDocumentLoadSuccess2({ numPages }) {
+        setNumPages2(numPages);
+    };
+
+    const nextPage2 = (pageNumber) => {
+        if (pageNumber + 1 > numPages2) {
+            setPageNumber2(1);
+        } else {
+            setPageNumber2(pageNumber + 1);
+        }
+    };
+
+    const previousPage2 = (pageNumber) => {
+        console.log(pageNumber - 1);
+        if (pageNumber === 1) {
+            setPageNumber2(numPages2);
+        } else {
+            setPageNumber2(pageNumber - 1);
         };
     };
 
@@ -48,7 +72,7 @@ const Revistas = () => {
             <div className="page-wrapper">
                 <div className="container-fluid">
                     <HeaderBanner />
-                    <div style={{ display: 'flex', justifyContent: 'center'}}>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <img style={{ maxWidth: '200px', maxHeight: '400px' }} src={Dedepe} alt="img" className="img-responsive img-thumbnail" width='200' />
                     </div>
 
@@ -76,15 +100,15 @@ const Revistas = () => {
                             border: 'none',
                             outline: 'inherit'
                         }}
-                            onClick={() => previousPage(pageNumber)}
+                            onClick={() => previousPage(pageNumber1)}
                         >
                             {'<'}
                         </button>
                         <Document
-                            file={CleanCode}
-                            onLoadSuccess={onDocumentLoadSuccess}
+                            file={RevistaDemocraciaDoPovo1}
+                            onLoadSuccess={onDocumentLoadSuccess1}
                         >
-                            <Page width='400' pageNumber={pageNumber} />
+                            <Page width='600' pageNumber={pageNumber1} />
                         </Document>
                         <button style={{
                             backgroundColor: '#171616',
@@ -93,14 +117,17 @@ const Revistas = () => {
                             border: 'none',
                             outline: 'inherit'
                         }}
-                            onClick={() => nextPage(pageNumber)}
+                            onClick={() => nextPage(pageNumber1)}
                         >
                             {'>'}
                         </button>
                     </div>
-                    <p style={{ textAlign: 'center', color: '#8f1e3e', fontFamily: 'Apple Chancery, cursive', fontSize: '15px' }}>Page {pageNumber} of {numPages}</p>
+                    <p style={{ textAlign: 'center', color: '#8f1e3e', fontFamily: 'Apple Chancery, cursive', fontSize: '15px' }}>Page {pageNumber1} of {numPages1}</p>
                     <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Democracia do Povo. Edição com 12 páginas + as suas 4 capas.
+                    </p>
+                    <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
+                        Revista Panfleto em Revista. Edição com 4, 8 ou 12 candidatos do mesmo partido político.
                     </p>
                     <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', backgroundColor: '#171616', flexWrap: 'wrap' }}>
                         <button style={{
@@ -110,18 +137,18 @@ const Revistas = () => {
                             border: 'none',
                             outline: 'inherit'
                         }}
-                            onClick={() => previousPage(pageNumber)}
+                            onClick={() => previousPage2(pageNumber2)}
                         >
                             {'<'}
                         </button>
                         <Document
                             onLoadProgress={({ loaded, total }) => {
-                                return <Progress striped  value={(loaded / total) * 100 + '%'}/>
+                                return <Progress striped value={(loaded / total) * 100 + '%'} />
                             }}
-                            file={CleanCode}
-                            onLoadSuccess={onDocumentLoadSuccess}
+                            file={RevistaDemocraciaDoPovo2}
+                            onLoadSuccess={onDocumentLoadSuccess2}
                         >
-                            <Page width='400' pageNumber={pageNumber} />
+                            <Page width='600' pageNumber={pageNumber2} />
                         </Document>
                         <button style={{
                             backgroundColor: '#171616',
@@ -130,15 +157,12 @@ const Revistas = () => {
                             border: 'none',
                             outline: 'inherit'
                         }}
-                            onClick={() => nextPage(pageNumber)}
+                            onClick={() => nextPage2(pageNumber2)}
                         >
                             {'>'}
                         </button>
                     </div>
-                    <p style={{ textAlign: 'center', color: '#8f1e3e', fontFamily: 'Apple Chancery, cursive', fontSize: '15px' }}>Page {pageNumber} of {numPages}</p>
-                    <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
-                        Revista Panfleto em Revista. Edição com 4, 8 ou 12 candidatos do mesmo partido político.
-                    </p>
+                    <p style={{ textAlign: 'center', color: '#8f1e3e', fontFamily: 'Apple Chancery, cursive', fontSize: '15px' }}>Page {pageNumber2} of {numPages2}</p>
                     <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Democracia do Povo. As edições com 8 e 12 páginas são sínteses desta edição com 44 páginas.
                     </p>
