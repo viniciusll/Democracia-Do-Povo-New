@@ -48,13 +48,10 @@ const Revistas = () => {
             <div className="page-wrapper">
                 <div className="container-fluid">
                     <HeaderBanner />
-                    <Container style={{  alignItems: 'center' }}>
-                        <Row>
-                            <Col sm={{ size: 1 }} className="text-center m-b-30">
-                                <img src={Dedepe} alt="img" className="img-responsive img-thumbnail" width='200' />
-                            </Col>
-                        </Row>
-                    </Container>
+                    <div style={{ display: 'flex', justifyContent: 'center'}}>
+                        <img style={{ maxWidth: '200px', maxHeight: '400px' }} src={Dedepe} alt="img" className="img-responsive img-thumbnail" width='200' />
+                    </div>
+
                     <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Olá amigo e amiga candidatos a prefeito, prefeita, vereador, vereadora!
                         Vamos trabalhar por uma democracia civilizada, sem conflitos e voltada para a efetiva participação popular?
