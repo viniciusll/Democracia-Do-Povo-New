@@ -19,6 +19,7 @@ import TabelaDePreco3 from './sections/tabelaDepreco3.jsx';
 import TabelaDePreco4 from './sections/tabelaDePreco4.jsx';
 import Formulario2 from './sections/formulario2.jsx';
 import TabelaDePreco5 from './sections/tabelaDePreco5';
+import TabelaDePreco6 from './sections/tabelaDepreco6';
 
 
 const CustomComponents = () => {
@@ -154,6 +155,12 @@ const CustomComponents = () => {
                         TABELA DE PREÇOS PARA EDIÇÃO COM 12 (doze) Candidatos
                     </h2>
                     <TabelaDePreco4 />
+
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                        Dados para contratação da transportadora de sua preferência
+                    </h2>
+                    <TabelaDePreco6 />
+
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Os pedidos serão efetivados somente por um dos Representantes cadastrados neste site.
                     </p>
