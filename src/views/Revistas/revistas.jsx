@@ -102,7 +102,7 @@ const Revistas = () => {
                     <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Democracia do Povo. Edição com 12 páginas + as suas 4 capas.
                     </p>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', backgroundColor: '#171616' }}>
+                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', backgroundColor: '#171616', flexWrap: 'wrap' }}>
                         <button style={{
                             backgroundColor: '#171616',
                             color: '#fff',
