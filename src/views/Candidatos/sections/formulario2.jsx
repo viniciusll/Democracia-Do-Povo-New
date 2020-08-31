@@ -273,33 +273,25 @@ const Formulario2 = () => {
                             onChange={e => setPrimeiraCapa(e.target.value)} 
                             placeholder="Primeira capa:"
                             name='primeiraCapa'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setSegundaCapa(e.target.value)} 
                             placeholder="Segunda capa:" 
                             name='segundaCapa'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setTerceiraCapa(e.target.value)} 
                             placeholder="Terceira capa:"
                             name='terceiraCapa'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setQuartaCapa(e.target.value)} 
                             placeholder="Quarta capa:"
                             name='quartaCapa'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                         Nomes completos dos 8 (oito) Candidatos e nomes como candidatos:
@@ -308,65 +300,49 @@ const Formulario2 = () => {
                             onChange={e => setPrimeiraCapa2(e.target.value)} 
                             placeholder="Primeira capa:"
                             name='primeiraCapa2'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setSegundaCapa2(e.target.value)} 
                             placeholder="Segunda capa:" 
                             name='segundaCapa2'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setPagina3(e.target.value)} 
                             placeholder="Página 3:" 
                             name='pagina3'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setPagina4(e.target.value)} 
                             placeholder="Página 4:"
                             name='pagina4'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setPagina5(e.target.value)} 
                             placeholder="Página 5:" 
                             name='pagina5'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setPagina6(e.target.value)} 
                             placeholder="Página 6:"
                             name='pagina6'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setTerceiraCapa2(e.target.value)}
                             placeholder="Terceira capa:" 
                             name='terceiraCapa2'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setQuartaCapa2(e.target.value)} 
                             placeholder="Quarta capa:" 
                             name='quartaCapa2'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                         Nomes completos dos 12 (doze) Candidatos e nomes como candidatos:
@@ -375,97 +351,73 @@ const Formulario2 = () => {
                             onChange={e => setPrimeiraCapa3(e.target.value)} 
                             placeholder="Primeira capa:" 
                             name='primeiraCapa3'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setSegundaCapa3(e.target.value)} 
                             placeholder="Segunda capa:" 
                             name='segundaCapa2'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => set_Pagina3(e.target.value)} 
                             placeholder="Página 3:" 
                             name='set_pagina3'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => set_Pagina4(e.target.value)} 
                             placeholder="Página 4:" 
                             name='set_pagina4'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => set_Pagina5(e.target.value)} 
                             placeholder="Página 5:"
                             name='set_pagina5'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => set_Pagina6(e.target.value)} 
                             placeholder="Página 6:" 
                             name='set_pagina6'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => set_Pagina7(e.target.value)} 
                             placeholder="Página 7:" 
                             name='set_pagina7'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => set_Pagina8(e.target.value)} 
                             placeholder="Página 8:" 
                             name='set_pagina8'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => set_Pagina9(e.target.value)} 
                             placeholder="Página 9:" 
                             name='pagina9'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => set_Pagina10(e.target.value)} 
                             placeholder="Página 10:" 
                             name='pagina10'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setTerceiraCapa3(e.target.value)} 
                             placeholder="Terceira capa:" 
                             name='terceiraCapa3'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <AvField 
                             onChange={e => setQuartaCapa3(e.target.value)} 
                             placeholder="Quarta capa:" 
                             name='quartaCapa3'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório'}
-                            }}
+                        
                         />
                         <br/>
                         <AvField 
