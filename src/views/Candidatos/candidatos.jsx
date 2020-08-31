@@ -64,8 +64,14 @@ const CustomComponents = () => {
                          </h2>
                     </Container>
                    <br/><br/>
-                    <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
-                        <strong style={{ color: '#ff0000' }}>Arte final das quatros capas: Formato Fechado 20cm x 28cm. Formato Aberto 40cm x 28cm </strong><br/>
+                    <p style={{ textAlign: 'center', color: '#ff0000', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                        <strong style={{ color: '#000264' }}>
+                            Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista. Medidas em centímetros para as 4 capas: 18 x 28. 
+                            Se desejar, inclua na arte final de suas capas, cupons semelhantes aos que foram inseridos nas terceira e quarta capas 
+                            destas edições com 8 e 12 páginas da revista Democracia do Povo.
+                            Salve em PDF as artes das 4 capas. 
+                            Imprimiremos e fixaremos no conteúdo de uma das edições da revista, com 8 ou 12 páginas, escolhida por você.
+                        </strong><br/> <br/>
                         Faça o seu pedido com um dos Representantes da Democracia do Povo.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a 
                         possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas Democracia do Povo e 
