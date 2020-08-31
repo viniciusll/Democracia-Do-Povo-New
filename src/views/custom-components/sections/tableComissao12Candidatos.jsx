@@ -29,7 +29,7 @@ const TableComissaoCandidatos12 = (props) => {
             <th style={{ color: '#000' }} scope="row">8.000</th>
             <td style={{ color: 'blue' }}>1.200,00</td>
             <td style={{ color: 'blue' }}>14.400,00</td>
-            <td style={{ color: 'red' }}>1008,00</td>
+            <td style={{ color: 'red' }}>1.008,00</td>
           </tr>
         </tbody>
       </Table>
