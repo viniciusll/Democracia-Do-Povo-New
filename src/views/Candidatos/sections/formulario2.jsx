@@ -257,9 +257,6 @@ const Formulario2 = () => {
                     FORMULÁRIO PARA PEDIDOS <br />
                     Revista Panfleto em Revista
                 </h2>
-                <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                    Nomes completos dos 4 (quatro) Candidatos e nomes como candidatos
-                </h3>
                 <FormGroup>
                     <FormGroup>
                     <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
@@ -291,6 +288,9 @@ const Formulario2 = () => {
                                     placeholder="E-mail:"
                                 />
                     </FormGroup>
+                    <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
+                        Nomes completos dos 4 (quatro) Candidatos e nomes como candidatos
+                    </h3>
                         <AvField 
                             onChange={e => setnomeComprador(e.target.value)} 
                             placeholder="Nome Comprador:"
