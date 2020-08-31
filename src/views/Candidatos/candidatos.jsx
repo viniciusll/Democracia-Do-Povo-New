@@ -78,7 +78,6 @@ const CustomComponents = () => {
                         Não os encontrando informe aos profissionais em vendas de seu município a 
                         possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas Democracia do Povo e 
                         Panfleto <br/> em Revista aos candidatos a prefeito e a vereador. <br/>
-                        <strong style={{ color: '#ff0000' }}> Salve a arte final das quatro capas em PDF </strong>
                     </p>
                     <h2 style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
                         TABELA DE PREÇOS
