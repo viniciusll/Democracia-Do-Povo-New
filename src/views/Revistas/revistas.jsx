@@ -8,11 +8,10 @@ import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
 import { Progress } from 'reactstrap';
 import Dedepe from '../../assets/images/Dedepê.png';
+import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
 import { Document, Page, pdfjs } from 'react-pdf';
 import RevistaDemocraciaDoPovo1 from './1002 Revista Democracia do Povo 8 p. site.pdf';
 import RevistaDemocraciaDoPovo2 from './1011 Revist Panfleto Revista 12 Cand. site.pdf';
-import { Container, Row, Col } from 'reactstrap';
-// import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -69,12 +68,13 @@ const Revistas = () => {
 
     return (
         <div id="main-wrapper">
+            <ScrollToTopOnMount />
             <Header />
             <div className="page-wrapper">
                 <div className="container-fluid">
                     <HeaderBanner />
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <img style={{ maxWidth: '200px', maxHeight: '400px' }} src={Dedepe} alt="img" className="img-responsive img-thumbnail" width='200' />
+                        <img style={{ maxWidth: '120px', maxHeight: '420px' }} src={Dedepe} alt="img" className="img-responsive img-thumbnail" width='200' />
                     </div>
 
                     <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
