@@ -8,7 +8,7 @@ import TableComissaoCandidatos12 from './tableComissao12Candidatos';
 import { Button, Input, InputGroup } from 'reactstrap';
 import { UncontrolledAlert  } from 'reactstrap';
 import api from '../../../api/ConnectApi';
-import { Link } from 'react-router-dom';
+import Logo from '../../../assets/images/logodemocraciadopovo2.png';
 
 import Revista3 from '../../../assets/images/revista 3.png';
 import Revista4 from '../../../assets/images/revista 4.png';
@@ -88,6 +88,9 @@ const Representantes = () => {
                 <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4',fontFamily: 'Batang' }}>
                     Apresente essas oportunidades aos candidatos a vereador e a prefeito de todos os Partidos Políticos!
                 </h3>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img style={{ maxWidth: '200px' }} src={Logo} alt="logo"/>
+                </div>
                 <p style={{ textAlign: 'center', color: '#000'}}>
                     A Revista <strong>Democracia Do Povo</strong> é uma publicação do <strong>O SÓCIO BR</strong>.
                 </p>

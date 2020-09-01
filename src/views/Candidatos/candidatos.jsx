@@ -11,6 +11,7 @@ import Revista4 from "../../assets/images/revista 4.png"
 import Imagem1 from "../../assets/images/imagem 1.jpg";
 import Imagem2 from "../../assets/images/imagem 2.jpg";
 import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
+import Logo from '../../assets/images/logodemocraciadopovo2.png';
 
 // sections for this page
 import TabelaDePreco1 from './sections/tabelaDePreco1.jsx';
@@ -52,8 +53,11 @@ const CustomComponents = () => {
                     <h1 style={{ textAlign: 'center', paddingTop: '5px', color: '#000bd4',fontFamily: 'cursive' }}>
                         Candidato a vereador e a prefeito! <br /> Anuncie nas quatro capas da revista
                     </h1>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <img style={{ maxWidth: '200px' }} src={Logo} alt="logo"/>
+                    </div>
                     <p style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
-                        A Revista <strong style={{ color: 'green', fontSize: '25px' }}>Democracia Do Povo</strong> é uma publicação do O SÓCIO BR.<br />
+                        A Revista <strong style={{ color: 'green', fontSize: '25px' }}>Democracia do Povo</strong> é uma publicação do O SÓCIO BR.<br />
                         Um produto da LOJA VIRTUAL REAL desenvolvido para campanhas publicitárias eleitorais.<br />
                         O candidato e candidata às eleições municipais, estaduais e federais poderão anunciar nas quatro capas da revista,
                         <br/>com conteúdo único, por edição, obtendo, desta forma, a sua <strong style={{ color: 'red' }}>REVISTA PRÓPRIA</strong>.
