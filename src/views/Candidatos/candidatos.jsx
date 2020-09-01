@@ -8,8 +8,8 @@ import Footer from "../../components/footer/footer.jsx";
 import { Container, Row, Col, Button } from 'reactstrap';
 import Revista1 from "../../assets/images/revista 1.png"
 import Revista4 from "../../assets/images/revista 4.png"
-import Imagem1 from "../../assets/images/imagem 1.png";
-import Imagem2 from "../../assets/images/imagem 2.png";
+import Imagem1 from "../../assets/images/imagem 1.jpg";
+import Imagem2 from "../../assets/images/imagem 2.jpg";
 import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
 
 // sections for this page
@@ -91,10 +91,10 @@ const CustomComponents = () => {
                         GANHE ESSA LINDA PLACA DE RECONHECIMENTO À SUA CANDIDATURA NA COMPRA DE QUALQUER QUANTIDADE DE EXEMPLARES ACIMA.
                     </h2>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <img src={Imagem1} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive img-thumbnail" />
+                        <img src={Imagem1} alt="img" style={{ maxWidth: '100vh' }} className="img-responsive img-thumbnail" />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <img src={Imagem2} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive img-thumbnail" />
+                        <img src={Imagem2} alt="img" style={{ maxWidth: '100vh' }} className="img-responsive img-thumbnail" />
                     </div>
                 
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
