@@ -87,16 +87,15 @@ const CustomComponents = () => {
                         TABELA DE PREÇOS
                     </h2>
                     <TabelaDePreco1 />
-                        <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
-                            GANHE ESSA LINDA PLACA DE RECONHECIMENTO À SUA CANDIDATURA NA COMPRA DE QUALQUER QUANTIDADE DE EXEMPLARES ACIMA.
-                         </h2>
-                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img src={Imagem1} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive img-thumbnail" />
-                         </div>
-                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img src={Imagem2} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive img-thumbnail" />
-                         </div>
-            
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                        GANHE ESSA LINDA PLACA DE RECONHECIMENTO À SUA CANDIDATURA NA COMPRA DE QUALQUER QUANTIDADE DE EXEMPLARES ACIMA.
+                    </h2>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <img src={Imagem1} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive img-thumbnail" />
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <img src={Imagem2} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive img-thumbnail" />
+                    </div>
                 
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                         Dados para contratação da transportadora de sua preferência
