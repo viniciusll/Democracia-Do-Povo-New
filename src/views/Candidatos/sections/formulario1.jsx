@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Input, Button, Label, FormGroup, CustomInput, UncontrolledAlert } from 'reactstrap';
+import { Input, Button, Label, FormGroup, UncontrolledAlert } from 'reactstrap';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
 import axios from 'axios';
 import { debounce } from 'lodash';
+import ScrollToTopOnMount from '../../../components/Scroll/scrollToTop';
 import { mask, unMask } from 'remask';
 
 const Formulario1 = () => {
@@ -39,6 +40,7 @@ const Formulario1 = () => {
     const [emailTransportadora, setEmailTransportadora] = useState('');
 
     const onDismiss = () => setVisible2(false);
+    const onDismiss1 = () => setVisible(false);
 
     const getRepresentantes = async () => {
         await api.get('/ficha/representantes')
@@ -58,7 +60,6 @@ const Formulario1 = () => {
 
     const enviarFormulario = async () => {
         const data = new FormData();
-        console.log(nomeDoRepresentanteComercial, image);
         data.append('file', image);
         data.append('nomeTransportadora', nomeTransportadora);
         data.append('enderecoTransportadora', enderecoTransportadora);
@@ -113,7 +114,8 @@ const Formulario1 = () => {
         } else {
             const request = await api.post('/ficha/criarFormulario1', data);
             console.log(request);
-            setVisible2(true)
+            setVisible2(true);
+            return  <ScrollToTopOnMount />
         };
     };
 
@@ -250,9 +252,6 @@ const Formulario1 = () => {
     return (
         <div>
             <AvForm className="uploader" encType="multipart/form-data" style={{ padding: '10px', alignItems: 'center' }}>
-                <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
-                    Pedido Emitido com sucesso
-                </UncontrolledAlert>
                 <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                     FORMULÁRIO PARA PEDIDOS <br />
                     Revista Democracia do Povo
@@ -569,6 +568,12 @@ const Formulario1 = () => {
                         <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
                     </FormGroup>
                 </FormGroup>
+                <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
+                    Pedido Emitido com sucesso
+                </UncontrolledAlert>
+                <UncontrolledAlert isOpen={visible} toggle={onDismiss1} color="danger" fade={false}>
+                    Não Foi possível emitir o pedido verifique todos os capos
+                </UncontrolledAlert>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <Button onClick={() => enviarFormulario()} outline color="primary">Enviar</Button>
                 </div>
