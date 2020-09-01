@@ -87,21 +87,17 @@ const CustomComponents = () => {
                         TABELA DE PREÇOS
                     </h2>
                     <TabelaDePreco1 />
-                    <Container style={{  alignItems: 'center', textAlign: 'center'}}>
                         <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                             GANHE ESSA LINDA PLACA DE RECONHECIMENTO À SUA CANDIDATURA NA COMPRA DE QUALQUER QUANTIDADE DE EXEMPLARES ACIMA.
                          </h2>
-                        <Row>
-                            <Col lg="7" className="text-center m-b-30">
-                                <img src={Imagem1} alt="img" className="img-responsive img-thumbnail" width='100' />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col lg="7" className="text-center m-b-30">
-                                <img src={Imagem2} alt="img" className="img-responsive img-thumbnail" width="100" />
-                            </Col>
-                        </Row>
-                    </Container>
+                         <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img src={Imagem1} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive img-thumbnail" />
+                         </div>
+                         <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img src={Imagem2} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive img-thumbnail" />
+                         </div>
+            
+                
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                         Dados para contratação da transportadora de sua preferência
                     </h2>
