@@ -34,6 +34,10 @@ const Formulario1 = () => {
     const [visible2, setVisible2] = useState(false);
     const [textSearch, setTextSearch] = useState('');
     const [representantes, setRepresentantes] = useState([]);
+    const [nomeTransportadora, setNomeTransportadora] = useState('');
+    const [enderecoTransportadora, setEnderecoTransportadora] = useState('');
+    const [foneTransportadora, setFoneTransportadora] = useState('');
+    const [emailTransportadora, setEmailTransportadora] = useState('');
 
     const onDismiss = () => setVisible2(false);
 
@@ -54,10 +58,12 @@ const Formulario1 = () => {
     };
 
     const enviarFormulario = async () => {
-        console.log('representante comercial: ', nomeDoRepresentanteComercial);
-        console.log('files: ', image);
         const data = new FormData();
         data.append('file', image);
+        data.append('nomeTransportadora', nomeTransportadora);
+        data.append('enderecoTransportadora', enderecoTransportadora);
+        data.append('foneTransportadora', foneTransportadora);
+        data.append('emailTransportadora', emailTransportadora);
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
         data.append('nomeComoCandidato', nomeComoCandidato);
         data.append('candidatoA', candidatoA);
@@ -252,28 +258,28 @@ const Formulario1 = () => {
                     Revista Democracia do Povo
                 </h2>
                 <FormGroup>
-                <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                <AvField onChange={e => setNomeTransportadora(e.target.value)}
                                 name='nome'
                                 validate={{
                                     required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                                 }}
                                 placeholder="NOME DA TRANSPORTADORA ESCOLHIDA:"
                             />
-                            <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                            <AvField onChange={e => setEnderecoTransportadora(e.target.value)}
                                 name='nome'
                                 validate={{
                                     required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                                 }}
                                 placeholder="Endereço em São Paulo:"
                             />
-                            <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                            <AvField onChange={e => setFoneTransportadora(e.target.value)}
                                 name='nome'
                                 validate={{
                                     required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                                 }}
                                 placeholder="Fone:"
                             />
-                            <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                            <AvField onChange={e => setEmailTransportadora(e.target.value)}
                                 name='nome'
                                 validate={{
                                     required: { value: true, errorMessage: 'Esse campo é obrigatório' }
