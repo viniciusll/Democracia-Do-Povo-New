@@ -257,36 +257,34 @@ const Formulario1 = () => {
                     FORMULÁRIO PARA PEDIDOS <br />
                     Revista Democracia do Povo
                 </h2>
-                <FormGroup>
                 <AvField onChange={e => setNomeTransportadora(e.target.value)}
-                                name='nome'
-                                validate={{
-                                    required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                                }}
-                                placeholder="NOME DA TRANSPORTADORA ESCOLHIDA:"
-                            />
-                            <AvField onChange={e => setEnderecoTransportadora(e.target.value)}
-                                name='nome'
-                                validate={{
-                                    required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                                }}
-                                placeholder="Endereço em São Paulo:"
-                            />
-                            <AvField onChange={e => setFoneTransportadora(e.target.value)}
-                                name='nome'
-                                validate={{
-                                    required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                                }}
-                                placeholder="Fone:"
-                            />
-                            <AvField onChange={e => setEmailTransportadora(e.target.value)}
-                                name='nome'
-                                validate={{
-                                    required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                                }}
-                                placeholder="E-mail:"
-                            />
-                </FormGroup>
+                    name='nomeTransportadora'
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                    }}
+                    placeholder="NOME DA TRANSPORTADORA ESCOLHIDA:"
+                />
+                <AvField onChange={e => setEnderecoTransportadora(e.target.value)}
+                    name='enderecoTransportadora'
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                    }}
+                    placeholder="Endereço em São Paulo:"
+                />
+                <AvField onChange={e => setFoneTransportadora(e.target.value)}
+                    name='foneTransportadora'
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                    }}
+                    placeholder="Fone:"
+                />
+                <AvField onChange={e => setEmailTransportadora(e.target.value)}
+                    name='emailTransportadora'
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                    }}
+                    placeholder="E-mail:"
+                />
                 <FormGroup>
                     <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
                         name='nome'
@@ -532,11 +530,11 @@ const Formulario1 = () => {
                         onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
                     >
                         <option>Escolha o representante</option>
-                         {representantes.map(representante => {
+                        {representantes.map(representante => {
                             return <option key={representante} value={representante}>{representante}</option>
                         })}
                     </Input>
-                    <br/>
+                    <br />
                     <AvField
                         name='cidade representante'
                         onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
@@ -546,21 +544,21 @@ const Formulario1 = () => {
                         }}
                     />
                     <FormGroup>
-                    <Label 
-                        for="exampleFile" 
-                        style={{ 
-                            backgroundColor: '#3639ff', 
-                            borderRadius: '3px',
-                            color: "#fff", 
-                            cursor: 'pointer', 
-                            margin: '10px', 
-                            padding: '6px 20px',
-                            width: '100%'
-                        }}
-                    >
+                        <Label
+                            for="exampleFile"
+                            style={{
+                                backgroundColor: '#3639ff',
+                                borderRadius: '3px',
+                                color: "#fff",
+                                cursor: 'pointer',
+                                margin: '10px',
+                                padding: '6px 20px',
+                                width: '100%'
+                            }}
+                        >
                             Escolha seu arquivo
                     </Label>
-                    <Input type="file" name="file" style={{ display: "none" }} id="exampleFile" />
+                        <Input type="file" name="file" style={{ display: "none" }} id="exampleFile" />
                     </FormGroup>
                 </FormGroup>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
