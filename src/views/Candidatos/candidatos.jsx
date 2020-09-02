@@ -64,7 +64,7 @@ const CustomComponents = () => {
                     </p>
 
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <img src={Revista1} alt="img" className="img-responsive img-thumbnail" style={{  maxWidth: '80vh'}} />
+                        <img src={Revista1} alt="img" className="img-responsive img-thumbnail" style={{ maxWidth: '80vh' }} />
                     </div>
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                         Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
@@ -129,16 +129,12 @@ const CustomComponents = () => {
                         Os custos de publicação pelo <strong style={{ color: '#ff0000' }}>SISTEMA COOPERADO DE PANFLETAGEM</strong> diminuem,<br />
                         consideravelmente, ao serem diluídos entre os participantes das edições desta revista.
                     </p>
-                    <Container style={{ alignItems: 'center' }}>
-                        <Row>
-                            <Col lg="10" className="text-center m-b-30">
-                                <img src={Revista4} alt="img" className="img-responsive img-thumbnail" width='200' />
-                            </Col>
-                        </Row>
-                        <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
-                            Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <img src={Revista4} alt="img" className="img-responsive img-thumbnail" style={{ width: '80vh' }} />
+                    </div>
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                        Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
                         </h2>
-                    </Container>
                     <br /><br />
                     <h2 style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
                         TABELA DE PREÇOS PARA EDIÇÃO COM 4 (quatro) Candidatos
