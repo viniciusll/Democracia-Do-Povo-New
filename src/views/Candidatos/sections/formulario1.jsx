@@ -575,6 +575,7 @@ const Formulario1 = () => {
                     Não Foi possível emitir o pedido verifique todos os capos
                 </UncontrolledAlert>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
+                    <p style={{ color: 'red' }}>Ao enviar você receberá no email cadastrado neste formulário as opções para efetuar o pagamento</p>
                     <Button onClick={() => enviarFormulario()} outline color="primary">Enviar</Button>
                 </div>
             </AvForm>
