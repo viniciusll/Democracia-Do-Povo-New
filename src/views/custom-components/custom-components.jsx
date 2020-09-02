@@ -18,18 +18,7 @@ const CustomComponents = () => {
             <div className="page-wrapper">
                 <div className="container-fluid">
                     <HeaderBanner />
-                    {/* <HeaderComponent /> */}
-                    {/* <BannerComponent />
-                    <FormBannerComponent />
-                    <FeatureComponent />
-                    <PortfolioComponent />
-                    <PricingComponent />
-                    <TeamComponent />
-                    <TestimonialComponent />
-                    <BlogComponent /> */}
                     <Representantes />
-                    {/* <ContactComponent /> */}
-                    {/* <CallToAction /> */}
                 </div>
             </div>
             <Footer />

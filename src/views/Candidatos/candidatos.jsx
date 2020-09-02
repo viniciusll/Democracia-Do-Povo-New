@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import Header from "../../components/header/header.jsx";
 import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 import Revista1 from "../../assets/images/revista 1.png"
 import Revista4 from "../../assets/images/revista 4.png"
 import Imagem1 from "../../assets/images/imagem 1.jpg";

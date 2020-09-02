@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import { Row, Col, Container } from 'reactstrap';
 import TableComissao from "./table.jsx";
 import TableComissaoCandidatos from './tableComissaoCandidatos';
 import TableComissaoCandidatos8 from './tableComissao8Candidatos';

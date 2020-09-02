@@ -9,7 +9,6 @@ import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
 import Revista1 from '../../assets/images/revista 1.png'
 import Revista2 from '../../assets/images/revista 2.png'
-import { Container, Row, Col } from 'reactstrap';
 import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
 
 // sections for this page

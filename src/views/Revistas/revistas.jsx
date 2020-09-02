@@ -6,14 +6,8 @@ import PropTypes from "prop-types";
 import Header from "../../components/header/header.jsx";
 import HeaderBanner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
-import { Progress } from 'reactstrap';
 import Dedepe from '../../assets/images/Dedepê.png';
 import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
-import { Document, Page, pdfjs } from 'react-pdf';
-import RevistaDemocraciaDoPovo1 from './1002 Revista Democracia do Povo 8 p. site.pdf';
-import RevistaDemocraciaDoPovo2 from './1011 Revist Panfleto Revista 12 Cand. site.pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 // sections for this page
 
