@@ -91,10 +91,10 @@ const CustomComponents = () => {
                         GANHE ESSA LINDA PLACA DE RECONHECIMENTO À SUA CANDIDATURA NA COMPRA DE QUALQUER QUANTIDADE DE EXEMPLARES ACIMA.
                     </h2>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <img src={Imagem1} alt="img" style={{ maxWidth: '100vh' }} className="img-responsive img-thumbnail" />
+                        <img src={Imagem1} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive" />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <img src={Imagem2} alt="img" style={{ maxWidth: '100vh' }} className="img-responsive img-thumbnail" />
+                        <img src={Imagem2} alt="img" style={{ maxWidth: '70vh' }} className="img-responsive" />
                     </div>
 
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
