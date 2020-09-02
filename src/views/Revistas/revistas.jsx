@@ -13,53 +13,6 @@ import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
 
 const Revistas = () => {
 
-    const [numPages1, setNumPages1] = useState(null);
-    const [pageNumber1, setPageNumber1] = useState(1);
-    const [numPages2, setNumPages2] = useState(null);
-    const [pageNumber2, setPageNumber2] = useState(1);
-
-    function onDocumentLoadSuccess1({ numPages }) {
-        setNumPages1(numPages);
-    };
-
-    const nextPage = (pageNumber) => {
-        if (pageNumber + 1 > numPages1) {
-            setPageNumber1(1);
-        } else {
-            setPageNumber1(pageNumber + 1);
-        }
-    };
-
-    const previousPage = (pageNumber) => {
-        console.log(pageNumber - 1);
-        if (pageNumber === 1) {
-            setPageNumber1(numPages1);
-        } else {
-            setPageNumber1(pageNumber - 1);
-        };
-    };
-
-    function onDocumentLoadSuccess2({ numPages }) {
-        setNumPages2(numPages);
-    };
-
-    const nextPage2 = (pageNumber) => {
-        if (pageNumber + 1 > numPages2) {
-            setPageNumber2(1);
-        } else {
-            setPageNumber2(pageNumber + 1);
-        }
-    };
-
-    const previousPage2 = (pageNumber) => {
-        console.log(pageNumber - 1);
-        if (pageNumber === 1) {
-            setPageNumber2(numPages2);
-        } else {
-            setPageNumber2(pageNumber - 1);
-        };
-    };
-
     return (
         <div id="main-wrapper">
             <ScrollToTopOnMount />
@@ -84,18 +37,18 @@ const Revistas = () => {
                         revistas a sua REVISTA PRÓPRIA, investindo, com exclusividade nas quatro capas e, na revista PANFLETO EM REVISTA
                         juntamente com outros candidatos e candidatas que possuem afinidade ideológica.
                     </p>
-                    <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
+                    <p style={{ textAlign: 'center', color: 'red', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Democracia do Povo. Edição com 8 páginas + as suas 4 capas.
                     </p>
                     <iframe style={{ width: '100%', height: '80vh'}} src="https://drive.google.com/file/d/1vnhSJSNdxfyIQOPJ43ese3AZ3GtvW83C/preview"></iframe>
-                    <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
+                    <p style={{ textAlign: 'center', color: 'red', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Democracia do Povo. Edição com 12 páginas + as suas 4 capas.
                     </p>
-                    <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
+                    <p style={{ textAlign: 'center', color: 'red', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Panfleto em Revista. Edição com 4, 8 ou 12 candidatos do mesmo partido político.
                     </p>
                     <iframe style={{ width: '100%', height: '80vh'}} src="https://drive.google.com/file/d/1dXgwRZyes_YQDC2I6vi0wmmMCXmIfpqr/preview"></iframe>
-                    <p style={{ textAlign: 'center', color: '#19a9bf', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
+                    <p style={{ textAlign: 'center', color: 'red', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Democracia do Povo. As edições com 8 e 12 páginas são sínteses desta edição com 44 páginas.
                     </p>
                 </div>
