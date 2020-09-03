@@ -44,6 +44,7 @@ const Revistas = () => {
                     <p style={{ textAlign: 'center', color: 'red', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Democracia do Povo. Edição com 12 páginas + as suas 4 capas.
                     </p>
+                    <iframe style={{ width: '100%', height: '80vh'}} src="https://drive.google.com/file/d/1UdILuSekyYDZZQCkr449ILjXN74FdL5d/preview"></iframe>
                     <p style={{ textAlign: 'center', color: 'red', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Panfleto em Revista. Edição com 4, 8 ou 12 candidatos do mesmo partido político.
                     </p>
