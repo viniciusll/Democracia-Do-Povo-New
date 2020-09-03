@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput, UncontrolledAlert } from 'reactstrap';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
@@ -58,12 +58,25 @@ const Formulario2 = () => {
     const [enderecoTransportadora, setEnderecoTransportadora] = useState('');
     const [foneTransportadora, setFoneTransportadora] = useState('');
     const [emailTransportadora, setEmailTransportadora] = useState('');
+    const [representantes, setRepresentantes] = useState([]);
 
     const onDismiss = () => setVisible2(false);
 
     const handleUpload = async file => {
         setFiles(file);
     };
+
+    const getRepresentantes = async () => {
+        await api.get('/ficha/representantes')
+            .then((response) => {
+                const nomesRepresentantes = response.data.nomesRepresentantes;
+                setRepresentantes(nomesRepresentantes);
+            });
+    };
+
+    useEffect(() => {
+        getRepresentantes();
+    }, [])
 
     const enviarFormulario = async () => {
         const data = new FormData();
@@ -648,14 +661,17 @@ const Formulario2 = () => {
                         </Label>
                     </FormGroup>
                     <FormGroup>
-                        <AvField
-                            onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
-                            label="Nome do Representante Comercial:"
-                            name='nomeDoRepresentanteComercial'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                            }}
-                        />
+                    <Input
+                        type="select"
+                        name='representantes'
+                        label='representantes'
+                        onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
+                    >
+                        <option>Escolha o representante</option>
+                        {representantes.map(representante => {
+                            return <option key={representante} value={representante}>{representante}</option>
+                        })}
+                    </Input>
                         <AvField
                             onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
                             label="Cidade do Representante Comercial"
