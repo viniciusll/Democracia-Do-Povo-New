@@ -15,10 +15,8 @@ import CustomComponents from "./views/custom-components/custom-components.jsx";
 import Candidatos from './views/Candidatos/candidatos';
 import Revistas from './views/Revistas/revistas.jsx';
 import CandidatosInscritos from './views/CandidatosInscritos/CandidatosInscritos';
-import RepresentantesCadastrados from './views/RepresentantesCadastrados/RepresentantesCadastrados'
-import Banner from './components/banner/banner';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
+import RepresentantesCadastrados from './views/RepresentantesCadastrados/RepresentantesCadastrados';
+import RevistasProprias from './views/RevistaPropria/RevistaPropria.jsx';
 
 var hist = createBrowserHistory();
 
@@ -30,14 +28,7 @@ ReactDOM.render(
             <Route path="/revistas" component={Revistas} />
             <Route path="/candidatos-inscritos" component={CandidatosInscritos} />
             <Route path="/representantes-cadastrados" component={RepresentantesCadastrados} />
-            <Route path="/revistas-propria" component={() => {
-                return <div>
-                        <Header />
-                        <Banner />
-                        <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }} >REVISTA PRÓPRIA</h2>
-                        <Footer />
-                    </div>
-            } } />
+            <Route path="/revistas-propria" component={RevistasProprias} />
             <Route path="/" component={Components} />
         </Switch>
     </HashRouter>,
