@@ -9,8 +9,6 @@ import Footer from "../../components/footer/footer.jsx";
 import Dedepe from '../../assets/images/Dedepê.png';
 import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
 
-// sections for this page
-
 const Revistas = () => {
 
     return (

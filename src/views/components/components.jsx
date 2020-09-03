@@ -49,7 +49,7 @@ const Components = () => {
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <img src={Revista1} alt="img" className="img-responsive img-thumbnail" style={{ width: '80vh' }} />
                     </div>
-                    <br/>
+                    <br />
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <img src={Revista2} alt="img" className="img-responsive img-thumbnail" style={{ width: '80vh' }} />
                     </div>
@@ -69,28 +69,28 @@ const Components = () => {
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 Regulamento com 7 itens, os quais se referem a uma participação direta do eleitor nas decisões governamentais
                                 dos municípios, mas também dos estados e da União.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 Esse regulamento é parte integrante do projeto para a reforma política e formação da Constituição do eleitor.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 1 — Os cidadãos, grupo de pessoas ou instituições enviarão ideias em formato de projetos e aperfeiçoamento
                                 de programas e leis às Câmaras Municipais, às Assembleias Legislativas dos Estados, ao Congresso Nacional.
                                 Todos os projetos serão publicados nos sites das Câmaras e dos Poderes Executivos de todo o país e, em um
                                 site a ser criado pelo Tribunal Superior Eleitoral, exclusivo para essa finalidade, e, em todos os sites
                                 que seus proprietários desejarem publicá-los.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 2 — Os parlamentares, em 30 dias, deverão relacionar nos projetos recebidos as vantagens e desvantagens,
                                 segundo resultado de sua criteriosa análise, sem alterá-los, porém, a Casa Parlamentar poderá apresentar
                                 um projeto, ainda que baseado em projeto enviado pelo cidadão, grupo de pessoas ou instituições.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 3 — Serão selecionados, por votação dos parlamentares, três projetos e publicados na imprensa e nos sites
                                 citados no item 1. Sendo selecionado o projeto do Parlamento baseado em um dos projetos enviados pelo cidadão,
                                 grupo de pessoas ou instituição, o projeto original será automaticamente um dos três selecionados. Os seis
                                 subsequentes projetos analisados que não forem selecionados entrarão nos campos “reserva de projetos”, dos sites citados.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 4 — Os projetos que necessitarem dos recursos da arrecadação de impostos já existentes, somente poderão entrar em votação no
                                 Parlamento, caso utilizem igual ou menor valor ao do programa ou lei em vigor. Não poderão criar impostos ou taxas. Os projetos
@@ -99,34 +99,34 @@ const Components = () => {
                                 Essas contribuições deverão ser rateadas entre as pessoas físicas, empresas privadas e instituições participantes, ou envolvidas na
                                 obra, programa ou investimento. Os serviços de manutenção deverão ser autossustentáveis, ou seja, deve-se criar condições para a captação
                                 de recursos financeiros.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 5 — Os três projetos vencedores na votação dos parlamentares dentro de um prazo de mais 30 dias serão debatidos nos meios de comunicação,
                                 nos órgãos públicos, nas empresas e nas escolas para que a população entenda, discuta e se inteire sobre cada questão pertinente à sua
                                 vida em sociedade.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 6 — A eleição do projeto será feita por telefone ou internet, com o eleitor teclando ou digitando o número de seu título de eleitor e,
                                 em seguida, escolhendo uma das alternativas a seguir.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 Alternativas selecionadas pela Câmara e a serem votadas pelo eleitor
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 Alternativa 1 Projeto (a)
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 Alternativa 2 Projeto (b)
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 Alternativa 3 Projeto (c)
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 Alternativa 4. Nenhum dos projetos.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 Alternativa 5. Permanecer lei, projeto, ou programa atuais
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 7 — O eleitor que é contra a modificação em pauta poderá votar na alternativa 5, “permanecer a atual lei, projeto ou programa”.
                                 E o que deseja modificar, mas não concorda ou não está satisfeito com nenhuma das três primeiras alternativas, poderá votar
@@ -147,14 +147,14 @@ const Components = () => {
                                 atividades económicas, profissionais, sociais e esportivos serão mais realistas, mais atualizados e mais diversificados.
                                 E, sendo votados pelo eleitor, serão julgados com mais sensatez e coerência, exercerão menor pressão de grupos especuladores
                                 e criminosos e serão tramitados, sancionados e promulgados com maior rapidez.
-                </p>
+                            </p>
                             <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                                 — Seguindo esse regulamento haverá plebiscito para eleger nova Lei de Licitações, para as três esferas de governos.
                                 A Democracia do Povo elaborou um projeto de licitações que descentraliza o pagamento de obras contratadas de empresas
                                 privadas, com a finalidade de que o dinheiro não passe pelas mãos de políticos e governantes. De forma, que a população
                                 acompanhará cada obra de seu interesse através dos sites correspondentes, e podendo participar das licitações, as quais serão
                                 abertas ao público em geral, por vídeo conferências.
-                </p>
+                            </p>
                         </div> :
                         undefined
                     }

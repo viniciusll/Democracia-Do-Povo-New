@@ -49,7 +49,7 @@ const CandidatosInscritos = () => {
                         elevação no preço devido a quantidade baixa de compra. Desta forma Seu Vicci Ozo completou o círculo vicioso: diminuiu o seu lucro, não gerou mais empregos, demitiu 6 funcionários, chamou a mulher para ajudar, encostou o “negócio da China”, ficou devendo para o fornecedor da matéria prima, sonegou parte do Simples por uns tempos, depois não conseguiu mais pagá-lo, sujou o nome, seu CNPJ foi caçado, entrou na informalidade, mas com muita luta, abriu outra firma no nome da mulher, mas com uma produção muito pequena, teve que aumentar o preço do produto. Seu Vicci Ozo gostaria de ser igual ao seu Vito Ozo, mas foi traído pelas retrógradas leis instituídas por quem ele escolheu para representá-lo.
                     </p>
                     <h2 style={{ textAlign: 'center', paddingTop: '5px', color: '#000', fontSize: '25px' }}>
-                    LISTA DOS CANDIDATOS, QUE AO SEREM ELEITOS AOS CARGOS DE PREFEITO E VEREADOR, TRABALHARÃO PARA IMPLANTAR A DEMOCRACIA DO POVO EM SEU MUNICÍPIO.
+                        LISTA DOS CANDIDATOS, QUE AO SEREM ELEITOS AOS CARGOS DE PREFEITO E VEREADOR, TRABALHARÃO PARA IMPLANTAR A DEMOCRACIA DO POVO EM SEU MUNICÍPIO.
                     </h2>
                     <TabelaDePreco />
                 </div>
