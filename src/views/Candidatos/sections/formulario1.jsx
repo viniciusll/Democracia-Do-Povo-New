@@ -577,6 +577,10 @@ const Formulario1 = () => {
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <p style={{ color: 'red' }}>Ao enviar você receberá no email cadastrado neste formulário as opções para efetuar o pagamento</p>
                     <Button onClick={() => enviarFormulario()} outline color="primary">Enviar</Button>
+                    <br/>
+                    <p style={{ textAlign: 'center', color: 'green', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                        <strong style={{ border: '2px solid green' }}>3° Passo:</strong> Para completar o seu marketing politico com eficácia.
+                    </p>
                 </div>
             </AvForm>
         </div>

@@ -71,8 +71,8 @@ const CustomComponents = () => {
                     </h2>
                     <br /><br />
                     <p style={{ textAlign: 'center', color: '#ff0000', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
-                        <strong style={{ color: '#000264' }}>
-                            <strong style={{ border: '2px solid #000264' }}> 1 Passo:</strong> Para divulgar a sua candidatura com pouco dinheiro.
+                        <strong style={{ color: 'green' }}>
+                            <strong style={{ border: '2px solid green' }}> 1° Passo:</strong> Para divulgar a sua candidatura com pouco dinheiro.
                         </strong><br /><br />
                         <strong style={{ color: '#000264' }}>
                             Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista. Medidas em centímetros para as 4 capas: 18 x 28.
@@ -99,8 +99,8 @@ const CustomComponents = () => {
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <img src={Imagem2} alt="img" style={{ maxWidth: '70vh' }} className="img-responsive" />
                     </div>
-                    <p style={{ textAlign: 'center', color: '#000264', paddingTop: '10px' }}>
-                        <strong style={{ border: '2px solid #000264' }}>2° Passo:</strong> Para você começar a pensar em conquistar muitos votos.
+                    <p style={{ textAlign: 'center', color: 'green', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                        <strong style={{ border: '2px solid green' }}>2° Passo:</strong> Para você começar a pensar em conquistar muitos votos.
                     </p>
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                         Dados para contratação da transportadora de sua preferência
@@ -119,9 +119,6 @@ const CustomComponents = () => {
                     <br />
                     {show == true ? <Formulario1 /> : undefined}
                     <br /><br />
-                    <p style={{ textAlign: 'center', color: '#000264', paddingTop: '10px' }}>
-                        <strong style={{ border: '2px solid #000264' }}>3° Passo:</strong> Para completar o seu marketing politico com eficácia.
-                    </p>
                     <h1 style={{ textAlign: 'center', paddingTop: '10px', color: '#000bd4', fontFamily: 'cursive' }}>
                         Candidato a vereador e a prefeito participe da edição desta revista
                     </h1>
