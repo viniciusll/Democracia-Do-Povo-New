@@ -96,9 +96,31 @@ const CustomComponents = () => {
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <img src={Imagem1} alt="img" style={{ maxWidth: '80vh' }} className="img-responsive" />
                     </div>
+                    <p style={{ textAlign: 'center', color: '#000', paddingTop: '50px' }}>
+                            Homenagem - ao candidato a prefeito - Poli Fictício <br />
+                            Parabéns a você Poli Fictício, que tomou a corajosa decisão de se candidatar <br />
+                            a uma função que exige enorme comprometimento com o dia a dia de seu município. <br />
+                            Seus habitantes esperam, se eleito for, que os projetos, que você sancionará <br />
+                            possam atender as necessidades básicas de todos, indistintamente. <br />
+                            A Democracia do Povo enaltece a mulher e o homem políticos que <br />
+                            governam junto ao cidadão, por entender que somente o sonho <br />
+                            que se sonha juntos poderá se tomar realidade a todos. <br /><br />
+                            São Paulo, 15 de novembro de 2020.
+                        </p>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <img src={Imagem2} alt="img" style={{ maxWidth: '70vh' }} className="img-responsive" />
                     </div>
+                    <p style={{ textAlign: 'center', color: '#000', paddingTop: '50px' }}>
+                            Homenagem - ao candidato a vereadora - Maria José Dedepê <br />
+                            Parabéns a você Maria José Dedepê, que tomou a corajosa decisão de se candidatar <br />
+                            a uma função que exige enorme comprometimento com o dia a dia de seu município. <br />
+                            Seus habitantes esperam, se eleito for, que os projetos, que você sancionará <br />
+                            possam atender as necessidades básicas de todos, indistintamente. <br />
+                            A Democracia do Povo enaltece a mulher e o homem políticos que <br />
+                            legislam junto ao cidadão, por entender que somente o sonho <br />
+                            que se sonha juntos poderá se tomar realidade a todos. <br /><br />
+                            São Paulo, 15 de novembro de 2020.
+                        </p>
                     <p style={{ textAlign: 'center', color: 'green', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         <strong style={{ border: '2px solid green' }}>2° Passo:</strong> Para você começar a pensar em conquistar muitos votos.
                     </p>
