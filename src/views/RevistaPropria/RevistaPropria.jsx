@@ -32,7 +32,7 @@ function RevistaPropria() {
                 REVISTA PRÓPRIA
             </h2>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <img src={RevistaPropriaImage} style={{ maxWidth: '80vh' }} alt="Revista Própria"/>
+                <img src={RevistaPropriaImage} style={{ maxWidth: '100%' }} alt="Revista Própria"/>
             </div>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000', fontFamily: 'Calibri (Corpo)' }}>
                 Atenção profissional em vendas!
