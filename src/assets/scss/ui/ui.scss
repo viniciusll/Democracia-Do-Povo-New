@@ -77,7 +77,7 @@ Static slide 10
 *******************/
 .static-slider10 {
     padding: 10% 0;
-    background-image: $banner-slider;
+    // background-image: $banner-slider;
     background-size:cover;
     background-position: center center;
     .title{
@@ -130,7 +130,7 @@ form-banner 1
 
 #banner1 {
     background: right -3em center no-repeat #e9f3f8;
-    background-image: $form-banner;
+    // background-image: $form-banner;
     h2 {
         font-size: 48px;
         line-height: 1;
@@ -351,16 +351,16 @@ team 2
         background-repeat: no-repeat;
         background-size: cover;
         &.t1 {
-            background-image: $t1;
+            // background-image: $t1;
         }
         &.t2 {
-            background-image: $t2;
+            // background-image: $t2;
         }
         &.t3 {
-            background-image: $t3;
+            // background-image: $t3;
         }
         &.t4 {
-            background-image: $t4;
+            // background-image: $t4;
         }
         .card-img-overlay{
             background: rgba(26, 139, 243, 0.87);

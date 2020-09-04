@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import { Container, Row, Col } from 'reactstrap';
 import DemocraciaDoPovo from '../../assets/images/logodemocraciadopovo.png';
 

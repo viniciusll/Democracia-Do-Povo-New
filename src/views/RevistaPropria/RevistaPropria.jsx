@@ -31,30 +31,30 @@ function RevistaPropria() {
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#FF0000', fontFamily: 'Batang' }}>
                 REVISTA PRÓPRIA
             </h2>
-            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', flexDirection: 'row   ' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', border: '2px solid #2d2d2e' }}>
-                    <div style={{ padding: '10px', height: '100%' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', flexDirection: 'row' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', border: '2px solid #2d2d2e', width: '50vh' }}>
+                    <div style={{ padding: '10px', width: '50vh' }}>
                         <img src={DemocraciaDoPovo} style={{ height: '10vh' }} alt="democracia do podo"/>
                     </div>
                     <div style={{ borderTop: '2px solid #2d2d2e', padding: '10px' }}>
                         <p>CONDECORAR com art</p>
                     </div>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ padding: '10px', border: '2px solid #2d2d2e' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', border: '2px solid #2d2d2e', borderLeft: '0px', width: '50vh' }}>
+                    <div style={{ padding: '10px', height: '100%'}}>
                         <p>
                             PANFLETO EM REVISTA <br />
                             Sistema Cooperado de Panfletagem
                         </p>
                     </div>
-                    <div style={{ padding: '10px', border: '2px solid #2d2d2e' }}>
-                        <p style={{ textAlign: 'center'}}>
-                            SITE EM REVISTA
-                            O WEBSITE PALPÁVEL DE SUA EMPRESA
-                            O papernauta vai adorar ter acesso ao Virtual Real
-                            O Brasil tem quase 1 milhão de sites.
-                            SITE EM REVISTA é um sofisticado cartão de visitas
-                            que vai tirar o seu site do esconderijo.
+                    <div style={{ padding: '10px', borderTop: '2px solid #2d2d2e', width: '50vh'}}>
+                        <p>
+                            SITE EM REVISTA <br/>
+                            O WEBSITE PALPÁVEL DE SUA EMPRESA<br/>
+                            O papernauta vai adorar ter acesso ao Virtual Real<br/>
+                            O Brasil tem quase 1 milhão de sites.<br/>
+                            SITE EM REVISTA é um sofisticado cartão de visitas<br/>
+                            que vai tirar o seu site do esconderijo.<br/>
                         </p>
                     </div>
                 </div>
