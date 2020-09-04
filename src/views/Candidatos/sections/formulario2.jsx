@@ -63,6 +63,7 @@ const Formulario2 = () => {
     const onDismiss = () => setVisible2(false);
 
     const handleUpload = async file => {
+        console.log(file);
         setFiles(file);
     };
 

@@ -572,7 +572,7 @@ const Formulario1 = () => {
                     Pedido Emitido com sucesso
                 </UncontrolledAlert>
                 <UncontrolledAlert isOpen={visible} toggle={onDismiss1} color="danger" fade={false}>
-                    Não Foi possível emitir o pedido verifique todos os capos
+                    Não Foi possível emitir o pedido verifique todos os campos
                 </UncontrolledAlert>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <p style={{ color: 'red' }}>Ao enviar você receberá no email cadastrado neste formulário as opções para efetuar o pagamento</p>

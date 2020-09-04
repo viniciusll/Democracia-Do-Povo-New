@@ -28,7 +28,7 @@ const Representantes = () => {
     const [visible2, setVisible2] = useState(false);
 
     const onDismiss = () => setVisible(false);
-    const onDismiss2 = () => setVisible(false);
+    const onDismiss2 = () => setVisible2(false);
 
     const handleClick = () => {
         if (show == true) {
