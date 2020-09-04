@@ -47,7 +47,7 @@ const RepresentantesCadastrados = () => {
                         <br/>
                     </p>
                     <p style={{ color: 'red', textAlign: 'center' }}>Divulgue o site da Democracia do Povo.</p>
-                    <p style={{ fontSize: '28px', textAlign: 'center', color: '#000'}}>
+                    <p style={{ textAlign: 'center', color: '#000' }}>
                         www.democraciadopovo.com.br
                     </p>
                 </div>

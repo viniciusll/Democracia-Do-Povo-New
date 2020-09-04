@@ -6,7 +6,8 @@ import Footer from '../../components/footer/footer';
 import TabelaDePrecosPara4EmpresasEComissoes from './sections/TabelaDePrecosPara4EmpresasEComissoes.jsx';
 import TabelaDePrecosPara8EmpresasEComissoes from './sections/TabelaDePrecosPara8EmpresasEComissoes.jsx';
 import TabelaDePrecosPara12EmpresasEComissoes from './sections/TabelaDePrecosPara12EmpresasEComissoes.jsx';
-import RevistaPropriaImage from '../../assets/images/Capturar.PNG';
+import RevistaPropriaImage from '../../assets/images/12.png';
+import RevistaPropriaImage2 from '../../assets/images/13.png';
 
 function RevistaPropria() {
     return (
@@ -31,8 +32,9 @@ function RevistaPropria() {
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#FF0000', fontFamily: 'Batang' }}>
                 REVISTA PRÓPRIA
             </h2>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <img src={RevistaPropriaImage} style={{ maxWidth: '100%' }} alt="Revista Própria"/>
+                <img src={RevistaPropriaImage2} style={{ maxWidth: '100%' }} alt="Revista Própria" />
             </div>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000', fontFamily: 'Calibri (Corpo)' }}>
                 Atenção profissional em vendas!

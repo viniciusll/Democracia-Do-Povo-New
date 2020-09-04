@@ -59,8 +59,10 @@ const Formulario2 = () => {
     const [foneTransportadora, setFoneTransportadora] = useState('');
     const [emailTransportadora, setEmailTransportadora] = useState('');
     const [representantes, setRepresentantes] = useState([]);
+    const [visible, setVisible] = useState(false);
 
     const onDismiss = () => setVisible2(false);
+    const onDismiss1 = () => setVisible(false);
 
     const handleUpload = async file => {
         console.log(file);
@@ -131,9 +133,30 @@ const Formulario2 = () => {
         data.append('exemplar', exemplar);
         data.append('nomeDoRepresentanteComercial', nomeDoRepresentanteComercial);
         data.append('cidadeDoRepresentanteComercial', cidadeDoRepresentanteComercial);
+        if (nomeTransportadora === '' ||
+            enderecoTransportadora === '' ||
+            foneTransportadora === '' ||
+            emailTransportadora === '' ||
+            nomeComprador === '' ||
+            nomeNotaFiscal === '' ||
+            inscRg === '' ||
+            cnpjOuCpf === '' ||
+            cepEntrega === '' ||
+            ruaEntrega === '' ||
+            bairroEntrega === '' ||
+            numeroEntrega === '' ||
+            cidadeEntrega === '' ||
+            estadoEntrega === '' ||
+            complemento === '' ||
+            exemplar === ''
+            ) {
+                return setVisible(true);
+        } else {
+            const request = await api.post('/ficha/criarFormulario2', data);
+            console.log(request);
+            setVisible2(true);
+        }
 
-        const request = await api.post('/ficha/criarFormulario2', data);
-        console.log(request);
     };
 
     const delayedQuery = useRef(
@@ -662,17 +685,17 @@ const Formulario2 = () => {
                         </Label>
                     </FormGroup>
                     <FormGroup>
-                    <Input
-                        type="select"
-                        name='representantes'
-                        label='representantes'
-                        onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
-                    >
-                        <option>Escolha o representante</option>
-                        {representantes.map(representante => {
-                            return <option key={representante} value={representante}>{representante}</option>
-                        })}
-                    </Input>
+                        <Input
+                            type="select"
+                            name='representantes'
+                            label='representantes'
+                            onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
+                        >
+                            <option>Escolha o representante</option>
+                            {representantes.map(representante => {
+                                return <option key={representante} value={representante}>{representante}</option>
+                            })}
+                        </Input>
                         <AvField
                             onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
                             label="Cidade do Representante Comercial"
@@ -706,6 +729,12 @@ const Formulario2 = () => {
                     </FormGroup>
                 </FormGroup>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
+                <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
+                    Pedido Emitido com sucesso
+                </UncontrolledAlert>
+                <UncontrolledAlert isOpen={visible} toggle={onDismiss1} color="danger" fade={false}>
+                    Não Foi possível emitir o pedido verifique todos os campos
+                </UncontrolledAlert>
                     <p style={{ color: 'red' }}>Ao enviar você receberá no email cadastrado neste formulário as opções para efetuar o pagamento</p>
                     <Button onClick={() => enviarFormulario()} outline color="primary">
                         Enviar
