@@ -6,7 +6,7 @@ import Footer from '../../components/footer/footer';
 import TabelaDePrecosPara4EmpresasEComissoes from './sections/TabelaDePrecosPara4EmpresasEComissoes.jsx';
 import TabelaDePrecosPara8EmpresasEComissoes from './sections/TabelaDePrecosPara8EmpresasEComissoes.jsx';
 import TabelaDePrecosPara12EmpresasEComissoes from './sections/TabelaDePrecosPara12EmpresasEComissoes.jsx';
-import DemocraciaDoPovo from '../../assets/images/logodemocraciadopovo.png';
+import RevistaPropriaImage from '../../assets/images/Capturar.PNG';
 
 function RevistaPropria() {
     return (
@@ -31,33 +31,8 @@ function RevistaPropria() {
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#FF0000', fontFamily: 'Batang' }}>
                 REVISTA PRÓPRIA
             </h2>
-            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', flexDirection: 'row' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', border: '2px solid #2d2d2e', width: '50vh' }}>
-                    <div style={{ padding: '10px', width: '50vh' }}>
-                        <img src={DemocraciaDoPovo} style={{ height: '10vh' }} alt="democracia do podo"/>
-                    </div>
-                    <div style={{ borderTop: '2px solid #2d2d2e', padding: '10px' }}>
-                        <p>CONDECORAR com art</p>
-                    </div>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', border: '2px solid #2d2d2e', borderLeft: '0px', width: '50vh' }}>
-                    <div style={{ padding: '10px', height: '100%'}}>
-                        <p>
-                            PANFLETO EM REVISTA <br />
-                            Sistema Cooperado de Panfletagem
-                        </p>
-                    </div>
-                    <div style={{ padding: '10px', borderTop: '2px solid #2d2d2e', width: '50vh'}}>
-                        <p>
-                            SITE EM REVISTA <br/>
-                            O WEBSITE PALPÁVEL DE SUA EMPRESA<br/>
-                            O papernauta vai adorar ter acesso ao Virtual Real<br/>
-                            O Brasil tem quase 1 milhão de sites.<br/>
-                            SITE EM REVISTA é um sofisticado cartão de visitas<br/>
-                            que vai tirar o seu site do esconderijo.<br/>
-                        </p>
-                    </div>
-                </div>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <img src={RevistaPropriaImage} style={{ maxWidth: '80vh' }} alt="Revista Própria"/>
             </div>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000', fontFamily: 'Calibri (Corpo)' }}>
                 Atenção profissional em vendas!
