@@ -8,8 +8,8 @@ import Footer from "../../components/footer/footer.jsx";
 import { Button } from 'reactstrap';
 import Revista1 from "../../assets/images/revista 1.png"
 import Revista4 from "../../assets/images/revista 4.png"
-import Imagem1 from "../../assets/images/111.jpg";
-import Imagem2 from "../../assets/images/222.jpg";
+import Imagem1 from "../../assets/images/111.png";
+import Imagem2 from "../../assets/images/222.png";
 import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
 import Logo from '../../assets/images/logodemocraciadopovo2.png';
 

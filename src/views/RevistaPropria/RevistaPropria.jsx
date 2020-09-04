@@ -6,6 +6,7 @@ import Footer from '../../components/footer/footer';
 import TabelaDePrecosPara4EmpresasEComissoes from './sections/TabelaDePrecosPara4EmpresasEComissoes.jsx';
 import TabelaDePrecosPara8EmpresasEComissoes from './sections/TabelaDePrecosPara8EmpresasEComissoes.jsx';
 import TabelaDePrecosPara12EmpresasEComissoes from './sections/TabelaDePrecosPara12EmpresasEComissoes.jsx';
+import DemocraciaDoPovo from '../../assets/images/logodemocraciadopovo.png';
 
 function RevistaPropria() {
     return (
@@ -25,6 +26,37 @@ function RevistaPropria() {
                         Outra vantagem do nosso modelo de Revista Própria é a de que, o custo da impressão gráfica entra na faixa de preço mínimo, mesmo para pequena quantidade de exemplares.
                         Confira os modelos de sua...
                     </p>
+                </div>
+            </div>
+            <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#FF0000', fontFamily: 'Batang' }}>
+                REVISTA PRÓPRIA
+            </h2>
+            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', flexDirection: 'row   ' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', border: '2px solid #2d2d2e' }}>
+                    <div style={{ padding: '10px', height: '100%' }}>
+                        <img src={DemocraciaDoPovo} style={{ height: '10vh' }} alt="democracia do podo"/>
+                    </div>
+                    <div style={{ borderTop: '2px solid #2d2d2e', padding: '10px' }}>
+                        <p>CONDECORAR com art</p>
+                    </div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ padding: '10px', border: '2px solid #2d2d2e' }}>
+                        <p>
+                            PANFLETO EM REVISTA <br />
+                            Sistema Cooperado de Panfletagem
+                        </p>
+                    </div>
+                    <div style={{ padding: '10px', border: '2px solid #2d2d2e' }}>
+                        <p style={{ textAlign: 'center'}}>
+                            SITE EM REVISTA
+                            O WEBSITE PALPÁVEL DE SUA EMPRESA
+                            O papernauta vai adorar ter acesso ao Virtual Real
+                            O Brasil tem quase 1 milhão de sites.
+                            SITE EM REVISTA é um sofisticado cartão de visitas
+                            que vai tirar o seu site do esconderijo.
+                        </p>
+                    </div>
                 </div>
             </div>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000', fontFamily: 'Calibri (Corpo)' }}>
