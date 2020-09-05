@@ -9,7 +9,7 @@ const Footer = () => {
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <div>
                         <p style={{ color: '#FFF' }}>O SÓCIO BR PRODUTOS E SERVIÇOS INOVADORES EIRELI.</p>
-                        <p style={{ color: '#FFF' }}>Rua bom sucesso 407 Tatuapé - São Paulo - SP.</p>
+                        <p style={{ color: '#FFF' }}>RUA BOM SUCESSO 407 TATUAPÉ - SÃO PAULO - SP.</p>
                         <p style={{ color: '#FFF' }}>CNPJ: 28.398.851/0001-53</p>
                     </div>
                     <div>

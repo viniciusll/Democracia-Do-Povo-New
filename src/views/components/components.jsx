@@ -145,7 +145,7 @@ const Components = () => {
                                     de atendimento” deverá ser feito pelo TSE, além da coordenação e execução de todos os plebiscitos, com a participação dos TRE,
                                     e com o apoio voluntário das emissoras de rádio e televisão, as quais já utilizam o sistema de comunicação, por meio do telefone
                                     e internet com o telespectador. Os projetos sendo feitos por quem sofre com os problemas locais de cada área das
-                                    atividades económicas, profissionais, sociais e esportivos serão mais realistas, mais atualizados e mais diversificados.
+                                    atividades econômicas, profissionais, sociais e esportivos serão mais realistas, mais atualizados e mais diversificados.
                                     E, sendo votados pelo eleitor, serão julgados com mais sensatez e coerência, exercerão menor pressão de grupos especuladores
                                     e criminosos e serão tramitados, sancionados e promulgados com maior rapidez.
                             </p>
