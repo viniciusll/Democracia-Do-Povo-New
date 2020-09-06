@@ -98,7 +98,7 @@ const CustomComponents = () => {
                     </div>
                     <p style={{ textAlign: 'center', color: '#000', paddingTop: '50px' }}>
                             Homenagem - ao candidato a prefeito - Poli Fictício <br />
-                            Parabéns a você Poli Fictício, que tomou a corajosa decisão de se candidatar <br />
+                            Parabéns a você Poli Fictício, que tomou a corajosa decisão de se candidata <br />
                             a uma função que exige enorme comprometimento com o dia a dia de seu município. <br />
                             Seus habitantes esperam, se eleito for, que os projetos, que você sancionará <br />
                             possam atender as necessidades básicas de todos, indistintamente. <br />
@@ -112,7 +112,7 @@ const CustomComponents = () => {
                     </div>
                     <p style={{ textAlign: 'center', color: '#000', paddingTop: '50px' }}>
                             Homenagem - ao candidato a vereadora - Maria José Dedepê <br />
-                            Parabéns a você Maria José Dedepê, que tomou a corajosa decisão de se candidatar <br />
+                            Parabéns a você Maria José Dedepê, que tomou a corajosa decisão de se candidata <br />
                             a uma função que exige enorme comprometimento com o dia a dia de seu município. <br />
                             Seus habitantes esperam, se eleito for, que os projetos, que você sancionará <br />
                             possam atender as necessidades básicas de todos, indistintamente. <br />

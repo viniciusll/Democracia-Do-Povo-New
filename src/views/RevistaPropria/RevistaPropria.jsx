@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Banner from '../../components/banner/banner.jsx';
 import Header from '../../components/header/header';
@@ -8,10 +8,25 @@ import TabelaDePrecosPara8EmpresasEComissoes from './sections/TabelaDePrecosPara
 import TabelaDePrecosPara12EmpresasEComissoes from './sections/TabelaDePrecosPara12EmpresasEComissoes.jsx';
 import RevistaPropriaImage from '../../assets/images/12.png';
 import RevistaPropriaImage2 from '../../assets/images/13.png';
+import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
+import Formulario from './sections/Formulario.jsx';
+import { Button } from 'reactstrap';
 
 function RevistaPropria() {
+
+    const [show, setShow] = useState(false);
+
+    const handleClick = () => {
+        if (show == true) {
+            setShow(false);
+        } else {
+            setShow(true);
+        }
+    };
+
     return (
         <div>
+            <ScrollToTopOnMount />
             <Header />
             <Banner />
             <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }} >REVISTA PRÓPRIA</h2>
@@ -33,7 +48,7 @@ function RevistaPropria() {
                 REVISTA PRÓPRIA
             </h2>
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <img src={RevistaPropriaImage} style={{ maxWidth: '100%' }} alt="Revista Própria"/>
+                <img src={RevistaPropriaImage} style={{ maxWidth: '100%' }} alt="Revista Própria" />
                 <img src={RevistaPropriaImage2} style={{ maxWidth: '100%' }} alt="Revista Própria" />
             </div>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000', fontFamily: 'Calibri (Corpo)' }}>
@@ -69,6 +84,15 @@ function RevistaPropria() {
             </h2>
             <TabelaDePrecosPara12EmpresasEComissoes />
             <br />
+
+            <div style={{ textAlign: 'center', paddingTop: '5px' }}>
+                <Button onClick={handleClick} style={{ color: 'yellow', backgroundColor: '#003d03' }}>
+                    Preencha o formulario e faça seu pedido
+                </Button>
+                {show == true ? <Formulario /> : undefined}
+            </div>
+            <br/><br/>
+
             <Footer />
         </div>
     )
