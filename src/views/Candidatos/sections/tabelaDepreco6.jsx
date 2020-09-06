@@ -14,24 +14,6 @@ const TabelaDePreco5 = (props) => {
         </thead>
         <tbody>
           <tr>
-            <th style={{ color: '#000' }} scope="row">250</th>
-            <td style={{ color: 'blue' }}></td>
-            <td style={{ color: 'red' }}></td>
-            <td style={{ color: 'red' }}></td>
-          </tr>
-          <tr>
-            <th style={{ color: '#000' }} scope="row">500</th>
-            <td style={{ color: 'blue' }}></td>
-            <td style={{ color: 'red' }}></td>
-            <td style={{ color: 'red' }}></td>
-          </tr>
-          <tr>
-            <th style={{ color: '#000' }} scope="row">1.000</th>
-            <td style={{ color: 'blue' }}></td>
-            <td style={{ color: 'red' }}></td>
-            <td style={{ color: 'red' }}></td>
-          </tr>
-          <tr>
             <th style={{ color: '#000' }} scope="row">2.000</th>
             <td style={{ color: 'blue' }}></td>
             <td style={{ color: 'red' }}></td>

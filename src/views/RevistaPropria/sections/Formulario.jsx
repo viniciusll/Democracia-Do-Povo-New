@@ -60,6 +60,7 @@ const Formulario2 = () => {
     const [emailTransportadora, setEmailTransportadora] = useState('');
     const [representantes, setRepresentantes] = useState([]);
     const [visible, setVisible] = useState(false);
+    const [nomeEmpresa, setNomeEmpresa] = useState('');
 
     const onDismiss = () => setVisible2(false);
     const onDismiss1 = () => setVisible(false);
@@ -85,6 +86,7 @@ const Formulario2 = () => {
         const data = new FormData();
         data.append('file', image);
         data.append('nomeTransportadora', nomeTransportadora);
+        data.append('nomeEmpresa', nomeEmpresa);
         data.append('enderecoTransportadora', enderecoTransportadora);
         data.append('foneTransportadora', foneTransportadora);
         data.append('emailTransportadora', emailTransportadora);
@@ -149,8 +151,8 @@ const Formulario2 = () => {
             estadoEntrega === '' ||
             complemento === '' ||
             exemplar === ''
-            ) {
-                return setVisible(true);
+        ) {
+            return setVisible(true);
         } else {
             const request = await api.post('/ficha/criarFormulario3', data);
             console.log(request);
@@ -331,7 +333,7 @@ const Formulario2 = () => {
                         label="E-mail:"
                     />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                        Nomes completos dos 4 (quatro)
+                        Nomes completos das 4 (quatro) Empresas
                     </h3>
                     <AvField
                         onChange={e => setnomeComprador(e.target.value)}
@@ -366,7 +368,7 @@ const Formulario2 = () => {
 
                     />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                        Nomes completos dos 8 (oito) 
+                        Nomes completos das 8 (oito) Empresas
                     </h3>
                     <AvField
                         onChange={e => setPrimeiraCapa2(e.target.value)}
@@ -417,7 +419,7 @@ const Formulario2 = () => {
 
                     />
                     <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                        Nomes completos dos 12 (doze)
+                        Nomes completos das 12 (doze) Empresas
                     </h3>
                     <AvField
                         onChange={e => setPrimeiraCapa3(e.target.value)}
@@ -728,11 +730,11 @@ const Formulario2 = () => {
                     </FormGroup>
                 </FormGroup>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
-                <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
-                    Pedido Emitido com sucesso
+                    <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
+                        Pedido Emitido com sucesso
                 </UncontrolledAlert>
-                <UncontrolledAlert isOpen={visible} toggle={onDismiss1} color="danger" fade={false}>
-                    Não Foi possível emitir o pedido verifique todos os campos
+                    <UncontrolledAlert isOpen={visible} toggle={onDismiss1} color="danger" fade={false}>
+                        Não Foi possível emitir o pedido verifique todos os campos
                 </UncontrolledAlert>
                     <p style={{ color: 'red' }}>Ao enviar você receberá no email cadastrado neste formulário as opções para efetuar o pagamento</p>
                     <Button onClick={() => enviarFormulario()} outline color="primary">
