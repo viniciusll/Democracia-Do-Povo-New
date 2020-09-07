@@ -16,8 +16,8 @@ function TabelaDePrecosPara4EmpresasEComissoes() {
                 <tr>
                     <th scope="row"></th>
                     <td style={{ color: 'purple' }}>1 página 20% de anúncio + 80% de matéria</td>
-                    <td style={{ color: 'purple' }}>4 páginas</td>
-                    <td style={{ color: 'purple' }}>4 páginas</td>
+                    <td style={{ color: 'purple' }}>12 páginas</td>
+                    <td style={{ color: 'purple' }}>12 páginas</td>
                 </tr>
                 <tr>
                     <th style={{ color: 'green' }} scope="row">2.000</th>
