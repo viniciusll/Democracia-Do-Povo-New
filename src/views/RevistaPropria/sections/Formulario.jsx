@@ -706,8 +706,7 @@ const Formulario2 = () => {
                             }}
                         />
                         <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                            Envie as fotos dos candidatos e textos das matérias
-                            que entrarão na edição da Revista Panfleto em Revista.
+                            Envie fotos e textos das matérias que entrarão na edição da revista Panfleto em Revista.
                         </p>
                         <FormGroup>
                             <Label
