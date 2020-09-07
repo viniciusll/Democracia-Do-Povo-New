@@ -407,7 +407,7 @@ const Formulario1 = () => {
                     <AvField
                         name='cidade representante'
                         onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
-                        label="Cidade do Representante Comercial"
+                        label="Cidade do Representante"
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
@@ -425,7 +425,7 @@ const Formulario1 = () => {
                                 width: '100%'
                             }}
                         >
-                            Escolha seu arquivo
+                            selecione o arquivo das artes.
                     </Label>
                         <Input type="file" name="file" style={{ display: "none" }} onChange={(e) => handleUpload(e.target.files[0])} id="exampleFile" />
                         <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
