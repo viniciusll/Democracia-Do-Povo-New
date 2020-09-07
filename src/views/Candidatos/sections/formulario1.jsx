@@ -115,7 +115,7 @@ const Formulario1 = () => {
             const request = await api.post('/ficha/criarFormulario1', data);
             console.log(request);
             setVisible2(true);
-            return  <ScrollToTopOnMount />
+            return <ScrollToTopOnMount />
         };
     };
 
@@ -256,6 +256,121 @@ const Formulario1 = () => {
                     FORMULÁRIO PARA PEDIDOS <br />
                     Revista Democracia do Povo
                 </h2>
+
+                <FormGroup>
+                    <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
+                        name='nome'
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                        }}
+                        label="Nome completo do Candidato:"
+                    />
+                    <AvField
+                        name='nomeCandidato'
+                        onChange={e => setNomeComoCandidato(e.target.value)}
+                        label="Nome como candidato:"
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                        }}
+                    />
+                </FormGroup>
+                <div style={{ textAlign: 'center' }}>
+                    <p>Candidato a: </p>
+                    <FormGroup style={{ paddingTop: '10px' }} check inline>
+                        <Label style={{ paddingRight: '10px' }} check>
+                            <Input value='Prefeito' onChange={e => setCandidatoA(e.target.value)} type="radio" name='radio1' />{' '}
+                            Prefeito
+                        </Label>
+                        <Label check>
+                            <Input value='Vereador' onChange={e => setCandidatoA(e.target.value)} type="radio" name='radio1' />{' '}
+                            Vereador
+                        </Label>
+                    </FormGroup>
+                </div>
+                <AvField
+                    onChange={handleChange}
+                    label="CEP:"
+                    name='cep'
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                    }}
+                />
+                <AvField
+                    value={cidadeEntrega}
+                    onChange={e => setCidadeEntrega(e.target.value)}
+                    label="Cidade:"
+                    name='city'
+                    disabled
+                />
+                <AvField
+                    value={estadoEntrega}
+                    onChange={e => setEstadoEntrega(e.target.value)}
+                    label="Estado:"
+                    name='estado'
+                    disabled
+                />
+                <AvField
+                    value={rua}
+                    onChange={e => setRua(e.target.value)}
+                    label="Rua:"
+                    name='street'
+                    disabled
+                />
+                <AvField
+                    value={bairro}
+                    onChange={e => setBairro(e.target.value)}
+                    label="Bairro:"
+                    name='bairro'
+                    disabled
+                />
+                <AvField
+                    value={numero}
+                    onChange={e => setNumero(e.target.value)}
+                    label="Número"
+                    name='number'
+                    type='number'
+                />
+                <AvField
+                    onChange={e => setComplemento(e.target.value)}
+                    label="Complemento:"
+                    name='complemento'
+                />
+                <AvField
+                    onChange={handleChangeTelefone}
+                    label="Telefone:"
+                    name='telefone'
+                    value={telefone}
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                    }}
+                />
+                <AvField
+                    onChange={e => setEmail(e.target.value)}
+                    label="E-mail:"
+                    name='email'
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                    }}
+                />
+                <AvField
+                    onChange={handleChangeCpfCnpj}
+                    label="CNPJ/CPF:"
+                    name='cpf'
+                    value={cnpjOuCpf}
+                    id="cpfcnpj"
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' },
+                        verificationCpfCnpj
+                    }}
+                />
+                <AvField
+                    onChange={e => setInscRg(e.target.value)}
+                    label="Insc. Est./RG:"
+                    name='rg'
+                    validate={{
+                        required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                    }}
+                />
                 <AvField onChange={e => setNomeTransportadora(e.target.value)}
                     name='nomeTransportadora'
                     validate={{
@@ -284,163 +399,6 @@ const Formulario1 = () => {
                     }}
                     label="E-mail:"
                 />
-                <FormGroup>
-                    <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
-                        name='nome'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                        label="Nome completo do Candidato:"
-                    />
-                    <AvField 
-                        name='nomeCandidato'  
-                        onChange={e => setNomeComoCandidato(e.target.value)} 
-                        label="Nome como candidato:" 
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                </FormGroup>
-                <div style={{ textAlign: 'center' }}>
-                    <p>Candidato a: </p>
-                    <FormGroup style={{ paddingTop: '10px' }} check inline>
-                        <Label style={{ paddingRight: '10px' }} check>
-                            <Input value='Prefeito' onChange={e => setCandidatoA(e.target.value)} type="radio" name='radio1' />{' '}
-                            Prefeito
-                        </Label>
-                        <Label check>
-                            <Input value='Vereador' onChange={e => setCandidatoA(e.target.value)} type="radio" name='radio1' />{' '}
-                            Vereador
-                        </Label>
-                    </FormGroup>
-                </div>
-                <FormGroup>
-                    <AvField
-                        onChange={handleChange}
-                        label="CEP para entrega:"
-                        name='cep'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        value={cidadeEntrega}
-                        onChange={e => setCidadeEntrega(e.target.value)}
-                        label="Cidade para entrega:"
-                        name='city'
-                        disabled
-                    />
-                    <AvField
-                        value={estadoEntrega}
-                        onChange={e => setEstadoEntrega(e.target.value)}
-                        label="Estado para entrega:"
-                        name='estado'
-                        disabled
-                    />
-                    <AvField
-                        value={rua}
-                        onChange={e => setRua(e.target.value)}
-                        label="Rua para entrega:"
-                        name='street'
-                        disabled
-                    />
-                    <AvField
-                        value={bairro}
-                        onChange={e => setBairro(e.target.value)}
-                        label="Bairro para entrega:"
-                        name='bairro'
-                        disabled
-                    />
-                    <AvField
-                        value={numero}
-                        onChange={e => setNumero(e.target.value)}
-                        label="Número"
-                        name='number'
-                        type='number'
-                    />
-                    <AvField
-                        onChange={e => setComplemento(e.target.value)}
-                        label="Complemento para entrega:"
-                        name='complemento'
-                    />
-                    <h3>Dados para nota fiscal: </h3>
-                    <AvField
-                        onChange={e => setNomeNotaFiscal(e.target.value)}
-                        name='nomeNotaFiscal'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                        label="Nome:"
-                    />
-                    <AvField
-                        onChange={e => setEnderecoNotaFiscal(e.target.value)}
-                        label="Endereço:"
-                        name='endereço'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setCidadeNotaFiscal(e.target.value)}
-                        label="Cidade :"
-                        name='cidadeNotafiscal'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setEstadoNotaFiscal(e.target.value)}
-                        label="Estado:"
-                        name='stateNotafiscal'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setCepNotaFiscal(e.target.value)}
-                        label="CEP:"
-                        name='cepNotofiscal'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setInscRg(e.target.value)}
-                        label="Insc. Est./RG:"
-                        name='rg'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={handleChangeCpfCnpj}
-                        label="CNPJ/CPF:"
-                        name='cpf'
-                        value={cnpjOuCpf}
-                        id="cpfcnpj"
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' },
-                            verificationCpfCnpj
-                        }}
-                    />
-                    <AvField
-                        onChange={handleChangeTelefone}
-                        label="Telefone:"
-                        name='telefone'
-                        value={telefone}
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setEmail(e.target.value)}
-                        label="E-mail:"
-                        name='email'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                </FormGroup>
                 <div style={{ textAlign: 'center' }}>
                     <p>Quantidade de Exemplares: </p>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
@@ -577,7 +535,7 @@ const Formulario1 = () => {
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                     <p style={{ color: 'red' }}>Ao enviar você receberá no email cadastrado neste formulário as opções para efetuar o pagamento</p>
                     <Button onClick={() => enviarFormulario()} outline color="primary">Enviar</Button>
-                    <br/>
+                    <br />
                     <p style={{ textAlign: 'center', color: 'green', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         <strong style={{ border: '2px solid green' }}>3° Passo:</strong> Para completar o seu marketing politico com eficácia.
                     </p>
