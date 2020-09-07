@@ -68,7 +68,6 @@ const Formulario1 = () => {
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
         data.append('nomeComoCandidato', nomeComoCandidato);
         data.append('candidatoA', candidatoA);
-        data.append('nomeNotaFiscal', nomeNotaFiscal);
         data.append('cidadeEntrega', cidadeEntrega);
         data.append('rua', rua);
         data.append('numero', numero);
@@ -76,10 +75,6 @@ const Formulario1 = () => {
         data.append('bairro', bairro);
         data.append('estadoEntrega', estadoEntrega);
         data.append('cepEntrega', cepEntrega);
-        data.append('enderecoNotaFiscal', enderecoNotaFiscal);
-        data.append('cidadeNotaFiscal', cidadeNotaFiscal);
-        data.append('estadoNotaFiscal', estadoNotaFiscal);
-        data.append('cepNotaFiscal', cepNotaFiscal);
         data.append('inscRg', inscRg);
         data.append('cnpjOuCpf', cnpjOuCpf);
         data.append('telefone', telefone);
@@ -100,9 +95,6 @@ const Formulario1 = () => {
             bairro === '' ||
             estadoEntrega === '' ||
             cepEntrega === '' ||
-            enderecoNotaFiscal === '' ||
-            cidadeNotaFiscal === '' ||
-            cepNotaFiscal === '' ||
             inscRg === '' ||
             cnpjOuCpf === '' ||
             email === '' ||
@@ -399,6 +391,46 @@ const Formulario1 = () => {
                     }}
                     label="E-mail:"
                 />
+                <FormGroup>
+                    <Input
+                        type="select"
+                        name='representantes'
+                        label='representantes'
+                        onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
+                    >
+                        <option>Escolha o representante</option>
+                        {representantes.map(representante => {
+                            return <option key={representante} value={representante}>{representante}</option>
+                        })}
+                    </Input>
+                    <br />
+                    <AvField
+                        name='cidade representante'
+                        onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
+                        label="Cidade do Representante Comercial"
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                        }}
+                    />
+                    <FormGroup>
+                        <Label
+                            for="exampleFile"
+                            style={{
+                                backgroundColor: '#3639ff',
+                                borderRadius: '3px',
+                                color: "#fff",
+                                cursor: 'pointer',
+                                margin: '10px',
+                                padding: '6px 20px',
+                                width: '100%'
+                            }}
+                        >
+                            Escolha seu arquivo
+                    </Label>
+                        <Input type="file" name="file" style={{ display: "none" }} onChange={(e) => handleUpload(e.target.files[0])} id="exampleFile" />
+                        <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
+                    </FormGroup>
+                </FormGroup>
                 <div style={{ textAlign: 'center' }}>
                     <p>Quantidade de Exemplares: </p>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
@@ -486,46 +518,6 @@ const Formulario1 = () => {
                         </Label>
                     </FormGroup>
                 </div>
-                <FormGroup>
-                    <Input
-                        type="select"
-                        name='representantes'
-                        label='representantes'
-                        onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
-                    >
-                        <option>Escolha o representante</option>
-                        {representantes.map(representante => {
-                            return <option key={representante} value={representante}>{representante}</option>
-                        })}
-                    </Input>
-                    <br />
-                    <AvField
-                        name='cidade representante'
-                        onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
-                        label="Cidade do Representante Comercial"
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <FormGroup>
-                        <Label
-                            for="exampleFile"
-                            style={{
-                                backgroundColor: '#3639ff',
-                                borderRadius: '3px',
-                                color: "#fff",
-                                cursor: 'pointer',
-                                margin: '10px',
-                                padding: '6px 20px',
-                                width: '100%'
-                            }}
-                        >
-                            Escolha seu arquivo
-                    </Label>
-                        <Input type="file" name="file" style={{ display: "none" }} onChange={(e) => handleUpload(e.target.files[0])} id="exampleFile" />
-                        <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
-                    </FormGroup>
-                </FormGroup>
                 <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
                     Pedido Emitido com sucesso
                 </UncontrolledAlert>
