@@ -111,7 +111,7 @@ const CustomComponents = () => {
                         <img src={Imagem2} alt="img" style={{ maxWidth: '70vh' }} className="img-responsive" />
                     </div>
                     <p style={{ textAlign: 'center', color: '#000', paddingTop: '50px' }}>
-                            Homenagem - ao candidato a vereadora - Maria José Dedepê <br />
+                            Homenagem - á candidata a vereadora - Maria José Dedepê <br />
                             Parabéns a você Maria José Dedepê, que tomou a corajosa decisão de se candidatar <br />
                             a uma função que exige enorme comprometimento com o dia a dia de seu município. <br />
                             Seus habitantes esperam, se eleita for, que os projetos, que você votará <br />
