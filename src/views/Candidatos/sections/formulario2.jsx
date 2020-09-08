@@ -59,6 +59,9 @@ const Formulario2 = () => {
     const enviarFormulario = async () => {
         const data = new FormData();
         data.append('file', image);
+        data.append('numeroEdicao', numeroEdicao);
+        data.append('numeroRepresentante', numeroRepresentante);
+        data.append('numeroParticipantes', numeroParticipantes);
         data.append('nomeTransportadora', nomeTransportadora);
         data.append('enderecoTransportadora', enderecoTransportadora);
         data.append('foneTransportadora', foneTransportadora);
@@ -79,6 +82,9 @@ const Formulario2 = () => {
         data.append('nomeDoRepresentanteComercial', nomeDoRepresentanteComercial);
         data.append('cidadeDoRepresentanteComercial', cidadeDoRepresentanteComercial);
         if (nomeTransportadora === '' ||
+            numeroParticipantes === '' ||
+            numeroEdicao === '' ||
+            numeroRepresentante === '' ||
             enderecoTransportadora === '' ||
             foneTransportadora === '' ||
             emailTransportadora === '' ||
@@ -243,14 +249,14 @@ const Formulario2 = () => {
                     Revista Panfleto em Revista
                 </h2>
                 <FormGroup>
-                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                    <AvField onChange={e => setNumeroRepresentante(e.target.value)}
                         name='numeroRepresentante'
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
                         label="N° Representante:"
                     />
-                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                    <AvField onChange={e => setNumeroEdicao(e.target.value)}
                         name='numeroEdicao'
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
@@ -261,15 +267,15 @@ const Formulario2 = () => {
                         <p>N° Participantes: </p>
                         <FormGroup style={{ paddingTop: '10px' }} check inline>
                             <Label style={{ paddingRight: '10px' }} check>
-                                <Input value='4' type="radio" name='radio1' />{' '}
+                                <Input value='4' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
                             4
                         </Label>
                             <Label style={{ paddingRight: '10px' }} check>
-                                <Input value='8'  type="radio" name='radio1' />{' '}
+                                <Input value='8' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
                             8
                         </Label>
                         <Label check>
-                                <Input value='12' type="radio" name='radio1' />{' '}
+                                <Input value='12' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
                             12
                         </Label>
                         </FormGroup>
@@ -433,7 +439,7 @@ const Formulario2 = () => {
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='3'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                             Edição com 4 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$1.1350,00
+                             Edição com 4 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$1.350,00
                             </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
