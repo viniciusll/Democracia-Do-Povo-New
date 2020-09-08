@@ -67,6 +67,7 @@ const Formulario2 = () => {
         data.append('foneTransportadora', foneTransportadora);
         data.append('emailTransportadora', emailTransportadora);
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
+        data.append('nomeComoCandidato', nomeComoCandidato);
         data.append('cidadeEntrega', cidadeEntrega);
         data.append('ruaEntrega', ruaEntrega);
         data.append('bairroEntrega', bairroEntrega);
@@ -83,6 +84,8 @@ const Formulario2 = () => {
         data.append('cidadeDoRepresentanteComercial', cidadeDoRepresentanteComercial);
         if (nomeTransportadora === '' ||
             numeroParticipantes === '' ||
+            nomeComoCandidato === '' ||
+            nomeCompletoCandidato === '' ||
             numeroEdicao === '' ||
             numeroRepresentante === '' ||
             enderecoTransportadora === '' ||
@@ -309,26 +312,19 @@ const Formulario2 = () => {
                         }}
                         label="E-mail:"
                     />
-                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                    <AvField onChange={e => setNomeCompletoCandidato(e.target.value)}
                         name='nomeCompletoCandidato'
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
                         label="Nome completo do candidato:"
                     />
-                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                    <AvField onChange={e => setNomeComoCandidato(e.target.value)}
                         name='nomeComocandidato'
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
                         label="Nome como candidato:"
-                    />
-                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
-                        name='nomeTransportadora'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                        label="NOME DA TRANSPORTADORA ESCOLHIDA:"
                     />
                     <AvField
                         onChange={handleChange}
