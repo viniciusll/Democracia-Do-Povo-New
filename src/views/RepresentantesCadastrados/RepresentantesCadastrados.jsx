@@ -22,7 +22,7 @@ const RepresentantesCadastrados = () => {
                         Mensagem a quem quer representar a Democracia do Povo
                     </h2>
                     <div style={{ padding: '35px', paddingTop: '0px' }}>
-                        <p style={{ color: '#000', padding: '20px', display: 'flex', textAlign: 'justify', justifyContent: 'flex-start', border: '2px solid green' }}>
+                        <p style={{ fontFamily: 'Garamond', color: '#000', fontSize: '19px', padding: '20px', display: 'flex', textAlign: 'justify', justifyContent: 'flex-start', border: '2px solid green' }}>
                             Olá amigo profissional em vendas! <br />
                             Quer ganhar dinheiro com as eleições?<br />
                             Apresente a revista Democracia do Povo a mais de 700 mil candidatos a prefeito e vereador. <br />
@@ -35,14 +35,14 @@ const RepresentantesCadastrados = () => {
                     </h3>
                     <div style={{ padding: '35px', paddingTop: '0px' }}>
                         <div style={{ border: '2px solid green' }}>
-                            <p style={{ color: '#000', padding: '20px', display: 'flex', textAlign: 'justify', justifyContent: 'flex-start' }}>
+                            <p style={{ fontFamily: 'Garamond', color: '#000', fontSize: '19px', padding: '20px', display: 'flex', textAlign: 'justify', justifyContent: 'flex-start' }}>
                                 Alternativa I – Projeto a): reeleger prefeitos e vereadores.<br />
                                 Alternativa II – Projeto b): votar em políticos iniciantes.<br />
                                 Alternativa III – Projeto c): votar nos candidatos da Democracia do Povo.<br />
                                 Alternativa IV – votar em nenhuma das três alternativas.<br />
                                 Alternativa V – votar nesta alternativa: permanecer atual sistema político eleitoral.<br />
                             </p>
-                            <p style={{ textAlign: 'justify', color: '#000', padding: '20px', display: 'flex', flexWrap: 'unset' }}>
+                            <p style={{ fontFamily: 'Garamond', textAlign: 'justify', color: '#000', padding: '20px', display: 'flex', flexWrap: 'unset', fontSize: '19px' }}>
                                 Isso é Democracia do Povo! O cidadão envia projetos às Casas parlamentares, estes selecionam os três melhores e o eleitor vota no de sua escolha. Desta forma, o eleitor, além de votar em políticos, vota em políticas públicas, como a política de geração de 15 milhões de empregos e valorização do salário mínimo para R$4.673,16.
                                 Veja na revista Democracia do Povo, edição principal, com 44 páginas, o projeto do Novo Simples da Pequena Empresa, o qual proporcionará obter maior margem de lucro, crescimento e, consequentemente, realizar as conquistas acima citadas.
                                 Esse projeto poderá ser colocado em prática, votado pelo Congresso Nacional, até mesmo, antes de a Democracia do Povo ser implantada, porém é bem provável que os congressistas dirão: isso não é possível. Esse projeto é inconstitucional. São muitos os motivos que o tornam inviável. A elevação do salário mínimo causa inflação e desabastecimento etc, etc, etc.
