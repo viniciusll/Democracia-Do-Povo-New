@@ -18,11 +18,11 @@ const RepresentantesCadastrados = () => {
             <div className="page-wrapper">
                 <div className="container-fluid">
                     <HeaderBanner />
-                    <h2 style={{ display: 'flex', justifyContent: 'center', textAlign: 'center', color: '#000', padding: '20px', display: 'flex', flexWrap: 'unset' }}>
+                    <h2 style={{ display: 'flex', justifyContent: 'center', paddingTop: '5px', textAlign: 'center', color: '#000', display: 'flex', flexWrap: 'unset' }}>
                         Mensagem a quem quer representar a Democracia do Povo
                     </h2>
-                    <div style={{ padding: '35px' }}>
-                        <p style={{ color: '#000', padding: '20px', display: 'flex', textAlign: 'justify', justifyContent: 'center', border: '2px solid green' }}>
+                    <div style={{ padding: '35px', paddingTop: '0px' }}>
+                        <p style={{ color: '#000', padding: '20px', display: 'flex', textAlign: 'justify', justifyContent: 'flex-start', border: '2px solid green' }}>
                             Olá amigo profissional em vendas! <br />
                             Quer ganhar dinheiro com as eleições?<br />
                             Apresente a revista Democracia do Povo a mais de 700 mil candidatos a prefeito e vereador. <br />
@@ -30,10 +30,12 @@ const RepresentantesCadastrados = () => {
                             www.democraciadopovo.com.br
                         </p>
                     </div>
-                    <h3 style={{ display: 'flex', justifyContent: 'center', textAlign: 'justify', color: '#000', padding: '20px', display: 'flex', flexWrap: 'unset' }}>EM QUEM VOTAR?</h3>
-                    <div style={{ padding: '35px'}}>
+                    <h3 style={{ display: 'flex', justifyContent: 'center', textAlign: 'justify', color: '#000', display: 'flex', flexWrap: 'unset' }}>
+                        EM QUEM VOTAR?
+                    </h3>
+                    <div style={{ padding: '35px', paddingTop: '0px' }}>
                         <div style={{ border: '2px solid green' }}>
-                            <p style={{ color: '#000', padding: '20px', display: 'flex', textAlign: 'justify', justifyContent: 'center' }}>
+                            <p style={{ color: '#000', padding: '20px', display: 'flex', textAlign: 'justify', justifyContent: 'flex-start' }}>
                                 Alternativa I – Projeto a): reeleger prefeitos e vereadores.<br />
                                 Alternativa II – Projeto b): votar em políticos iniciantes.<br />
                                 Alternativa III – Projeto c): votar nos candidatos da Democracia do Povo.<br />
