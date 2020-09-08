@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { InputGroup, Input, Button, Label, FormGroup, Form, CustomInput, UncontrolledAlert } from 'reactstrap';
+import { Input, Button, Label, FormGroup, Form, CustomInput, UncontrolledAlert } from 'reactstrap';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 import api from '../../../api/ConnectApi';
 import { debounce } from 'lodash';
@@ -134,7 +134,6 @@ const Formulario2 = () => {
         delayedQuery(e.target.value);
     };
 
-
     const verificationCpf = (cpf) => {
         cpf = cpf.replace(/[^\d]+/g, '');
         let sum, leftover;
@@ -259,6 +258,25 @@ const Formulario2 = () => {
                         }}
                         label="N° Representante:"
                     />
+                    <Input
+                        type="select"
+                        name='representantes'
+                        label='representantes'
+                        onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
+                    >
+                        <option>Escolha o representante</option>
+                        {representantes.map(representante => {
+                            return <option key={representante} value={representante}>{representante}</option>
+                        })}
+                    </Input>
+                    <AvField
+                        onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
+                        label="Cidade do Representante Comercial"
+                        name='cidadeDoRepresentanteComercial'
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                        }}
+                    />
                     <AvField onChange={e => setNumeroEdicao(e.target.value)}
                         name='numeroEdicao'
                         validate={{
@@ -277,13 +295,13 @@ const Formulario2 = () => {
                                 <Input value='8' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
                             8
                         </Label>
-                        <Label check>
+                            <Label check>
                                 <Input value='12' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
                             12
                         </Label>
                         </FormGroup>
                     </div>
-                    <br/>
+                    <br />
                     <AvField onChange={e => setNomeTransportadora(e.target.value)}
                         name='nomeTransportadora'
                         validate={{
@@ -481,25 +499,6 @@ const Formulario2 = () => {
                         </Label>
                     </FormGroup>
                     <FormGroup>
-                        <Input
-                            type="select"
-                            name='representantes'
-                            label='representantes'
-                            onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
-                        >
-                            <option>Escolha o representante</option>
-                            {representantes.map(representante => {
-                                return <option key={representante} value={representante}>{representante}</option>
-                            })}
-                        </Input>
-                        <AvField
-                            onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
-                            label="Cidade do Representante Comercial"
-                            name='cidadeDoRepresentanteComercial'
-                            validate={{
-                                required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                            }}
-                        />
                         <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                             Envie as fotos dos candidatos e textos das matérias
                             que entrarão na edição da Revista Panfleto em Revista.
