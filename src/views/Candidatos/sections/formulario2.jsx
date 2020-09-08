@@ -450,7 +450,7 @@ const Formulario2 = () => {
                                     width: '100%'
                                 }}
                             >
-                                Escolha seu arquivo
+                                Selecione o  arquivo da foto e do texto.
                             </Label>
                             <Input type="file" name="file" style={{ display: "none" }} onChange={(e) => handleUpload(e.target.files[0])} id="exampleFile" />
                             <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
