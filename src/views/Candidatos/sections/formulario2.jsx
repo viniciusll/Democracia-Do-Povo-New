@@ -433,6 +433,10 @@ const Formulario2 = () => {
                         }}
                     />
                        <FormGroup>
+                        <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
+                            Envie a foto do candidato e texto da matéria
+                            que entrarão na edição da Revista Panfleto em Revista.
+                        </p>
                         <FormGroup>
                             <Label
                                 for="exampleFile"
