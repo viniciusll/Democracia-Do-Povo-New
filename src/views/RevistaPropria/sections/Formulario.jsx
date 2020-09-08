@@ -317,14 +317,7 @@ const Formulario = () => {
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
-                        label="Nome completo do candidato:"
-                    />
-                    <AvField onChange={e => setNomeComoCandidato(e.target.value)}
-                        name='nomeComocandidato'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                        label="Nome como candidato:"
+                        label="Nome da Empresa:"
                     />
                     <AvField
                         onChange={handleChange}
