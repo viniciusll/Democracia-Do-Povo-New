@@ -439,63 +439,63 @@ const Formulario2 = () => {
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='1'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                              Edição com 4 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$500,00
+                              Edição com 4 Candidatos - Quantidade: 500 Exemplares - Valor: R$500,00
                             </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='2'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                              Edição com 4 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$750,00
+                              Edição com 4 Candidatos - Quantidade: 1.000 Exemplares - Valor: R$750,00
                             </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='3'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                             Edição com 4 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$1.350,00
+                             Edição com 4 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$1.350,00
                             </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='4'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$450,00
+                            Edição com 8 Candidatos - Quantidade: 500 Exemplares - Valor: R$450,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='5'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$700,00
+                            Edição com 8 Candidatos - Quantidade: 1.000 Exemplares - Valor: R$700,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='6'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$1.300,00
+                            Edição com 8 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$1.300,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='7'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$400,00
+                            Edição com 12 Candidatos – Quantidade: 500 Exemplares - Valor: R$400,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='8'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 4.000 Exemplares - Valor: R$650,00
+                            Edição com 12 Candidatos – Quantidade: 1.000 Exemplares - Valor: R$650,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='9'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 8.000 Exemplares - Valor: R$1.200,00
+                            Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$1.200,00
                         </Label>
                     </FormGroup>
                     <FormGroup>
