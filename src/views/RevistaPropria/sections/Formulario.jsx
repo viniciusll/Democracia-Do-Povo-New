@@ -104,7 +104,7 @@ const Formulario = () => {
         ) {
             return setVisible(true);
         } else {
-            const request = await api.post('/ficha/criarFormulario2', data);
+            const request = await api.post('/ficha/criarFormulario3', data);
             console.log(request);
             setVisible2(true);
         }
