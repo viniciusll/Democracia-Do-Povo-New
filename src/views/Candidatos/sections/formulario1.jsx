@@ -86,7 +86,6 @@ const Formulario1 = () => {
         if (
             image === null ||
             nomeCompletoCandidato === '' ||
-            nomeNotaFiscal === '' ||
             nomeComoCandidato === '' ||
             candidatoA === '' ||
             cidadeEntrega === '' ||
