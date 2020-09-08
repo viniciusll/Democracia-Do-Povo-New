@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 
-const TabelaRepresentantes = (props) => {
+const TabelaRepresentantes = () => {
     return (
       <Table responsive style={{ textAlign: 'center', alignItems: 'center'}} bordered>
         <thead>
@@ -45,6 +45,6 @@ const TabelaRepresentantes = (props) => {
         </tbody>
       </Table>
     );
-  }
+  };
   
   export default TabelaRepresentantes;
