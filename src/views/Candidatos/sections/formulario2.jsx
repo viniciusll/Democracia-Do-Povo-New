@@ -7,31 +7,8 @@ import axios from 'axios';
 import { mask, unMask } from 'remask';
 
 const Formulario2 = () => {
-    const [primeiraCapa, setPrimeiraCapa] = useState('');
-    const [segundaCapa, setSegundaCapa] = useState('');
-    const [terceiraCapa, setTerceiraCapa] = useState('');
-    const [quartaCapa, setQuartaCapa] = useState('');
-    const [primeiraCapa2, setPrimeiraCapa2] = useState('');
-    const [segundaCapa2, setSegundaCapa2] = useState('');
-    const [pagina3, setPagina3] = useState('');
-    const [pagina4, setPagina4] = useState('');
-    const [pagina5, setPagina5] = useState('');
-    const [pagina6, setPagina6] = useState('');
-    const [terceiraCapa2, setTerceiraCapa2] = useState('');
-    const [quartaCapa2, setQuartaCapa2] = useState('');
-    const [primeiraCapa3, setPrimeiraCapa3] = useState('');
-    const [segundaCapa3, setSegundaCapa3] = useState('');
-    const [_pagina3, set_Pagina3] = useState('');
-    const [_pagina4, set_Pagina4] = useState('');
-    const [_pagina5, set_Pagina5] = useState('');
-    const [_pagina6, set_Pagina6] = useState('');
-    const [pagina7, set_Pagina7] = useState('');
-    const [pagina8, set_Pagina8] = useState('');
-    const [pagina9, set_Pagina9] = useState('');
-    const [pagina10, set_Pagina10] = useState('');
-    const [terceiraCapa3, setTerceiraCapa3] = useState('');
-    const [quartaCapa3, setQuartaCapa3] = useState('');
     const [nomeCompletoCandidato, setNomeCompletoCandidato] = useState('');
+    const [nomeComoCandidato, setNomeComoCandidato] = useState('');
     const [cidadeEntrega, setCidadeEntrega] = useState('');
     const [ruaEntrega, setRuaEntrega] = useState('');
     const [bairroEntrega, setBairroEntrega] = useState('');
@@ -39,10 +16,6 @@ const Formulario2 = () => {
     const [estadoEntrega, setEstadoEntrega] = useState('');
     const [complemento, setComplementoEntrega] = useState('');
     const [cepEntrega, setCepEntrega] = useState('');
-    const [enderecoNotaFiscal, setEnderecoNotaFiscal] = useState('');
-    const [cidadeNotaFiscal, setCidadeNotaFiscal] = useState('');
-    const [estadoNotaFiscal, setEstadoNotaFiscal] = useState('');
-    const [cepNotaFiscal, setCepNotaFiscal] = useState('');
     const [inscRg, setInscRg] = useState('');
     const [cnpjOuCpf, setCnpjOuCpf] = useState('');
     const [telefone, setTelefone] = useState('');
@@ -51,8 +24,6 @@ const Formulario2 = () => {
     const [nomeDoRepresentanteComercial, setNomeDoRepresentanteComercial] = useState('');
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
     const [image, setFiles] = useState(null);
-    const [nomeComprador, setnomeComprador] = useState('');
-    const [nomeNotaFiscal, setNomeNotaFiscal] = useState('');
     const [visible2, setVisible2] = useState(false);
     const [nomeTransportadora, setNomeTransportadora] = useState('');
     const [enderecoTransportadora, setEnderecoTransportadora] = useState('');
@@ -60,6 +31,10 @@ const Formulario2 = () => {
     const [emailTransportadora, setEmailTransportadora] = useState('');
     const [representantes, setRepresentantes] = useState([]);
     const [visible, setVisible] = useState(false);
+    const [numeroEdicao, setNumeroEdicao] = useState('');
+    const [numeroRepresentante, setNumeroRepresentante] = useState('');
+    const [numeroParticipantes, setNumeroParticipantes] = useState('');
+
 
     const onDismiss = () => setVisible2(false);
     const onDismiss1 = () => setVisible(false);
@@ -79,7 +54,7 @@ const Formulario2 = () => {
 
     useEffect(() => {
         getRepresentantes();
-    }, [])
+    }, []);
 
     const enviarFormulario = async () => {
         const data = new FormData();
@@ -88,32 +63,6 @@ const Formulario2 = () => {
         data.append('enderecoTransportadora', enderecoTransportadora);
         data.append('foneTransportadora', foneTransportadora);
         data.append('emailTransportadora', emailTransportadora);
-        data.append('nomeComprador', nomeComprador);
-        data.append('nomeNotaFiscal', nomeNotaFiscal);
-        data.append('primeiraCapa', primeiraCapa);
-        data.append('segundaCapa', segundaCapa);
-        data.append('terceiraCapa', terceiraCapa);
-        data.append('quartaCapa', quartaCapa);
-        data.append('primeiraCapa2', primeiraCapa2);
-        data.append('segundaCapa2', segundaCapa2);
-        data.append('pagina3', pagina3);
-        data.append('pagina4', pagina4);
-        data.append('pagina5', pagina5);
-        data.append('pagina6', pagina6);
-        data.append('terceiraCapa2', terceiraCapa2);
-        data.append('quartaCapa2', quartaCapa2);
-        data.append('primeiraCapa3', primeiraCapa3);
-        data.append('segundaCapa3', segundaCapa3);
-        data.append('_pagina3', _pagina3);
-        data.append('_pagina4', _pagina4);
-        data.append('_pagina5', _pagina5);
-        data.append('_pagina6', _pagina6);
-        data.append('pagina7', pagina7);
-        data.append('pagina8', pagina8);
-        data.append('pagina9', pagina9);
-        data.append('pagina10', pagina10);
-        data.append('terceiraCapa3', terceiraCapa3);
-        data.append('quartaCapa3', quartaCapa3);
         data.append('nomeCompletoCandidato', nomeCompletoCandidato);
         data.append('cidadeEntrega', cidadeEntrega);
         data.append('ruaEntrega', ruaEntrega);
@@ -122,10 +71,6 @@ const Formulario2 = () => {
         data.append('complemento', complemento);
         data.append('estadoEntrega', estadoEntrega);
         data.append('cepEntrega', cepEntrega);
-        data.append('enderecoNotaFiscal', enderecoNotaFiscal);
-        data.append('cidadeNotaFiscal', cidadeNotaFiscal);
-        data.append('estadoNotaFiscal', estadoNotaFiscal);
-        data.append('cepNotaFiscal', cepNotaFiscal);
         data.append('inscRg', inscRg);
         data.append('cnpjOuCpf', cnpjOuCpf);
         data.append('telefone', telefone);
@@ -137,8 +82,6 @@ const Formulario2 = () => {
             enderecoTransportadora === '' ||
             foneTransportadora === '' ||
             emailTransportadora === '' ||
-            nomeComprador === '' ||
-            nomeNotaFiscal === '' ||
             inscRg === '' ||
             cnpjOuCpf === '' ||
             cepEntrega === '' ||
@@ -149,8 +92,8 @@ const Formulario2 = () => {
             estadoEntrega === '' ||
             complemento === '' ||
             exemplar === ''
-            ) {
-                return setVisible(true);
+        ) {
+            return setVisible(true);
         } else {
             const request = await api.post('/ficha/criarFormulario2', data);
             console.log(request);
@@ -295,14 +238,43 @@ const Formulario2 = () => {
     return (
         <div>
             <AvForm style={{ padding: '10px', alignItems: 'center' }}>
-                <UncontrolledAlert UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
-                    Pedido Emitido com sucesso
-                </UncontrolledAlert>
                 <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
                     FORMULÁRIO PARA PEDIDOS <br />
                     Revista Panfleto em Revista
                 </h2>
                 <FormGroup>
+                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                        name='numeroRepresentante'
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                        }}
+                        label="N° Representante:"
+                    />
+                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                        name='numeroEdicao'
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                        }}
+                        label="N° Edição:"
+                    />
+                    <div style={{ textAlign: 'center' }}>
+                        <p>N° Participantes: </p>
+                        <FormGroup style={{ paddingTop: '10px' }} check inline>
+                            <Label style={{ paddingRight: '10px' }} check>
+                                <Input value='4' type="radio" name='radio1' />{' '}
+                            4
+                        </Label>
+                            <Label style={{ paddingRight: '10px' }} check>
+                                <Input value='8'  type="radio" name='radio1' />{' '}
+                            8
+                        </Label>
+                        <Label check>
+                                <Input value='12' type="radio" name='radio1' />{' '}
+                            12
+                        </Label>
+                        </FormGroup>
+                    </div>
+                    <br/>
                     <AvField onChange={e => setNomeTransportadora(e.target.value)}
                         name='nomeTransportadora'
                         validate={{
@@ -331,171 +303,30 @@ const Formulario2 = () => {
                         }}
                         label="E-mail:"
                     />
-                    <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                        Nomes completos dos 4 (quatro) Candidatos e nomes como candidatos
-                    </h3>
-                    <AvField
-                        onChange={e => setnomeComprador(e.target.value)}
-                        label="Nome Comprador:"
-                        name='nomeComprador'
+                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                        name='nomeCompletoCandidato'
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
+                        label="Nome completo do candidato:"
                     />
-                    <AvField
-                        onChange={e => setPrimeiraCapa(e.target.value)}
-                        label="Primeira capa:"
-                        name='primeiraCapa'
-
+                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                        name='nomeComocandidato'
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                        }}
+                        label="Nome como candidato:"
                     />
-                    <AvField
-                        onChange={e => setSegundaCapa(e.target.value)}
-                        label="Segunda capa:"
-                        name='segundaCapa'
-
+                    <AvField onChange={e => setNomeTransportadora(e.target.value)}
+                        name='nomeTransportadora'
+                        validate={{
+                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
+                        }}
+                        label="NOME DA TRANSPORTADORA ESCOLHIDA:"
                     />
-                    <AvField
-                        onChange={e => setTerceiraCapa(e.target.value)}
-                        label="Terceira capa:"
-                        name='terceiraCapa'
-
-                    />
-                    <AvField
-                        onChange={e => setQuartaCapa(e.target.value)}
-                        label="Quarta capa:"
-                        name='quartaCapa'
-
-                    />
-                    <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                        Nomes completos dos 8 (oito) Candidatos e nomes como candidatos:
-                    </h3>
-                    <AvField
-                        onChange={e => setPrimeiraCapa2(e.target.value)}
-                        label="Primeira capa:"
-                        name='primeiraCapa2'
-
-                    />
-                    <AvField
-                        onChange={e => setSegundaCapa2(e.target.value)}
-                        label="Segunda capa:"
-                        name='segundaCapa2'
-
-                    />
-                    <AvField
-                        onChange={e => setPagina3(e.target.value)}
-                        label="Página 3:"
-                        name='pagina3'
-
-                    />
-                    <AvField
-                        onChange={e => setPagina4(e.target.value)}
-                        label="Página 4:"
-                        name='pagina4'
-
-                    />
-                    <AvField
-                        onChange={e => setPagina5(e.target.value)}
-                        label="Página 5:"
-                        name='pagina5'
-
-                    />
-                    <AvField
-                        onChange={e => setPagina6(e.target.value)}
-                        label="Página 6:"
-                        name='pagina6'
-
-                    />
-                    <AvField
-                        onChange={e => setTerceiraCapa2(e.target.value)}
-                        label="Terceira capa:"
-                        name='terceiraCapa2'
-
-                    />
-                    <AvField
-                        onChange={e => setQuartaCapa2(e.target.value)}
-                        label="Quarta capa:"
-                        name='quartaCapa2'
-
-                    />
-                    <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                        Nomes completos dos 12 (doze) Candidatos e nomes como candidatos:
-                    </h3>
-                    <AvField
-                        onChange={e => setPrimeiraCapa3(e.target.value)}
-                        label="Primeira capa:"
-                        name='primeiraCapa3'
-
-                    />
-                    <AvField
-                        onChange={e => setSegundaCapa3(e.target.value)}
-                        label="Segunda capa:"
-                        name='segundaCapa2'
-
-                    />
-                    <AvField
-                        onChange={e => set_Pagina3(e.target.value)}
-                        label="Página 3:"
-                        name='set_pagina3'
-
-                    />
-                    <AvField
-                        onChange={e => set_Pagina4(e.target.value)}
-                        label="Página 4:"
-                        name='set_pagina4'
-
-                    />
-                    <AvField
-                        onChange={e => set_Pagina5(e.target.value)}
-                        label="Página 5:"
-                        name='set_pagina5'
-
-                    />
-                    <AvField
-                        onChange={e => set_Pagina6(e.target.value)}
-                        label="Página 6:"
-                        name='set_pagina6'
-
-                    />
-                    <AvField
-                        onChange={e => set_Pagina7(e.target.value)}
-                        label="Página 7:"
-                        name='set_pagina7'
-
-                    />
-                    <AvField
-                        onChange={e => set_Pagina8(e.target.value)}
-                        label="Página 8:"
-                        name='set_pagina8'
-
-                    />
-                    <AvField
-                        onChange={e => set_Pagina9(e.target.value)}
-                        label="Página 9:"
-                        name='pagina9'
-
-                    />
-                    <AvField
-                        onChange={e => set_Pagina10(e.target.value)}
-                        label="Página 10:"
-                        name='pagina10'
-
-                    />
-                    <AvField
-                        onChange={e => setTerceiraCapa3(e.target.value)}
-                        label="Terceira capa:"
-                        name='terceiraCapa3'
-
-                    />
-                    <AvField
-                        onChange={e => setQuartaCapa3(e.target.value)}
-                        label="Quarta capa:"
-                        name='quartaCapa3'
-
-                    />
-                    <br />
                     <AvField
                         onChange={handleChange}
-                        label="CEP para entrega:"
+                        label="CEP:"
                         name='cep'
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
@@ -504,28 +335,28 @@ const Formulario2 = () => {
                     <AvField
                         value={estadoEntrega}
                         onChange={e => setEstadoEntrega(e.target.value)}
-                        label="Estado para entrega:"
+                        label="Estado:"
                         name='estado'
                         disabled
                     />
                     <AvField
                         value={cidadeEntrega}
                         onChange={e => setCidadeEntrega(e.target.value)}
-                        label="Cidade para entrega:"
+                        label="Cidade:"
                         name='cidade'
                         disabled
                     />
                     <AvField
                         value={bairroEntrega}
                         onChange={e => setBairroEntrega(e.target.value)}
-                        label="Bairro para entrega"
+                        label="Bairro"
                         name='bairro'
                         disabled
                     />
                     <AvField
                         value={ruaEntrega}
                         onChange={e => setRuaEntrega(e.target.value)}
-                        label="Rua para entrega"
+                        label="Rua"
                         name='rua'
                         disabled
                     />
@@ -542,46 +373,6 @@ const Formulario2 = () => {
                         onChange={e => setComplementoEntrega(e.target.value)}
                         label="Complemento"
                         name='complemento'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setNomeNotaFiscal(e.target.value)}
-                        label="Nome Nota fiscal:"
-                        name='nomeNotaFiscal'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setEnderecoNotaFiscal(e.target.value)}
-                        label="Endereço para nota fiscal:"
-                        name='enderecoNotaFiscal'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setCidadeNotaFiscal(e.target.value)}
-                        label="Cidade para nota fiscal:"
-                        name='cidadeNotaFiscal'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setEstadoNotaFiscal(e.target.value)}
-                        label="Estado para nota fiscal:"
-                        name='estadoNotaFiscal'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                    />
-                    <AvField
-                        onChange={e => setCepNotaFiscal(e.target.value)}
-                        label="CEP para nota fiscal:"
-                        name='cepNotaFiscal'
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
@@ -621,67 +412,70 @@ const Formulario2 = () => {
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
                     />
+                    <p style={{ color: 'black' }}>
+                        Os preços das edições por candidatos:
+                    </p>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='1'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                              Edição com 4 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$2.000,00
+                              Edição com 4 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$500,00
                             </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='2'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                              Edição com 4 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$3.000,00
+                              Edição com 4 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$750,00
                             </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='3'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                             Edição com 4 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$5.400,00
+                             Edição com 4 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$1.1350,00
                             </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='4'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$3.600,00
+                            Edição com 8 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$450,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='5'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$5.600,00
+                            Edição com 8 Candidatos - Quantidade: 4.000 Exemplares - Valor: R$700,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='6'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$10.400,00
+                            Edição com 8 Candidatos - Quantidade: 8.000 Exemplares - Valor: R$1.300,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='7'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$4.800,00
+                            Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$400,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='8'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 4.000 Exemplares - Valor: R$7.800,00
+                            Edição com 12 Candidatos – Quantidade: 4.000 Exemplares - Valor: R$650,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='9'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 8.000 Exemplares - Valor: R$14.400,00
+                            Edição com 12 Candidatos – Quantidade: 8.000 Exemplares - Valor: R$1.200,00
                         </Label>
                     </FormGroup>
                     <FormGroup>
@@ -729,11 +523,11 @@ const Formulario2 = () => {
                     </FormGroup>
                 </FormGroup>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
-                <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
-                    Pedido Emitido com sucesso
+                    <UncontrolledAlert isOpen={visible2} toggle={onDismiss} color="success" fade={false}>
+                        Pedido Emitido com sucesso
                 </UncontrolledAlert>
-                <UncontrolledAlert isOpen={visible} toggle={onDismiss1} color="danger" fade={false}>
-                    Não Foi possível emitir o pedido verifique todos os campos
+                    <UncontrolledAlert isOpen={visible} toggle={onDismiss1} color="danger" fade={false}>
+                        Não Foi possível emitir o pedido verifique todos os campos
                 </UncontrolledAlert>
                     <p style={{ color: 'red' }}>Ao enviar você receberá no email cadastrado neste formulário as opções para efetuar o pagamento</p>
                     <Button onClick={() => enviarFormulario()} outline color="primary">
