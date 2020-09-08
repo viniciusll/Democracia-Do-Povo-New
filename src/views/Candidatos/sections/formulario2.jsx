@@ -432,8 +432,32 @@ const Formulario2 = () => {
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
                         }}
                     />
+                       <FormGroup>
+                        <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
+                            Envie as fotos dos candidatos e textos das matérias
+                            que entrarão na edição da Revista Panfleto em Revista.
+                        </p>
+                        <FormGroup>
+                            <Label
+                                for="exampleFile"
+                                style={{
+                                    backgroundColor: '#3639ff',
+                                    borderRadius: '3px',
+                                    color: "#fff",
+                                    cursor: 'pointer',
+                                    margin: '10px',
+                                    padding: '6px 20px',
+                                    width: '100%'
+                                }}
+                            >
+                                Escolha seu arquivo
+                            </Label>
+                            <Input type="file" name="file" style={{ display: "none" }} onChange={(e) => handleUpload(e.target.files[0])} id="exampleFile" />
+                            <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
+                        </FormGroup>
+                    </FormGroup>
                     <p style={{ color: 'black' }}>
-                        Os preços das edições por candidatos:
+                        Quantidade de Exemplares:
                     </p>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
@@ -497,30 +521,6 @@ const Formulario2 = () => {
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$1.200,00
                         </Label>
-                    </FormGroup>
-                    <FormGroup>
-                        <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                            Envie as fotos dos candidatos e textos das matérias
-                            que entrarão na edição da Revista Panfleto em Revista.
-                        </p>
-                        <FormGroup>
-                            <Label
-                                for="exampleFile"
-                                style={{
-                                    backgroundColor: '#3639ff',
-                                    borderRadius: '3px',
-                                    color: "#fff",
-                                    cursor: 'pointer',
-                                    margin: '10px',
-                                    padding: '6px 20px',
-                                    width: '100%'
-                                }}
-                            >
-                                Escolha seu arquivo
-                            </Label>
-                            <Input type="file" name="file" style={{ display: "none" }} onChange={(e) => handleUpload(e.target.files[0])} id="exampleFile" />
-                            <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
-                        </FormGroup>
                     </FormGroup>
                 </FormGroup>
                 <div style={{ textAlign: 'center', paddingTop: '5px' }}>
