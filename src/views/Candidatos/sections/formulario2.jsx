@@ -434,7 +434,7 @@ const Formulario2 = () => {
                     />
                        <FormGroup>
                         <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                           Envie a arte final da página ou capa de sua exclusividade que entrara na edição da Revista Panfleto em Revista.
+                           Envie a arte final da página ou capa de sua exclusividade que entrará na edição da Revista Panfleto em Revista.
                         </p>
                         <FormGroup>
                             <Label
