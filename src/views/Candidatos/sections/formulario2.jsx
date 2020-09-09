@@ -287,11 +287,11 @@ const Formulario2 = () => {
                     <div style={{ textAlign: 'center' }}>
                         <p>N° Participantes: </p>
                         <FormGroup style={{  }} check inline>
-                            <Label style={{ paddingRight: '15px' }} check>
+                            <Label style={{ paddingRight: '25px' }} check>
                                 <Input value='4' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
                             Edição com 4
                         </Label>
-                            <Label style={{ paddingRight: '15px' }} check>
+                            <Label style={{ paddingRight: '25px' }} check>
                                 <Input value='8' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
                                 Edição com 8
                         </Label>
