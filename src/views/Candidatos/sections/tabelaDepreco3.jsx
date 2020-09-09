@@ -12,15 +12,15 @@ const TabelaDePreco3 = (props) => {
         </thead>
         <tbody>
           <tr>
-            <th style={{ color: '#000' }} scope="row">500</th>
+            <th style={{ color: '#000' }} scope="row">250</th>
             <td style={{ color: 'blue' }}>450,00</td>
           </tr>
           <tr>
-            <th style={{ color: '#000' }} scope="row">1.000</th>
+            <th style={{ color: '#000' }} scope="row">500</th>
             <td style={{ color: 'blue' }}>700,00</td>
           </tr>
           <tr>
-            <th style={{ color: '#000' }} scope="row">2.000</th>
+            <th style={{ color: '#000' }} scope="row">1.000</th>
             <td style={{ color: 'blue' }}>1.300,00</td>
           </tr>
         </tbody>
