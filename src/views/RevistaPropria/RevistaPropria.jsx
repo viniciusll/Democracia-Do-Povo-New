@@ -74,6 +74,7 @@ function RevistaPropria() {
                     </p>
                 </div>
             </div>
+            <h1>inserir revista</h1>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000' }}>
                 TABELA DE PREÇOS PARA <strong style={{ color: 'red' }}>4</strong> EMPRESAS E COMISSÕES
             </h2>

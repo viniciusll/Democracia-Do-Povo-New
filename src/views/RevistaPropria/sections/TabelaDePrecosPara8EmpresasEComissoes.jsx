@@ -6,7 +6,7 @@ function TabelaDePrecosPara8EmpresasEComissoes() {
         <Table responsive style={{ textAlign: 'center', alignItems: 'center' }} bordered>
             <thead>
                 <tr>
-                    <th style={{ color: 'green' }}>Quantidade de Exemplares</th>
+                    <th style={{ color: 'green' }}>Total de Exemplares/Por Empresa</th>
                     <th style={{ color: 'red' }}>Valor a pagar por empresa R$</th>
                     <th style={{ color: 'red' }}>Faturamento R$</th>
                     <th style={{ color: 'red' }}>Comissão do Representante R$</th>
@@ -20,19 +20,19 @@ function TabelaDePrecosPara8EmpresasEComissoes() {
                     <td style={{ color: 'purple' }}>8 páginas</td>
                 </tr>
                 <tr>
-                    <th style={{ color: 'green' }} scope="row">2.000</th>
+                    <th style={{ color: 'green' }} scope="row">2.000/250</th>
                     <td style={{ color: '#000' }}>450,00</td>
                     <td style={{ color: '#000' }}>3.600,00</td>
                     <td style={{ color: '#000' }}>252,00</td>
                 </tr>
                 <tr>
-                    <th style={{ color: 'green' }} scope="row">4.000</th>
+                    <th style={{ color: 'green' }} scope="row">4.000/500</th>
                     <td style={{ color: '#000' }}>750,00</td>
                     <td style={{ color: '#000' }}>5.600,00</td>
                     <td style={{ color: '#000' }}>392,00</td>
                 </tr>
                 <tr>
-                    <th style={{ color: 'green' }} scope="row">8.000</th>
+                    <th style={{ color: 'green' }} scope="row">8.000/1.000</th>
                     <td style={{ color: '#000' }}>1.300,00</td>
                     <td style={{ color: '#000' }}>10.400,00</td>
                     <td style={{ color: '#000' }}>728,00</td>
