@@ -22,6 +22,8 @@ import TabelaDePreco4 from './sections/tabelaDePreco4.jsx';
 import Formulario2 from './sections/formulario2.jsx';
 import TabelaDePreco5 from './sections/tabelaDePreco5';
 import TabelaDePreco6 from './sections/tabelaDepreco6';
+import TabelaDePreco7 from './sections/tabelaDePreco7';
+import TabelaDePreco8 from './sections/tabelaDePreco8';
 
 
 const CustomComponents = () => {
@@ -75,11 +77,10 @@ const CustomComponents = () => {
                             <strong style={{ border: '2px solid green' }}> 1° Passo:</strong> Para divulgar a sua candidatura com pouco dinheiro.
                         </strong><br /><br />
                         <strong style={{ color: '#000264' }}>
-                            Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista. Medidas em centímetros para as 4 capas: 18 x 28.
-                            Se desejar, inclua na arte final de suas capas, cupons semelhantes aos que foram inseridos nas terceira e quarta capas
-                            destas edições com 8 e 12 páginas da revista Democracia do Povo.
-                            Salve em PDF as artes das 4 capas.
-                            Imprimiremos e fixaremos no conteúdo de uma das edições da revista, com 8 ou 12 páginas, escolhida por você.
+                            Solicite a confecção da arte final à gráfica de sua preferência ou a um arte-finalista. Medidas em centímetros para as 4 capas: 18 x 26. 
+                            Se desejar, inclua na arte final de suas capas, cupons semelhantes aos que foram inseridos nas terceira e quarta capas destas 
+                            edições com 8 e 12 páginas da revista Democracia do Povo. Salve em PDF as artes das 4 capas. Imprimiremos e fixaremos no conteúdo de 
+                            uma das edições da revista, com 8 ou 12 páginas, escolhida por você.
                         </strong><br /> <br />
                         Faça o seu pedido com um dos Representantes da Democracia do Povo.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a
@@ -179,9 +180,22 @@ const CustomComponents = () => {
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                         Dados para contratação da transportadora de sua preferência
                     </h2>
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
+                        Edição com 4 Participantes
+                    </h2>
                     <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000', fontFamily: 'Batang' }}>Faça a simulação neste site: <a href="https://cargobr.com/">cargobr.com</a></p>
                     <TabelaDePreco6 />
-
+                    <br/>
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
+                        Edição com 8 Participantes
+                    </h2>
+                    <TabelaDePreco7 />
+                    <br/>
+                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
+                        Edição com 12 Participantes
+                    </h2>
+                    <TabelaDePreco8 />
+                    <br/>
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Os pedidos serão efetivados somente por um dos Representantes cadastrados neste site.
                     </p>
