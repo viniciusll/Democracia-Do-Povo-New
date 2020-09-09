@@ -50,6 +50,7 @@ const Revistas = () => {
                     <p style={{ textAlign: 'center', color: 'red', fontFamily: 'Segoe Print', fontSize: '20px', padding: '15px' }}>
                         Revista Democracia do Povo. As edições com 8 e 12 páginas são sínteses desta edição com 44 páginas.
                     </p>
+                    <iframe style={{ width: '100%', height: '80vh'}} src="https://drive.google.com/file/d/1fS_ID2SXK4wy9_gk12ebWmTM1av6ry4Z/preview"></iframe>
                 </div>
             </div>
             <Footer />
