@@ -164,6 +164,17 @@ const CustomComponents = () => {
                         Veja e leia todas as revistas da Democracia do Povo no menu REVISTAS
                         </h2>
                     <br /><br />
+                    <p style={{ textAlign: 'center', color: '#ff0000', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                        <strong style={{ color: '#000264' }}>
+                            Solicite a confecção da arte final à gráfica de sua preferência ou a um arte finalista. Medidas em centímetros
+                            para a pagína ou  capa de sua exclusividade 18 x 26. Inclua nesse espaço ou anuncio de sua candidatura, sua foto,
+                            texto, títulos e de mais  dados desejados. Salve em PDF.
+                        </strong><br /> <br />
+                        Faça o seu pedido com um dos Representantes da Democracia do Povo.<br />
+                        Não os encontrando informe aos profissionais em vendas de seu município a
+                        possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas Democracia do Povo e
+                        Panfleto <br /> em Revista aos candidatos a prefeito e a vereador. <br />
+                    </p>
                     <h2 style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
                         TABELA DE PREÇOS PARA EDIÇÃO COM 4 (quatro) Candidatos
                     </h2>

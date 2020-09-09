@@ -29,7 +29,7 @@ ReactDOM.render(
             <Route path="/candidatos-inscritos" component={CandidatosInscritos} />
             <Route path="/representantes-cadastrados" component={RepresentantesCadastrados} />
             <Route path="/revistas-propria" component={RevistasProprias} />
-            <Route path="/" component={Components} />
+            <Route path="/" component={Components} exact />
         </Switch>
     </HashRouter>,
     document.getElementById("root")
