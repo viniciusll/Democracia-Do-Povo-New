@@ -434,8 +434,7 @@ const Formulario2 = () => {
                     />
                        <FormGroup>
                         <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
-                            Envie a foto do candidato e texto da matéria
-                            que entrarão na edição da Revista Panfleto em Revista.
+                           Envie a arte final da página ou capa de sua exclusividade que entrarão na edição da Revista Panfleto em Revista.
                         </p>
                         <FormGroup>
                             <Label
@@ -450,7 +449,7 @@ const Formulario2 = () => {
                                     width: '100%'
                                 }}
                             >
-                                Selecione o  arquivo da foto e do texto.
+                                Selecione o arquivo.
                             </Label>
                             <Input type="file" name="file" style={{ display: "none" }} onChange={(e) => handleUpload(e.target.files[0])} id="exampleFile" />
                             <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
@@ -484,42 +483,42 @@ const Formulario2 = () => {
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='4'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 500 Exemplares - Valor: R$450,00
+                            Edição com 8 Candidatos - Quantidade: 250 Exemplares - Valor: R$450,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='5'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 1.000 Exemplares - Valor: R$700,00
+                            Edição com 8 Candidatos - Quantidade: 500 Exemplares - Valor: R$700,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='6'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 8 Candidatos - Quantidade: 2.000 Exemplares - Valor: R$1.300,00
+                            Edição com 8 Candidatos - Quantidade: 1.000 Exemplares - Valor: R$1.300,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='7'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 500 Exemplares - Valor: R$400,00
+                            Edição com 12 Candidatos – Quantidade: 165 Exemplares - Valor: R$400,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='8'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 1.000 Exemplares - Valor: R$650,00
+                            Edição com 12 Candidatos – Quantidade: 330 Exemplares - Valor: R$650,00
                         </Label>
                     </FormGroup>
                     <FormGroup style={{ paddingTop: '10px' }} check row>
                         <Label style={{ paddingRight: '10px' }} check>
                             <Input value='9'
                                 onChange={e => setExemplar(e.target.value)} type="radio" name='radio1' />{' '}
-                            Edição com 12 Candidatos – Quantidade: 2.000 Exemplares - Valor: R$1.200,00
+                            Edição com 12 Candidatos – Quantidade: 660 Exemplares - Valor: R$1.200,00
                         </Label>
                     </FormGroup>
                 </FormGroup>
