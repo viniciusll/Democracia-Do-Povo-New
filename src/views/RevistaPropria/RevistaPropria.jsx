@@ -75,6 +75,17 @@ function RevistaPropria() {
                 </div>
             </div>
             <h1>inserir revista</h1>
+            <p style={{ textAlign: 'center', color: '#ff0000', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
+                <strong style={{ color: '#000264' }}>
+                    Solicite a confecção da arte final do anúncio à gráfica de sua preferência ou a um arte finalista.
+                    A área máxima da arte deverá ser de 100cm². Posição vertical, horizontal ou quadrada. Elabore o  texto referente à sua
+                    atividade utilizando a fonte Calibri 12 ou Arial 11. Para títulos utilize fonte e tamanho desejados. A área do texto com títulos
+                    deverá ocupar, no máximo 300cm². Salve em PDF. Faremos o layout das artes na página ou capa de sua exclusividade.
+                        </strong><br /> <br />
+                        Faça o seu pedido com um dos Representantes do O Sócio Br.<br />
+                        Não os encontrando informe aos profissionais em vendas de seu município a
+                        possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas. <br/>
+            </p>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000' }}>
                 TABELA DE PREÇOS PARA <strong style={{ color: 'red' }}>4</strong> EMPRESAS E COMISSÕES
             </h2>
