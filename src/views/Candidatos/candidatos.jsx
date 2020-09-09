@@ -180,10 +180,10 @@ const CustomComponents = () => {
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                         Dados para contratação da transportadora de sua preferência
                     </h2>
+                    <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000', fontFamily: 'Batang' }}>Faça a simulação neste site: <a href="https://cargobr.com/">cargobr.com</a></p>
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
                         Edição com 4 Participantes
                     </h2>
-                    <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000', fontFamily: 'Batang' }}>Faça a simulação neste site: <a href="https://cargobr.com/">cargobr.com</a></p>
                     <TabelaDePreco6 />
                     <br/>
                     <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>

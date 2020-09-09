@@ -89,31 +89,31 @@ function RevistaPropria() {
             <br />
 
             <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
-                        Dados para contratação da transportadora de sua preferência
+                Dados para contratação da transportadora de sua preferência
                     </h2>
-                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                        Edição com 4 Participantes
+            <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000', fontFamily: 'Batang' }}>Faça a simulação neste site: <a href="https://cargobr.com/">cargobr.com</a></p>
+            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
+                Edição com 4 Participantes
                     </h2>
-                    <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000', fontFamily: 'Batang' }}>Faça a simulação neste site: <a href="https://cargobr.com/">cargobr.com</a></p>
-                    <TabelaDePreco6 />
-                    <br/>
-                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                        Edição com 8 Participantes
+            <TabelaDePreco6 />
+            <br />
+            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
+                Edição com 8 Participantes
                     </h2>
-                    <TabelaDePreco7 />
-                    <br/>
-                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                        Edição com 12 Participantes
+            <TabelaDePreco7 />
+            <br />
+            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
+                Edição com 12 Participantes
                     </h2>
-                    <TabelaDePreco8 />
-                    <br/>
+            <TabelaDePreco8 />
+            <br />
             <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                 <Button onClick={handleClick} style={{ color: 'yellow', backgroundColor: '#003d03' }}>
                     Preencha o formulario e faça seu pedido
                 </Button>
                 {show == true ? <Formulario /> : undefined}
             </div>
-            <br/><br/>
+            <br /><br />
 
             <Footer />
         </div>
