@@ -265,14 +265,14 @@ const Formulario = () => {
                         label='representantes'
                         onChange={e => setNomeDoRepresentanteComercial(e.target.value)}
                     >
-                        <option>Escolha o representante</option>
+                        <option>Nome do representante</option>
                         {representantes.map(representante => {
                             return <option key={representante} value={representante}>{representante}</option>
                         })}
                     </Input>
                     <AvField
                         onChange={e => setCidadeDoRepresentanteComercial(e.target.value)}
-                        label="Cidade do Representante Comercial"
+                        label="Cidade do Representante"
                         name='cidadeDoRepresentanteComercial'
                         validate={{
                             required: { value: true, errorMessage: 'Esse campo é obrigatório' }
@@ -288,17 +288,17 @@ const Formulario = () => {
                     <div style={{ textAlign: 'center' }}>
                         <p>N° Participantes: </p>
                         <FormGroup style={{ paddingTop: '10px' }} check inline>
-                            <Label style={{ paddingRight: '10px' }} check>
+                        <Label style={{ paddingRight: '25px' }} check>
                                 <Input value='4' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
-                            4
+                            Edição com 4
                         </Label>
-                            <Label style={{ paddingRight: '10px' }} check>
+                            <Label style={{ paddingRight: '25px' }} check>
                                 <Input value='8' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
-                            8
+                                Edição com 8
                         </Label>
                             <Label check>
                                 <Input value='12' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
-                            12
+                                Edição com 12
                         </Label>
                         </FormGroup>
                     </div>
