@@ -75,7 +75,7 @@ const Formulario2 = () => {
         data.append('cepEntrega', cepEntrega);
         data.append('inscRg', inscRg);
         data.append('cnpjOuCpf', cnpjOuCpf);
-        data.append('telefone', telefone);
+        data.append('telefone', telefone.replace(/\D+/g, ''));
         data.append('email', email);
         data.append('exemplar', exemplar);
         data.append('nomeDoRepresentanteComercial', nomeDoRepresentanteComercial);
