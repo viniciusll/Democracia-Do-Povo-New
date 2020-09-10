@@ -81,7 +81,7 @@ const Formulario = () => {
         data.append('nomeDoRepresentanteComercial', nomeDoRepresentanteComercial);
         data.append('cidadeDoRepresentanteComercial', cidadeDoRepresentanteComercial);
         if (nomeTransportadora === '' ||
-            nomeComoCandidato === '' ||
+            nomeCompletoCandidato === '' ||
             numeroEdicao === '' ||
             numeroRepresentante === '' ||
             enderecoTransportadora === '' ||
