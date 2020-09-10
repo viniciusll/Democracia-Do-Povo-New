@@ -33,7 +33,6 @@ const Formulario2 = () => {
     const [visible, setVisible] = useState(false);
     const [numeroEdicao, setNumeroEdicao] = useState('');
     const [numeroRepresentante, setNumeroRepresentante] = useState('');
-    const [numeroParticipantes, setNumeroParticipantes] = useState('');
 
 
     const onDismiss = () => setVisible2(false);
@@ -61,7 +60,6 @@ const Formulario2 = () => {
         data.append('file', image);
         data.append('numeroEdicao', numeroEdicao);
         data.append('numeroRepresentante', numeroRepresentante);
-        data.append('numeroParticipantes', numeroParticipantes);
         data.append('nomeTransportadora', nomeTransportadora);
         data.append('enderecoTransportadora', enderecoTransportadora);
         data.append('foneTransportadora', foneTransportadora);
@@ -83,7 +81,6 @@ const Formulario2 = () => {
         data.append('nomeDoRepresentanteComercial', nomeDoRepresentanteComercial);
         data.append('cidadeDoRepresentanteComercial', cidadeDoRepresentanteComercial);
         if (nomeTransportadora === '' ||
-            numeroParticipantes === '' ||
             nomeComoCandidato === '' ||
             nomeCompletoCandidato === '' ||
             numeroEdicao === '' ||
@@ -284,23 +281,6 @@ const Formulario2 = () => {
                         }}
                         label="N° Edição:"
                     />
-                    <div style={{ textAlign: 'center' }}>
-                        <p>N° Participantes: </p>
-                        <FormGroup style={{  }} check inline>
-                            <Label style={{ paddingRight: '25px' }} check>
-                                <Input value='4' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio22' />{' '}
-                            Edição com 4
-                        </Label>
-                            <Label style={{ paddingRight: '25px' }} check>
-                                <Input value='8' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio22' />{' '}
-                                Edição com 8
-                        </Label>
-                            <Label check>
-                                <Input value='12' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio22' />{' '}
-                                Edição com 12
-                        </Label>
-                        </FormGroup>
-                    </div>
                     <br />
                     <AvField onChange={e => setNomeTransportadora(e.target.value)}
                         name='nomeTransportadora'
