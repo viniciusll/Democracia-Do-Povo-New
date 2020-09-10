@@ -288,15 +288,15 @@ const Formulario2 = () => {
                         <p>N° Participantes: </p>
                         <FormGroup style={{  }} check inline>
                             <Label style={{ paddingRight: '25px' }} check>
-                                <Input value='4' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
+                                <Input value='4' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio22' />{' '}
                             Edição com 4
                         </Label>
                             <Label style={{ paddingRight: '25px' }} check>
-                                <Input value='8' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
+                                <Input value='8' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio22' />{' '}
                                 Edição com 8
                         </Label>
                             <Label check>
-                                <Input value='12' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio1' />{' '}
+                                <Input value='12' onChange={e => setNumeroParticipantes(e.target.value)} type="radio" name='radio22' />{' '}
                                 Edição com 12
                         </Label>
                         </FormGroup>
