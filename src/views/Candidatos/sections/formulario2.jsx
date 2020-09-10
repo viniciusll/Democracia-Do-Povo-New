@@ -23,7 +23,7 @@ const Formulario2 = () => {
     const [exemplar, setExemplar] = useState('');
     const [nomeDoRepresentanteComercial, setNomeDoRepresentanteComercial] = useState('');
     const [cidadeDoRepresentanteComercial, setCidadeDoRepresentanteComercial] = useState('');
-    const [image, setFiles] = useState(null);
+    const [image2, setFiles2] = useState(null);
     const [visible2, setVisible2] = useState(false);
     const [nomeTransportadora, setNomeTransportadora] = useState('');
     const [enderecoTransportadora, setEnderecoTransportadora] = useState('');
@@ -40,7 +40,7 @@ const Formulario2 = () => {
 
     const handleUpload = async file => {
         console.log(file);
-        setFiles(file);
+        setFiles2(file);
     };
 
     const getRepresentantes = async () => {
@@ -57,7 +57,7 @@ const Formulario2 = () => {
 
     const enviarFormulario = async () => {
         const data = new FormData();
-        data.append('file', image);
+        data.append('file', image2);
         data.append('numeroEdicao', numeroEdicao);
         data.append('numeroRepresentante', numeroRepresentante);
         data.append('nomeTransportadora', nomeTransportadora);
@@ -432,7 +432,7 @@ const Formulario2 = () => {
                                 Selecione o arquivo.
                             </Label>
                             <Input type="file" name="file" style={{ display: "none" }} onChange={(e) => handleUpload(e.target.files[0])} id="exampleFile" />
-                            <span style={{ paddingLeft: '10px' }}>{!image ? 'Nenhum arquivo selecionado' : image.name}</span>
+                            <span style={{ paddingLeft: '10px' }}>{!image2 ? 'Nenhum arquivo selecionado' : image2.name}</span>
                         </FormGroup>
                     </FormGroup>
                     <p style={{ color: 'black' }}>

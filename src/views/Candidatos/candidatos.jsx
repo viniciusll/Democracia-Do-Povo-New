@@ -35,6 +35,7 @@ const CustomComponents = () => {
             setShow(false);
         } else {
             setShow(true);
+            setShow2(false)
         }
     };
     const handleClick2 = () => {
@@ -42,6 +43,7 @@ const CustomComponents = () => {
             setShow2(false);
         } else {
             setShow2(true);
+            setShow(false)
         }
     };
 
