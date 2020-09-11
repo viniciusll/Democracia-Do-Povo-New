@@ -59,7 +59,6 @@ const Formulario2 = () => {
         const data = new FormData();
         data.append('file', image2);
         data.append('numeroEdicao', numeroEdicao);
-        data.append('numeroRepresentante', numeroRepresentante);
         data.append('nomeTransportadora', nomeTransportadora);
         data.append('enderecoTransportadora', enderecoTransportadora);
         data.append('foneTransportadora', foneTransportadora);
@@ -84,7 +83,6 @@ const Formulario2 = () => {
             nomeComoCandidato === '' ||
             nomeCompletoCandidato === '' ||
             numeroEdicao === '' ||
-            numeroRepresentante === '' ||
             enderecoTransportadora === '' ||
             foneTransportadora === '' ||
             emailTransportadora === '' ||
@@ -248,13 +246,6 @@ const Formulario2 = () => {
                     Revista Panfleto em Revista
                 </h2>
                 <FormGroup>
-                    <AvField onChange={e => setNumeroRepresentante(e.target.value)}
-                        name='numeroRepresentante'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                        label="N° Representante:"
-                    />
                     <Input
                         type="select"
                         name='representantes'

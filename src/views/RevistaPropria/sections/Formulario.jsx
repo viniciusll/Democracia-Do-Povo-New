@@ -32,7 +32,6 @@ const Formulario = () => {
     const [representantes, setRepresentantes] = useState([]);
     const [visible, setVisible] = useState(false);
     const [numeroEdicao, setNumeroEdicao] = useState('');
-    const [numeroRepresentante, setNumeroRepresentante] = useState('');
 
 
     const onDismiss = () => setVisible2(false);
@@ -59,7 +58,6 @@ const Formulario = () => {
         const data = new FormData();
         data.append('file', image);
         data.append('numeroEdicao', numeroEdicao);
-        data.append('numeroRepresentante', numeroRepresentante);
         data.append('nomeTransportadora', nomeTransportadora);
         data.append('enderecoTransportadora', enderecoTransportadora);
         data.append('foneTransportadora', foneTransportadora);
@@ -83,7 +81,6 @@ const Formulario = () => {
         if (nomeTransportadora === '' ||
             nomeCompletoCandidato === '' ||
             numeroEdicao === '' ||
-            numeroRepresentante === '' ||
             enderecoTransportadora === '' ||
             foneTransportadora === '' ||
             emailTransportadora === '' ||
@@ -248,13 +245,6 @@ const Formulario = () => {
                     Revista Panfleto em Revista
                 </h2>
                 <FormGroup>
-                    <AvField onChange={e => setNumeroRepresentante(e.target.value)}
-                        name='numeroRepresentante'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
-                        label="N° Representante:"
-                    />
                     <Input
                         type="select"
                         name='representantes'

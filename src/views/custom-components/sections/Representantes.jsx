@@ -43,7 +43,7 @@ const Representantes = () => {
             return setVisible(true);
         };
 
-        const response = await api.post('/ficha/criandoFicha', {
+        await api.post('/ficha/criandoFicha', {
             nome: nome,
             endereco: endereco,
             cidade: cidade,
@@ -53,17 +53,25 @@ const Representantes = () => {
             fone2: fone2,
             email: email
         })
-        setVisible2(true);
-        console.log(response);
-        setShow(false);
-        setNome('');
-        setEndereco('');
-        setEstado('');
-        setCidade('');
-        setCep('');
-        setFone('');
-        setFone2('');
-        setEmail('');
+            .then(({ data }) => {
+                setVisible2(true);
+                console.log(data);
+                setShow(false);
+                setNome('');
+                setEndereco('');
+                setEstado('');
+                setCidade('');
+                setCep('');
+                setFone('');
+                setFone2('');
+                setEmail('');
+            })
+            .catch((error) => {
+                if (error ) {
+                    const { data } = error.response;
+                    alert(data.message);
+            }
+        });
     };
 
     return (
