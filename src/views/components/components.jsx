@@ -156,6 +156,59 @@ const Components = () => {
                                     acompanhará cada obra de seu interesse através dos sites correspondentes, e podendo participar das licitações, as quais serão
                                     abertas ao público em geral, por vídeo conferências.
                             </p>
+                                <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }} >
+                                    Diretriz I da Reforma Política Brasileira REGULAMENTO
+                            </h3>
+                                <p style={{ textAlign: 'justify', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '20px', padding: '15px' }}>
+                                    <span style={{color: '#000'}}> Dedepê</span> — Talvez, a única possibilidade que os governos
+                                    têm para fazer com que parte da arrecadação de impostos
+                                    retorne em serviços de boa qualidade à sociedade, é a de
+                                    criar mecanismos eficientes na área administrativa das
+                                    cidades, estados e do próprio país. Muitos desses
+                                    mecanismos já foram criados por especialistas de todos os
+                                    segmentos da sociedade e também por quem é vítima das
+                                    leis e sistemas injustos.
+                                    Inúmeras boas ideias surgem para aperfeiçoar o sistema
+                                    da saúde, da segurança, do sistema de ensino e educação,
+                                    do transporte, emprego e salários, tributário, político e
+                                    outros, mas que o atual sistema político, a democracia
+                                    representativa e a inflexibilidade da Constituição Federal
+                                    impedem que sejam implantadas.
+                                    Se o eleitor pudesse votar em projetos desenvolvidos por
+                                    essas pessoas e por qualquer outro cidadão que tiver uma
+                                    boa ideia, e não votar somente em candidatos aos cargos
+                                    políticos do país, provavelmente, votaria em projetos bem
+                                    elaborados, consistentes e satisfatórios à maioria da
+                                    população. Para oferecer essa condição ao eleitor é
+                                    necessário constar na Constituição Federal uma lei que, na
+                                    verdade, já existe - é a Lei do Plebiscito, - aperfeiçoá-la,
+                                    estabelecer um REGULAMENTO, descrito em meu site, e
+                                    ampliá-la aos âmbitos estadual e federal.
+                                    “Apesar dos avanços, a democracia participativa ainda
+                                    não se firmou. A participação dos cidadãos nas decisões
+                                    políticas, sociais e econômicas tem sido intensificada
+                                    apenas na escolha de seus representantes”.
+                                    Para que os cidadãos possam trabalhar com mais
+                                    facilidade e eficiência pelo seu aperfeiçoamento
+                                    individual, alcançando maior especialização e melhor
+                                    qualificação, é importante que estejam dentro de um
+                                    ambiente organizado e saudável, como nas melhores
+                                    empresas para trabalhar, e que participem diretamente
+                                    das decisões de reformas dos sistemas governamentais.
+                                    A Diretriz I da Reforma Política da Democracia do Povo é
+                                    fundamentada na lei do Plebiscito. Essa lei foi instituída
+                                    com a intenção de estimular uma participação popular
+                                    mais intensa escolhendo-se o melhor caminho para a sua
+                                    efetivação que são as instâncias locais de decisão, onde os
+                                    problemas e as soluções estão mais próximos dos
+                                    cidadãos, ou seja, nos municípios.
+                                    O plebiscito está previsto no artigo 14 da Constituição
+                                    Federal e regulamentado pela Lei no 9.709, de 18 de
+                                    novembro de 1998.
+                                    “A lei do plebiscito estabelece que as questões
+                                    pertinentes aos municípios poderão ser votadas pelo
+                                    eleitor em conformidade com a sua Lei Orgânica”.
+                            </p>
                             </div>
                         </div>
                         :
