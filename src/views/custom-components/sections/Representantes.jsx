@@ -160,9 +160,6 @@ const Representantes = () => {
                 {
                     show == true ?
                         <div style={{ textAlign: 'center' }}>
-                            <UncontrolledAlert fade={false} isOpen={visible} toggle={onDismiss} color='danger'>
-                                Preencha todos Campos
-                            </UncontrolledAlert>
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
                                 <Input placeholder='Nome' onChange={(e) => setNome(e.target.value)} />
                             </InputGroup>
@@ -187,6 +184,9 @@ const Representantes = () => {
                             <InputGroup size="lg" style={{ paddingTop: '10px' }}>
                                 <Input onChange={(e) => setEmail(e.target.value)} placeholder='E-mail' />
                             </InputGroup>
+                            <UncontrolledAlert fade={false} isOpen={visible} toggle={onDismiss} color='danger'>
+                                Preencha todos Campos
+                            </UncontrolledAlert>
                             <br />
                             <Button outline onClick={enviarFicha} color="primary">Enviar</Button>
                             <br />
