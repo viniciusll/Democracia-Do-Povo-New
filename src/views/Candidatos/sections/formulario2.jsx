@@ -364,9 +364,6 @@ const Formulario2 = () => {
                         onChange={e => setComplementoEntrega(e.target.value)}
                         label="Complemento"
                         name='complemento'
-                        validate={{
-                            required: { value: true, errorMessage: 'Esse campo é obrigatório' }
-                        }}
                     />
                     <AvField
                         onChange={e => setInscRg(e.target.value)}
