@@ -92,7 +92,6 @@ const Formulario = () => {
             numeroEntrega === '' ||
             cidadeEntrega === '' ||
             estadoEntrega === '' ||
-            complemento === '' ||
             exemplar === ''
         ) {
             return setVisible(true);
