@@ -67,6 +67,10 @@ const Components = () => {
                     {show == true ?
                         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '10px' }}>
                             <div style={{ border: '2px solid green', width: '150vh', height: '100%' }}>
+                                <h1 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                                    Diretriz I da Reforma Política Brasileira <br/>
+                                    REGULAMENTO
+                                </h1>
                                 <p style={{ textAlign: 'justify', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '20px', padding: '15px' }}>
                                     Regulamento com 7 itens, os quais se referem a uma participação direta do eleitor nas decisões governamentais
                                     dos municípios, mas também dos estados e da União.
