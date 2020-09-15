@@ -8,7 +8,6 @@ import Footer from "../../components/footer/footer.jsx";
 import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
 
 // sections for this page
-import TabelaRepresentantes from './Sections/tabelaRepresentantes.jsx';
 
 const RepresentantesCadastrados = () => {
     return (
@@ -60,7 +59,6 @@ const RepresentantesCadastrados = () => {
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Os pedidos serão efetivados somente por um dos Representantes cadastrados neste site.
                     </p>
-                    <TabelaRepresentantes />
                 </div>
             </div>
             <Footer />
