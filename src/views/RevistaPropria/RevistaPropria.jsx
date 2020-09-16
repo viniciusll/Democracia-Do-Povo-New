@@ -11,8 +11,6 @@ import RevistaPropriaImage2 from '../../assets/images/13.png';
 import ScrollToTopOnMount from '../../components/Scroll/scrollToTop';
 import Formulario from './sections/Formulario.jsx';
 import TabelaDePreco6 from '../Candidatos/sections/tabelaDepreco6.jsx';
-import TabelaDePreco7 from '../Candidatos/sections/tabelaDePreco7.jsx';
-import TabelaDePreco8 from '../Candidatos/sections/tabelaDePreco8.jsx';
 import { Button } from 'reactstrap';
 
 function RevistaPropria() {
@@ -104,20 +102,7 @@ function RevistaPropria() {
                 Dados para contratação da transportadora de sua preferência
                     </h2>
             <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000', fontFamily: 'Batang' }}>Faça a simulação neste site: <a href="https://cargobr.com/">cargobr.com</a></p>
-            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                Edição com 4 Participantes
-                    </h2>
             <TabelaDePreco6 />
-            <br />
-            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                Edição com 8 Participantes
-                    </h2>
-            <TabelaDePreco7 />
-            <br />
-            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                Edição com 12 Participantes
-                    </h2>
-            <TabelaDePreco8 />
             <br />
             <div style={{ textAlign: 'center', paddingTop: '5px' }}>
                 <Button onClick={handleClick} style={{ color: 'yellow', backgroundColor: '#003d03' }}>

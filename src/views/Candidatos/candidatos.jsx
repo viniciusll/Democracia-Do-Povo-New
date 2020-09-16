@@ -22,8 +22,6 @@ import TabelaDePreco4 from './sections/tabelaDePreco4.jsx';
 import Formulario2 from './sections/formulario2.jsx';
 import TabelaDePreco5 from './sections/tabelaDePreco5';
 import TabelaDePreco6 from './sections/tabelaDepreco6';
-import TabelaDePreco7 from './sections/tabelaDePreco7';
-import TabelaDePreco8 from './sections/tabelaDePreco8';
 
 
 const CustomComponents = () => {
@@ -196,20 +194,7 @@ const CustomComponents = () => {
                     <p style={{ textAlign: 'center', paddingTop: '20px', color: '#000', fontFamily: 'Batang' }}>
                         Faça a simulação neste site: <a href="https://cargobr.com/">cargobr.com</a>
                     </p>
-                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                        Edição com 4 Participantes
-                    </h2>
                     <TabelaDePreco6 />
-                    <br/>
-                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                        Edição com 8 Participantes
-                    </h2>
-                    <TabelaDePreco7 />
-                    <br/>
-                    <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000264', fontFamily: 'Batang' }}>
-                        Edição com 12 Participantes
-                    </h2>
-                    <TabelaDePreco8 />
                     <br/>
                     <p style={{ textAlign: 'center', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                         Os pedidos serão efetivados somente por um dos Representantes cadastrados neste site.
