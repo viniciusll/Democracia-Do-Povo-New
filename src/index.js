@@ -4,7 +4,7 @@ import { createBrowserHistory } from "history";
 import {
     Route,
     Switch,
-    HashRouter
+    Router
 } from "react-router-dom";
 
 import './assets/scss/style.scss';
@@ -21,16 +21,16 @@ import RevistasProprias from './views/RevistaPropria/RevistaPropria.jsx';
 var hist = createBrowserHistory();
 
 ReactDOM.render(
-    <HashRouter history={hist}>
+    <Router history={hist}>
         <Switch>
             <Route path="/representantes" component={CustomComponents} />
             <Route path="/candidatos" component={Candidatos} />
             <Route path="/revistas" component={Revistas} />
             <Route path="/candidatos-inscritos" component={CandidatosInscritos} />
             <Route path="/representantes-cadastrados" component={RepresentantesCadastrados} />
-            <Route path="/revistas-propria" component={RevistasProprias} />
-            <Route path="/" component={Components} exact />
+            <Route path="/" component={RevistasProprias} exact />
+            <Route path="/home" component={Components} />
         </Switch>
-    </HashRouter>,
+    </Router>,
     document.getElementById("root")
 );

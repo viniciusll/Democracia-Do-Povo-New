@@ -21,7 +21,7 @@ const Header = () => {
                         <Collapse isOpen={isOpen} navbar className="hover-dropdown font-14 ml-auto" id="h6-info">
                             <Nav style={{ backgroundColor: '#003d03' }} navbar className="ml-auto">
                                 <NavItem>
-                                    <Link className="nav-link" to={"/"}>
+                                    <Link className="nav-link" to={"/home"}>
                                         Home
 									</Link>
                                 </NavItem>
@@ -41,7 +41,7 @@ const Header = () => {
                                     </Link>
                                 </NavItem>
                                 <NavItem>
-                                    <Link className="nav-link" to={"/revistas-propria"}>
+                                    <Link className="nav-link" to={"/"}>
                                         Revista Própria
                                     </Link>
                                 </NavItem>
