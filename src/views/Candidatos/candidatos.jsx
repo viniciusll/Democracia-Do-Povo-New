@@ -170,6 +170,17 @@ const CustomComponents = () => {
                             para a pagína ou  capa de sua exclusividade 18 x 26. Inclua nesse espaço o anúncio de sua candidatura, sua foto,
                             texto, títulos e demais  dados desejados. Salve em PDF.
                         </strong><br /> <br />
+                        {
+                            <Button 
+                                color='primary' 
+                                outline
+                                href="src/assets/images/Gabarito artes Revista Própria.doc"
+                                download
+                            > 
+                                Baixe o gabarito
+                            </Button> 
+                        }
+                        <br /><br />
                         Faça o seu pedido com um dos Representantes da Democracia do Povo.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a
                         possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas Democracia do Povo e
