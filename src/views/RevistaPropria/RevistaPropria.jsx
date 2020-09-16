@@ -32,7 +32,7 @@ function RevistaPropria() {
             <Banner />
             <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }} >REVISTA PRÓPRIA</h2>
             <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '15px' }}>
-                <div style={{ width: '150vh', height: '100%', fontFamily: 'Batang', fontSize: '20px' }}>
+                <div style={{ width: '150vh', height: '100%', fontFamily: 'Batang', fontSize: '20px', border: '2px solid red', padding: '8px' }}>
                     <p style={{ color: 'red', textAlign: 'justify' }}>
                         São publicações em revistas que possuem conteúdo inteiramente relacionado a cada ramo de atividade, com informações úteis aos
                         leitores e consumidores. Ausente de anúncios de concorrentes, a batizamos de Revista Própria. Neste modelo de revista, o impacto
