@@ -153,13 +153,6 @@ const Components = () => {
                                     E, sendo votados pelo eleitor, serão julgados com mais sensatez e coerência, exercerão menor pressão de grupos especuladores
                                     e criminosos e serão tramitados, sancionados e promulgados com maior rapidez.
                             </p>
-                                <p style={{ textAlign: 'justify', color: '#000264', fontFamily: 'Comic Sans MS', fontSize: '20px', padding: '15px' }}>
-                                    — Seguindo esse regulamento haverá plebiscito para eleger nova Lei de Licitações, para as três esferas de governos.
-                                    A Democracia do Povo elaborou um projeto de licitações que descentraliza o pagamento de obras contratadas de empresas
-                                    privadas, com a finalidade de que o dinheiro não passe pelas mãos de políticos e governantes. De forma, que a população
-                                    acompanhará cada obra de seu interesse através dos sites correspondentes, e podendo participar das licitações, as quais serão
-                                    abertas ao público em geral, por vídeo conferências.
-                            </p>
                                 <h3 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }} >
                                     Diretriz I da Reforma Política Brasileira REGULAMENTO
                             </h3>
