@@ -28,8 +28,8 @@ ReactDOM.render(
             <Route path="/revistas" component={Revistas} />
             <Route path="/candidatos-inscritos" component={CandidatosInscritos} />
             <Route path="/representantes-cadastrados" component={RepresentantesCadastrados} />
-            <Route path="/" component={RevistasProprias} exact />
             <Route path="/home" component={Components} />
+            <Route path="/" component={RevistasProprias} exact />
         </Switch>
     </Router>,
     document.getElementById("root")
