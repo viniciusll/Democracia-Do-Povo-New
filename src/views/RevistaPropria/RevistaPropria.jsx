@@ -72,7 +72,8 @@ function RevistaPropria() {
                     </p>
                 </div>
             </div>
-            <h1>inserir revista</h1>
+            <br/>
+            <iframe style={{ width: '100%', height: '80vh'}} src="https://drive.google.com/file/d/1oFGDmIvJO1dWX7vpi1oU9LC2ajMNJJYq/preview"></iframe>
             <p style={{ textAlign: 'center', color: '#ff0000', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                 <strong style={{ color: '#000264' }}>
                     Solicite a confecção da arte final do anúncio à gráfica de sua preferência ou a um arte finalista.
