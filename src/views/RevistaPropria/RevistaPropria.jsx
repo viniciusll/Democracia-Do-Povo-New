@@ -86,6 +86,9 @@ function RevistaPropria() {
                         consideravelmente, ao serem diluídos entre os participantes das edições desta revista.
             </p>
             <iframe style={{ width: '100%', height: '80vh' }} src="https://drive.google.com/file/d/1oFGDmIvJO1dWX7vpi1oU9LC2ajMNJJYq/preview"></iframe>
+            <p style={{ color: 'green', textAlign: 'center', fontFamily: 'Comic Sans MS', fontSize: '25px' }}>
+                <strong style={{ border: '2px solid green' }}> 1° Passo:</strong> Para você participar da próxima Edição.
+            </p>
             <p style={{ textAlign: 'center', color: '#ff0000', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                 <strong style={{ color: '#000264' }}>
                     Solicite a confecção da arte final do anúncio à gráfica de sua preferência ou a um arte finalista.
@@ -105,9 +108,6 @@ function RevistaPropria() {
                         Faça o seu pedido com um dos Representantes do O Sócio Br.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a
                         possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas. <br />
-            </p>
-            <p style={{ color: 'green', textAlign: 'center', fontFamily: 'Comic Sans MS', fontSize: '25px' }}>
-                <strong style={{ border: '2px solid green' }}> 1° Passo:</strong> Para divulgar a sua candidatura com pouco dinheiro.
             </p>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000' }}>
                 TABELA DE PREÇOS PARA <strong style={{ color: 'red' }}>4</strong> EMPRESAS E COMISSÕES
