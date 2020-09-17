@@ -493,6 +493,9 @@ const Formulario = () => {
                         Enviar
                     </Button>
                 </div>
+                <p style={{ color: 'green', textAlign: 'center', fontFamily: 'Comic Sans MS', fontSize: '25px' }}>
+                <strong style={{ border: '2px solid green' }}> 3° Passo:</strong> Para completar o seu marketing politico com eficácia.
+            </p>
             </AvForm>
         </div>
     );

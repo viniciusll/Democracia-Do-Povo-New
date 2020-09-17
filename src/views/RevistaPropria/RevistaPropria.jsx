@@ -72,8 +72,20 @@ function RevistaPropria() {
                     </p>
                 </div>
             </div>
-            <br/>
-            <iframe style={{ width: '100%', height: '80vh'}} src="https://drive.google.com/file/d/1oFGDmIvJO1dWX7vpi1oU9LC2ajMNJJYq/preview"></iframe>
+            <br />
+            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#000bd4', fontFamily: 'Batang' }}>
+                PANFLETO EM REVISTA
+                    </h2>
+            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
+                SISTEMA COOPERADO DE PANFLETAGEM
+                    </h2>
+            <p style={{ textAlign: 'center', color: '#000', paddingTop: '10px' }}>
+                A Revista <strong style={{ color: '#000bd4' }}>PANFLETO EM REVISTA</strong> é uma publicação do O SÓCIO BR. <br />
+                        Um produto da <strong style={{ color: '#0bacba' }}>LOJA VIRTUAL REAL</strong>.<br />
+                        Os custos de publicação pelo <strong style={{ color: '#ff0000' }}>SISTEMA COOPERADO DE PANFLETAGEM</strong> diminuem,<br />
+                        consideravelmente, ao serem diluídos entre os participantes das edições desta revista.
+            </p>
+            <iframe style={{ width: '100%', height: '80vh' }} src="https://drive.google.com/file/d/1oFGDmIvJO1dWX7vpi1oU9LC2ajMNJJYq/preview"></iframe>
             <p style={{ textAlign: 'center', color: '#ff0000', fontFamily: 'Comic Sans MS', fontSize: '25px', padding: '15px' }}>
                 <strong style={{ color: '#000264' }}>
                     Solicite a confecção da arte final do anúncio à gráfica de sua preferência ou a um arte finalista.
@@ -81,18 +93,21 @@ function RevistaPropria() {
                     atividade utilizando a fonte Calibri 12 ou Arial 11. Para títulos utilize fonte e tamanho desejados. A área do texto com títulos
                     deverá ocupar, no máximo 300cm². Salve em PDF. Faremos o layout das artes na página ou capa de sua exclusividade.
                         </strong><br /> <br />
-                        {
-                            <Button 
-                                color='primary'
-                                outline
-                            > 
-                                <a href={require("../../assets/images/GabaritoartesRevistaPropria.docx")} target="_blank" download>Baixe o gabarito</a>
-                            </Button> 
-                        }
-                        <br /><br />
+                {
+                    <Button
+                        color='primary'
+                        outline
+                    >
+                        <a href={require("../../assets/images/GabaritoartesRevistaPropria.docx")} target="_blank" download>Baixe o gabarito</a>
+                    </Button>
+                }
+                <br /><br />
                         Faça o seu pedido com um dos Representantes do O Sócio Br.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a
-                        possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas. <br/>
+                        possibilidade de serem cadastrados neste site para que possam efetivar os pedidos das revistas. <br />
+            </p>
+            <p style={{ color: 'green', textAlign: 'center', fontFamily: 'Comic Sans MS', fontSize: '25px' }}>
+                <strong style={{ border: '2px solid green' }}> 1° Passo:</strong> Para divulgar a sua candidatura com pouco dinheiro.
             </p>
             <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000' }}>
                 TABELA DE PREÇOS PARA <strong style={{ color: 'red' }}>4</strong> EMPRESAS E COMISSÕES
@@ -107,7 +122,9 @@ function RevistaPropria() {
             </h2>
             <TabelaDePrecosPara12EmpresasEComissoes />
             <br />
-
+            <p style={{ color: 'green', textAlign: 'center', fontFamily: 'Comic Sans MS', fontSize: '25px' }}>
+                <strong style={{ border: '2px solid green' }}> 2° Passo:</strong> Para você começar a pensar em conquistar muitos votos.
+            </p>
             <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                 Dados para contratação da transportadora de sua preferência
                     </h2>
