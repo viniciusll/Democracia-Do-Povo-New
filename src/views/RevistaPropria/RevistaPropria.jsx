@@ -123,7 +123,7 @@ function RevistaPropria() {
             <TabelaDePrecosPara12EmpresasEComissoes />
             <br />
             <p style={{ color: 'green', textAlign: 'center', fontFamily: 'Comic Sans MS', fontSize: '25px' }}>
-                <strong style={{ border: '2px solid green' }}> 2° Passo:</strong> Para você começar a pensar em conquistar muitos votos.
+                <strong style={{ border: '2px solid green' }}> 2° Passo: </strong>
             </p>
             <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }}>
                 Dados para contratação da transportadora de sua preferência
