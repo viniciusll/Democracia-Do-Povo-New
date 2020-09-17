@@ -172,12 +172,10 @@ const CustomComponents = () => {
                         </strong><br /> <br />
                         {
                             <Button 
-                                color='primary' 
+                                color='primary'
                                 outline
-                                href="src/assets/images/Gabarito artes Revista Própria.doc"
-                                download
                             > 
-                                Baixe o gabarito
+                                <a href={require("../../assets/images/GabaritoartesRevistaPropria.docx")} target="_blank" download>Baixe o gabarito</a>
                             </Button> 
                         }
                         <br /><br />
