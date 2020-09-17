@@ -96,14 +96,14 @@ function RevistaPropria() {
                     atividade utilizando a fonte Calibri 12 ou Arial 11. Para títulos utilize fonte e tamanho desejados. A área do texto com títulos
                     deverá ocupar, no máximo 300cm². Salve em PDF. Faremos o layout das artes na página ou capa de sua exclusividade.
                         </strong><br /> <br />
-                {
+                {/* {
                     <Button
                         color='primary'
                         outline
                     >
                         <a href={require("../../assets/images/GabaritoartesRevistaPropria.docx")} target="_blank" download>Baixe o gabarito</a>
                     </Button>
-                }
+                } */}
                 <br /><br />
                         Faça o seu pedido com um dos Representantes do O Sócio Br.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a

@@ -170,14 +170,14 @@ const CustomComponents = () => {
                             para a pagína ou  capa de sua exclusividade 18 x 26. Inclua nesse espaço o anúncio de sua candidatura, sua foto,
                             texto, títulos e demais  dados desejados. Salve em PDF.
                         </strong><br /> <br />
-                        {
+                        {/* {
                             <Button 
                                 color='primary'
                                 outline
                             > 
                                 <a href={require("../../assets/images/GabaritoartesRevistaPropria.docx")} target="_blank" download>Baixe o gabarito</a>
                             </Button> 
-                        }
+                        } */}
                         <br /><br />
                         Faça o seu pedido com um dos Representantes da Democracia do Povo.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a

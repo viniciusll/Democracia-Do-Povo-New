@@ -27,7 +27,7 @@ function TabelaDePrecosPara8EmpresasEComissoes() {
                 </tr>
                 <tr>
                     <th style={{ color: 'green' }} scope="row">4.000/500</th>
-                    <td style={{ color: '#000' }}>750,00</td>
+                    <td style={{ color: '#000' }}>700,00</td>
                     <td style={{ color: '#000' }}>5.600,00</td>
                     <td style={{ color: '#000' }}>392,00</td>
                 </tr>
