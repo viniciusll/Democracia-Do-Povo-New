@@ -30,33 +30,20 @@ function RevistaPropria() {
             <ScrollToTopOnMount />
             <Header />
             <Banner />
-            <h2 style={{ textAlign: 'center', paddingTop: '20px', color: '#ff0000', fontFamily: 'Batang' }} >REVISTA PRÓPRIA</h2>
             <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '15px' }}>
-                <div style={{ width: '150vh', height: '100%', fontFamily: 'Batang', fontSize: '20px', border: '2px solid red', padding: '8px' }}>
-                    <p style={{ color: 'red', textAlign: 'justify' }}>
-                        São publicações em revistas que possuem conteúdo inteiramente relacionado a cada ramo de atividade, com informações úteis aos
-                        leitores e consumidores. Ausente de anúncios de concorrentes, a batizamos de Revista Própria. Neste modelo de revista, o impacto
-                        positivo causado pela exposição da empresa nas quatro capas é considerável e o custo é menor do que um pequeno anúncio interno,
-                        em muitas revistas do mercado editorial. É um processo de produção mais econômico comparado ao modelo das publicações
-                        independentes, pois estas absorvem custos com a produção de conteúdo, seleção das matérias institucionais, artes finais,
-                        revisão ortográfica, diagramação, produção gráfica e, no caso da revista Panfleto em Revista, entra também no custo, a distribuição dos exemplares. <br />
-                        Outra vantagem do nosso modelo de Revista Própria é a de que, o custo da impressão gráfica entra na faixa de preço mínimo, mesmo para pequena quantidade de exemplares.
-                        Confira os modelos de sua...
-                    </p>
+                <div style={{ width: '150vh', height: '100%', fontSize: '25px', border: '2px solid #000', padding: '8px' }}>
+                    <h2 style={{ color: '#6ca1f5', textAlign: 'center' }}>
+                        ComuniCativa <strong style={{ color: '#134aa1'}}>Clientes</strong>
+                    </h2>
+                    <br/>
+                    <h2 style={{ color: 'red', textAlign: 'center' }}>
+                        Atividades
+                    </h2>
                 </div>
             </div>
-            <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#FF0000', fontFamily: 'Batang' }}>
-                REVISTA PRÓPRIA
-            </h2>
-            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <img src={RevistaPropriaImage} style={{ maxWidth: '100%' }} alt="Revista Própria" />
-                <img src={RevistaPropriaImage2} style={{ maxWidth: '100%' }} alt="Revista Própria" />
-            </div>
-            <h2 style={{ textAlign: 'center', paddingTop: '10px', color: '#000', fontFamily: 'Calibri (Corpo)' }}>
-                Atenção profissional em vendas!
-            </h2>
+            <br/>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <div style={{ width: '150vh', height: '100%', fontFamily: 'Batang', fontSize: '20px', border: '2px solid red' }}>
+                <div style={{ width: '150vh', height: '100%', fontFamily: 'Batang', fontSize: '20px' }}>
                     <p style={{ textAlign: 'justify', color: '#000', padding: '3px 30px 3px 30px' }}>
                         O SÓCIO BR está preparando um site exclusivo para a REVISTA PRÓPRIA. <br />
                         Existem mais de uma centena de ramos de atividades comerciais, de serviços e profissionais liberais para você oferecer todas essas edições da REVISTA PRÓPRIA. São mais de 5 milhões de empresas no Brasil a procura de se fazerem conhecidas do consumidor e vender mais.
