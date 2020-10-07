@@ -31,20 +31,16 @@ function RevistaPropria() {
             <Header />
             <Banner />
             <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '15px' }}>
-                <div style={{ width: '150vh', height: '100%', fontSize: '25px', border: '2px solid #000', padding: '8px' }}>
-                    <h2 style={{ color: '#6ca1f5', textAlign: 'center' }}>
-                        ComuniCativa <strong style={{ color: '#134aa1'}}>Clientes</strong>
-                    </h2>
-                    <br/>
+                <div style={{ width: '150vh', height: '100%', fontSize: '25px', padding: '8px' }}>
                     <h2 style={{ color: 'red', textAlign: 'center' }}>
-                        Atividades
+                        REVISTA PRÓPRIA
                     </h2>
                 </div>
             </div>
             <br/>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <div style={{ width: '150vh', height: '100%', fontFamily: 'Batang', fontSize: '20px' }}>
-                    <p style={{ textAlign: 'justify', color: '#000', padding: '3px 30px 3px 30px' }}>
+                    <p style={{ textAlign: 'justify', color: '#000', padding: '3px 30px 3px 30px', border: '2px solid red'}}>
                         O SÓCIO BR está preparando um site exclusivo para a REVISTA PRÓPRIA. <br />
                         Existem mais de uma centena de ramos de atividades comerciais, de serviços e profissionais liberais para você oferecer todas essas edições da REVISTA PRÓPRIA. São mais de 5 milhões de empresas no Brasil a procura de se fazerem conhecidas do consumidor e vender mais.
                         A revista PANFLETO EM REVISTA para o setor corporativo está completamente elaborada e você e O SÓCIO BR já podem começar a ganhar dinheiro com ela. Os preços dos exemplares e comissões de vendas são os mesmos para a revista PANFLETO EM REVISTA dos candidatos a prefeito e vereador da Democracia do Povo. Veja um modelo corporativo abaixo. <br /><br />
@@ -83,14 +79,6 @@ function RevistaPropria() {
                     atividade utilizando a fonte Calibri 12 ou Arial 11. Para títulos utilize fonte e tamanho desejados. A área do texto com títulos
                     deverá ocupar, no máximo 300cm². Salve em PDF. Faremos o layout das artes na página ou capa de sua exclusividade.
                         </strong><br /> <br />
-                {/* {
-                    <Button
-                        color='primary'
-                        outline
-                    >
-                        <a href={require("../../assets/images/GabaritoartesRevistaPropria.docx")} target="_blank" download>Baixe o gabarito</a>
-                    </Button>
-                } */}
                 <br /><br />
                         Faça o seu pedido com um dos Representantes do O Sócio Br.<br />
                         Não os encontrando informe aos profissionais em vendas de seu município a
@@ -125,6 +113,40 @@ function RevistaPropria() {
                 {show == true ? <Formulario /> : undefined}
             </div>
             <br /><br />
+
+            <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '15px' }}>
+                <div style={{ width: '150vh', height: '100%', fontSize: '25px', border: '1px solid #000', padding: '8px' }}>
+                    <h2 style={{ color: '#5e9aff', textAlign: 'center' }}>
+                        ComuniCativa <strong style={{ color: '#033994' }}>Clientes</strong>
+                    </h2>
+                    <h2 style={{ color: 'red', textAlign: 'center' }}>
+                        ATIVIDADES
+                    </h2>
+                </div>
+            </div>
+            <br/>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div style={{ width: '150vh', height: '100%', fontFamily: 'Batang', fontSize: '20px' }}>
+                    <p style={{ textAlign: 'center', color: '#000', padding: '3px 30px 3px 30px'}}>
+                        A Revista ComuniCativa Clientes (<strong style={{ color: 'red'}}>Atividades</strong>) é uma publicação do O SÓCIO BR.
+                    </p>
+                    <p style={{ textAlign: 'justify', color: '#000', padding: '3px 30px 3px 30px'}}>
+                        Um produto da <strong style={{ color: '#5e9aff' }}>LOJA VIRTUAL REAL</strong>, especialmente desenvolvido para as empresas do comércio varejista e de serviços de 
+                        todos os ramos de atividades, se comunicarem, diretamente, com o seu público alvo. <br/><br/>
+                        O conteúdo, em cada edição, contém informações úteis ao leitor e consumidor, com textos e fotos relacionados a cada ramo de atividade. Além da utilização, 
+                        com exclusividade, das quatro capas, por determinada empresa que desejar ter a sua própria revista, como o modelo abaixo 
+                        de <strong style={{ color: 'red' }}>PADARIA</strong> para difundir e fortalecer a marca, 
+                        aos futuros e habituais clientes. Nunca é demais afirmar: 
+                        Vende mais quem <strong style={{ color: '#5e9aff' }}>ComuniCativa</strong> <strong style={{ color: '#033994' }}>Clientes</strong> com a sua <strong style={{ color: 'red' }}>REVISTA PRÓPRIA</strong>. <br/><br/>
+                        O processo de produção desse modelo de Revista Própria é mais econômico comparado ao modelo das publicações individuais, que absorvem custos com a produção de 
+                        conteúdo, seleção das matérias institucionais, artes-finais, revisão ortográfica, diagramação e produção gráfica e, assim tendo que dividir esses custos pela quantidade 
+                        de exemplares e que, por esse motivo, ficam mais caros. Outra vantagem do nosso modelo de Revista Própria é a de que o custo da impressão gráfica entra na faixa de preço mínimo, 
+                        mesmo para pequena quantidade de exemplares.    
+                    </p>
+                </div>
+            </div>
+
+            <br/> <br/>
 
             <Footer />
         </div>
